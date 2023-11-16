@@ -6,10 +6,10 @@ Dive into the captivating world of cinema with our unique exploration of the CMU
 ## Research Questions
 Our approach aims to highlight redundant connections among certain actors and assess their financial and qualitative impact on films. This will enable film producers to make strategic decisions and, on the other hand, provide you with the necessary arguments to win your debates with cinephile friends
 
-1. Does the rise of the number of famous actors has a significant impact on the revenue and the quality of a movie ?
-2. Which actor pairs have the best and worst chimistry ?
-3. Can we characterize the interconnetions between the actors ?
-4. Vis-a-vis to the previous questions, do we observe different conclusion in function of the geography, timeline, or film gender ?
+- Does the rise of the number of famous actors has a significant impact on the revenue and the quality of a movie ?
+- Which actor pairs have the best and worst chimistry ?
+- Can we characterize the interconnetions between the actors ?
+- Vis-a-vis to the previous questions, do we observe different conclusion in function of the geography, timeline, or film gender ?
 
 ## Aditional Datasets
 The Movies Dataset on Kaggle : \url{https://www.kaggle.com/datasets/rounakbanik/the-movies-dataset/data}
