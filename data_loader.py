@@ -156,6 +156,12 @@ def get_wikidata_id_translations():
 
 
 
+#check for non-empty and non-NaN entries in a list
+def is_nonempty_list(lst):
+    return isinstance(lst, list) and len(lst) > 0 and not any(pd.isna(item) for item in lst)
+
+
+
 
 
 
