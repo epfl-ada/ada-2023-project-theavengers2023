@@ -53,7 +53,12 @@ The initial analysis conducted earlier requires refinement. We will enhance the 
 #### 4.1. Chemistry
 At this stage, we will analyze "Which actor pairs have the best and worst chemistry?". Critical decisions must be made due to the necessity of reducing our actor sample. The challenge arises from the fact that, with the need for interactions between actors, the number of potential interactions among n people is [n(n-1)]/2. As n grows, the number of interactions becomes unmanageable. Consequently, we must carefully select the number of actors based on various considerations. It is acknowledged that we require actors who have collaborated sufficiently to generate significant interactions with their peers. However, determining the exact threshold depends on our specific objectives and preferences. Then, we can perform the regression of the interaction between actor to explain the revenues and ratings. 
 
-### Part 5: 
+# Part 5: 
+# Interconnection 
+At this stage, we will use a network analyze to quantify the number of interactions between actors. That will provide an answer about the existence of communities and also an help to visualize these communities.
+
+### Part 6:
+Create the data story for our report.
 
 #### T-test
 A t-test will be used to compare the means of two groups (revenue and rating) and determine if there is a significant difference between them. It assesses whether the observed differences between the groups are likely to have occurred by chance or if they are statistically significant (alpha 5%).
@@ -66,9 +71,6 @@ The linear regression will be applied to revenue or rating in function of dummy 
 
 #### Network Analysis
 Useful for the understandability and visualization of the interaction between actors and highlight potential community of actors.
-
-### Part 6:
-Create the data story for our report.
 
 
 
