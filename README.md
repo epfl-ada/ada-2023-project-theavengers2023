@@ -19,7 +19,7 @@ Our approach aims to highlight redundant connections among certain actors and as
 - inflation (to fill)
 
 
-Access all datasets on Google Drive using this link: [datasets](https://drive.google.com/drive/folders/1kKqpqdOm1F45n19MyqXFOTy_DvmOtbOA). To execute the `P2_milestone.ipynb`  notebook, position the datasets folder in the same directory. Below is the structure of the datasets provided:
+Access all datasets on Google Drive using this link: [datasets](https://drive.google.com/drive/folders/1kKqpqdOm1F45n19MyqXFOTy_DvmOtbOA). To execute the `Project_milestone2.ipynb`  notebook, position the datasets folder in the same directory. Below is the structure of the datasets provided:
 
 ```bash
 /datasets
