@@ -32,8 +32,8 @@ Access all datasets on Google Drive using this link: [datasets](https://drive.go
 ├── kaggle_imdb
 │ ├── title.basics.tsv
 │ └── title.ratings.tsv
-└── Inflation
-  └── to fill
+└── Consumer price idex
+  └── Consumer price index (2010=100) - United States
 ```
 
 
