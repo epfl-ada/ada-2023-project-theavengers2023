@@ -33,6 +33,32 @@ All the datasets can be found on GoogleDrive at the following link [datasets](ht
     - title.ratings.tsv
   - Inflation
 
+'''bash
+/data
+├── sceneflow
+│ ├── frames_finalpass
+│ └── disparity
+├── KITTI
+│ ├── KITTI_2012
+│ │ ├── training
+│ │ ├── testing
+│ │ └── vkitti
+│ ├── KITTI_2015
+│ │ ├── training
+│ │ ├── testing
+│ │ └── vkitti
+├── Middlebury
+│ ├── trainingH
+│ └── trainingH_GT
+├── ETH3D
+│ ├── two_view_training
+│ └── two_view_training_gt
+└── DTU_data
+├── dtu_train
+└── dtu_test
+'''
+
+
 
  
 
