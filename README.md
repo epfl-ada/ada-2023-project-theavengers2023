@@ -78,8 +78,6 @@ At this stage, we will analyze "Which actor pairs have the best and worst chemis
 Then, we can perform the regression of the interaction between actor to explain the revenues and ratings. 
 
 ## Part 5: 
-### 5.1. Interconnection:
-
 
 ### T-test
 A t-test will be used to compare the means of two groups (revenue and rating) and determine if there is a significant difference between them. It assesses whether the observed differences between the groups are likely to have occurred by chance or if they are statistically significant (alpha 5%).
