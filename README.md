@@ -19,28 +19,7 @@ Our approach aims to highlight redundant connections among certain actors and as
 - "Consumer price index (2010=100) - United States" from The World Bank [3] : This time series is useful to be able to compare appropriately the revenue accros the year. Adjusting revenue for inflation over the years is essential to provide a more accurate representation of the revenue made by the movies. This adjustment ensures that revenue figures are comparable across different periods
 
 
-Access all datasets on Google Drive using this link: [datasets](https://drive.google.com/drive/folders/1kKqpqdOm1F45n19MyqXFOTy_DvmOtbOA). To execute the `Project_milestone2.ipynb`  notebook, position the datasets folder in the same directory. Below is the structure of the datasets provided:
-
-```bash
-/datasets
-├──  MoviesSummaries
-│ ├── character.metadata.tsv
-│ └── movie.metadata.tsv
-├── kaggle_movie
-│ ├── movies_metadata.csv
-│ └── ratings.csv
-├── kaggle_imdb
-│ ├── title.basics.tsv
-│ └── title.ratings.tsv
-└── consumer price index
-  └── consumer_price_index_2010.csv
-```
-
-
-
- 
-
-
+Access all datasets on Google Drive using this link: [datasets](https://drive.google.com/drive/folders/1kKqpqdOm1F45n19MyqXFOTy_DvmOtbOA). To execute the `Project_milestone2.ipynb`  notebook, position the datasets folder in the same directory. 
 
 
 
