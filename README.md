@@ -32,8 +32,8 @@ Access all datasets on Google Drive using this link: [datasets](https://drive.go
 ├── kaggle_imdb
 │ ├── title.basics.tsv
 │ └── title.ratings.tsv
-└── Consumer price idex
-  └── ....
+└── consumer price index
+  └── consumer_price_index_2010.csv
 ```
 
 
