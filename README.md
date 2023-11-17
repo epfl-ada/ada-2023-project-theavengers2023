@@ -43,7 +43,7 @@ Each movie involves a varying number of actors, and at this point, we aim to exp
 
 This two-part approach ensures a comprehensive exploration of the dataset, setting the stage for subsequent in-depth analyses. 
 
-This part of the project is all about checking if our analysis might have problems or risks that could affect the project. Making sure the project is doable is really important. So, even if this step might seem unimportant, it's not. It's a way to be sure our analysis is strong and won't face unexpected issues that could mess up the whole project.
+This part of the project is all about checking if our analysis might have problems or risks that could affect the project. Making sure the project is doable is really important. So, even if this step might seem unimportant, it's not. 
 
 ### Part 3:
 #### 3.1. Improvement of the first analysis
@@ -51,8 +51,7 @@ The initial analysis conducted earlier requires refinement. We will enhance the 
 
 ### Part 4: 
 #### 4.1. Chemistry
-At this stage, we will analyze "Which actor pairs have the best and worst chemistry?". Critical decisions must be made due to the necessity of reducing our actor sample. The challenge arises from the fact that, with the need for interactions between actors, the number of potential interactions among n people is [n(n-1)]/2. As n grows, the number of interactions becomes unmanageable. Consequently, we must carefully select the number of actors based on various considerations. It is acknowledged that we require actors who have collaborated sufficiently to generate significant interactions with their peers. However, determining the exact threshold depends on our specific objectives and preferences.
-Then, we can perform the regression of the interaction between actor to explain the revenues and ratings. 
+At this stage, we will analyze "Which actor pairs have the best and worst chemistry?". Critical decisions must be made due to the necessity of reducing our actor sample. The challenge arises from the fact that, with the need for interactions between actors, the number of potential interactions among n people is [n(n-1)]/2. As n grows, the number of interactions becomes unmanageable. Consequently, we must carefully select the number of actors based on various considerations. It is acknowledged that we require actors who have collaborated sufficiently to generate significant interactions with their peers. However, determining the exact threshold depends on our specific objectives and preferences. Then, we can perform the regression of the interaction between actor to explain the revenues and ratings. 
 
 ### Part 5: 
 
