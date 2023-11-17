@@ -33,7 +33,7 @@ All the datasets can be found on GoogleDrive at the following link [datasets](ht
     - title.ratings.tsv
   - Inflation
 
-'''bash
+```bash
 /data
 ├── sceneflow
 │ ├── frames_finalpass
@@ -56,7 +56,7 @@ All the datasets can be found on GoogleDrive at the following link [datasets](ht
 └── DTU_data
 ├── dtu_train
 └── dtu_test
-'''
+```
 
 
 
