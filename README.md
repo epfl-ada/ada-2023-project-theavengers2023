@@ -53,8 +53,8 @@ The initial analysis conducted earlier requires refinement. We will enhance the 
 #### 4.1. Chemistry
 At this stage, we will analyze "Which actor pairs have the best and worst chemistry?". Critical decisions must be made due to the necessity of reducing our actor sample. The challenge arises from the fact that, with the need for interactions between actors, the number of potential interactions among n people is [n(n-1)]/2. As n grows, the number of interactions becomes unmanageable. Consequently, we must carefully select the number of actors based on various considerations. It is acknowledged that we require actors who have collaborated sufficiently to generate significant interactions with their peers. However, determining the exact threshold depends on our specific objectives and preferences. Then, we can perform the regression of the interaction between actor to explain the revenues and ratings. 
 
-# Part 5: 
-# Interconnection 
+### Part 5: 
+### 5.1 Interconnection 
 At this stage, we will use a network analyze to quantify the number of interactions between actors. That will provide an answer about the existence of communities and also an help to visualize these communities.
 
 ### Part 6:
@@ -77,6 +77,11 @@ Useful for the understandability and visualization of the interaction between ac
 ## Proposed timeline
 
 In order to answer the posed researched questions, we constructed a data analysis pipeline and the pipeline into 3 major parts as detailed in what follows:
+17.11.2023 : Milestone 2 : End of part 1 & 2
+24.11.2023 : Part 3
+08.12.2023 : Part 4
+15.12.2023 : Part 5
+22.12.2023 : Milestone 3: Part 6
 
 
 
@@ -84,17 +89,26 @@ In order to answer the posed researched questions, we constructed a data analysi
 
 | Teammate | Contributions |
 |   :---:  |    :---:      |
-|   Majda |             	(1) Worked on the pre-proccessing the data by executing step 1, step 2 in the method section.
-(2) Worked on classifying the movies into different emotional classes by executing step 4.|
-|   Julien |               |
+|   Majda | (1) Worked on the processing of the data, extraction and merging of the datasets.
+(2) Worked on visualization of the raw data.
+(3) Worked on the ranking of the actor pairs and their signicancy.
+(4) Analysis of the regression|
+|   Julien | (1) Worked on the processing of the data, extraction and merging of the datasets.       
+(2) Implementation of the interaction matrix and first analysis with it 
+(3) Linear regression of the interaction between actors
+(4) additional linear regression|
 |   Louis | (1) Worked on linear regression of the log-revenue and the rating in function of the numbner of known actors.
 (2) Worked on the statistical impact of the models and parameters.
-(3) Worked on the fitting of the functional form of the revenue and rating|
+(3) Worked on the fitting of the functional form of the revenue and rating.
+(4) Implementation and analysis of the linear regression|
 |   Nathan |(1) Worked on linear regression of the log-revenue and the rating in function of the numbner of known actors.
-(2) Worked on the network anal|
-|   Albias |               |
-
-assign each task to team memebers
+(2) Worked on the network analyze and the visualization of the interaction of actors.
+(3) Worked on the fitting of the functional form of the revenue and rating.
+(4) Implementation of the report and working for the data story |
+|   Albias |(1) Worked on the processing of the data, extraction and merging of the datasets.
+(2) Worked on the analyze of the raw data (distribution, mean, quantiles, statistics...).
+(3) Worked on the ranking of the actor pairs and their signicancy.
+(4) Implementation of the report and working for the data story|
 
 
 ## References 
