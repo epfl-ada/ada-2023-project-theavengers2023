@@ -76,8 +76,11 @@ Useful for the understandability and visualization of the interaction between ac
 
 ## Proposed timeline
 
-In order to answer the posed researched questions, we constructed a data analysis pipeline and the pipeline into 3 major parts as detailed in what follows:
+In order to answer the posed researched questions, we constructed a data analysis pipeline and the pipeline into 3 major parts as detailed in what follows:             
+
 17.11.2023 : Milestone 2 : End of part 1 & 2
+
+
 24.11.2023 : Part 3
 08.12.2023 : Part 4
 15.12.2023 : Part 5
