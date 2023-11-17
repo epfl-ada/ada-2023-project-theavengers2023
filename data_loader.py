@@ -5,6 +5,8 @@ import json
 import re
 import requests
 import sys
+import seaborn as sns
+import matplotlib.pyplot as plt
 ## Define the paths to the datasets
 
 #-----------------CMU dataset-----------------#
@@ -23,9 +25,11 @@ KAGGLE_IMDB_PATH = 'datasets/kaggle_imdb/'
 KAGGLE_TITLE_IMDB = KAGGLE_IMDB_PATH+"/title.basics.tsv/data.tsv"
 KAGGLE_RATING_IMDB = KAGGLE_IMDB_PATH+"/title.ratings.tsv/data.tsv"
 
-#-----------------Kaggle Oscars dataset-----------------#
-OSCAR_PATH = 'datasets/oscars_awards/'
-OSCAR_WINNER = OSCAR_PATH+"the_oscar_award.csv"
+#-----------------Consumer price index dataset-----------------#
+PRICE_INDEX_PATH = 'datasets/consumer_price_index/'
+CONSUMER_PRICE_INDEX = PRICE_INDEX_PATH+"consumer_price_index_2010.csv"
+
+
 
 
 
@@ -121,14 +125,6 @@ def load_rating_imdb_kaggle():
     return df_rating_imdb
 
 
-def load_oscar_winner():
-    df_oscar_winner = pd.read_csv(OSCAR_WINNER, sep=',', header=0, low_memory=False)
-    df_oscar_winner.rename(columns={'film': 'Name', 'year_film': 'Year', 'name' : 'Actor/Actress'}, inplace=True)
-    df_oscar_winner['Year'] = pd.to_numeric(df_oscar_winner['Year'], errors='coerce').astype('Int64')
-    df_oscar_winner['Year'] = df_oscar_winner['Year'].astype('Int64')
-    df_oscar_winner.dropna(subset=['Name'], inplace=True)
-
-    return df_oscar_winner
 
 
 
@@ -182,6 +178,40 @@ def count_known_actors(actor_list):
     #if the value is NaN or None, return 0
     else:
         return 0
+    
+def load_inflation():
+    consumer_price_inflation = pd.read_csv(CONSUMER_PRICE_INDEX, sep = ',',skiprows=3)
+    inflation_Dollar = consumer_price_inflation.iloc[251] # Select US 
+    inflation_Dollar = inflation_Dollar.iloc[4:-1] # Select only the value : We have to multiply each revenu by 100 and divide by the appropriate rate
+    inflation_Dollar = inflation_Dollar.reset_index()
+    pd_inflation_Dollar = pd.DataFrame(inflation_Dollar)
+    pd_inflation_Dollar.rename(columns={'index': 'Year'}, inplace=True)
+    pd_inflation_Dollar['Year'] = pd_inflation_Dollar['Year'].astype(int)
+
+
+    return pd_inflation_Dollar
+
+
+def compute_categorical_variable(df, string_categorie ,number = 5):
+ # Only show the number biggest movie producer 
+
+    #compute the percentage of occurrences for each country
+    df_percentages = df.value_counts(normalize=True) * 100
+
+    #compute the top 5 categories
+    top = df_percentages.nlargest(number).index
+
+    # Filter the DataFrame to include only the top 5 countries
+    df_top5 = df[df.isin(top)]
+
+
+def transformCat(x):
+    if (x>=0) and (x<10):
+        return '00'+str(x)
+    elif x<=30:
+        return '0'+str(x)
+    else:
+        return ('30+')
 
 
 
