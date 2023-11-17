@@ -96,17 +96,17 @@ In order to answer the posed researched questions, we constructed a data analysi
 
 ## Organization within the team 
 
-     Majda :       (1) Worked on the processing of the data, extraction and merging of the datasets.
+     Majda :      (1) Worked on the processing of the data, extraction and merging of the datasets.
                   (2) Worked on visualization of the raw data.
                   (3) Worked on the ranking of the actor pairs and their signicancy.
                   (4) Analysis of the regression|
      ------------------------------------------------------------------------------------------------------------------------
-     Julien :      (1) Worked on the processing of the data, extraction and merging of the datasets.       
+     Julien :     (1) Worked on the processing of the data, extraction and merging of the datasets.       
                   (2) Implementation of the interaction matrix and first analysis with it 
                   (3) Linear regression of the interaction between actors
                   (4) additional linear regression
      ------------------------------------------------------------------------------------------------------------------------
-      Louis :    (1) Worked on linear regression of the log-revenue and the rating in function of the numbner of known actors.
+      Louis :     (1) Worked on linear regression of the log-revenue and the rating in function of the numbner of known actors.
                   (2) Worked on the statistical impact of the models and parameters.
                   (3) Worked on the fitting of the functional form of the revenue and rating.
                   (4) Implementation and analysis of the linear regression|
