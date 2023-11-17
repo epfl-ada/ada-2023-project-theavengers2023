@@ -67,9 +67,9 @@ list tasks and deadlines for each task
 
 ## Organization within the team 
 
-| Attempt | #1    | #2    |
-| :---:   | :---: | :---: |
-| Seconds | 301   | 283   |
+| Teammate | Contributions |
+|   :---:  |    :---:      |
+|   Julien |               |
 
 assign each task to team memebers
 
