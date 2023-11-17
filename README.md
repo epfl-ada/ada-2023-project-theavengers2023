@@ -82,7 +82,7 @@ In order to answer the posed researched questions, we constructed a data analysi
 
 | Teammate | Contributions |
 |   :---:  |    :---:      |
-|   Majda |               |
+|   Majda |             	(1) Worked on the pre-proccessing the data by executing step 1, step 2 in the method section.  |
 |   Julien |               |
 |   Louis |               |
 |   Nathan |               |
