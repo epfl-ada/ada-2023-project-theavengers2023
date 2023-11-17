@@ -82,10 +82,14 @@ In order to answer the posed researched questions, we constructed a data analysi
 
 | Teammate | Contributions |
 |   :---:  |    :---:      |
-|   Majda |             	(1) Worked on the pre-proccessing the data by executing step 1, step 2 in the method section.  |
+|   Majda |             	(1) Worked on the pre-proccessing the data by executing step 1, step 2 in the method section.
+(2) Worked on classifying the movies into different emotional classes by executing step 4.|
 |   Julien |               |
-|   Louis |               |
-|   Nathan |               |
+|   Louis | (1) Worked on linear regression of the log-revenue and the rating in function of the numbner of known actors.
+(2) Worked on the statistical impact of the models and parameters.
+(3) Worked on the fitting of the functional form of the revenue and rating|
+|   Nathan |(1) Worked on linear regression of the log-revenue and the rating in function of the numbner of known actors.
+(2) Worked on the network anal|
 |   Albias |               |
 
 assign each task to team memebers
