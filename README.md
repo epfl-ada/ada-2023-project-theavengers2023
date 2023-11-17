@@ -85,19 +85,16 @@ Then, we can perform the regression of the interaction between actor to explain 
 
 
 ### T-test
-Explanation later.
+A t-test will be used to compare the means of two groups (revenue and rating) and determine if there is a significant difference between them. It assesses whether the observed differences between the groups are likely to have occurred by chance or if they are statistically significant (alpha 5%).
 
 ### F-test
-Explanation later.
-
-### ANOVA
-Explanation later.
+The F-test will be used to evaluate hypotheses involving multiple parameters by comparing the fit of a more complex model (revenue or rating in function number of known actors) against a simplest model (average revenue or rating model). It assesses whether the additional parameters in the more complex model significantly improve the model fit, indicating if the added complexity is justified in explaining the observed data.
 
 ### Linear regression
-Explanation later.
+The linear regression will be applied to revenue or rating in function of dummy variables (0 known actor, 1 known actor, …). In our analysis, we are looking at the significance of the number of famous actors effect - globally (F-test) or variable per variable (t-tests).
 
 ### Network Analysis
-Explanation later.
+Useful for the understandability and visualization of the interaction between actors and highlight potential community of actors.
 
 ## Proposed timeline
 
