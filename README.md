@@ -109,17 +109,17 @@ In order to answer the posed researched questions, we constructed a data analysi
       Louis :     (1) Worked on linear regression of the log-revenue and the rating in function of the numbner of known actors.
                   (2) Worked on the statistical impact of the models and parameters.
                   (3) Worked on the fitting of the functional form of the revenue and rating.
-                  (4) Implementation and analysis of the linear regression|
+                  (4) Implementation and analysis of the linear regression
     ------------------------------------------------------------------------------------------------------------------------              
       Nathan :    (1) Worked on linear regression of the log-revenue and the rating in function of the numbner of known actors.
                   (2) Worked on the network analyze and the visualization of the interaction of actors.
                   (3) Worked on the fitting of the functional form of the revenue and rating.
-                  (4) Implementation of the report and working for the data story |
+                  (4) Implementation of the report and working for the data story 
      ------------------------------------------------------------------------------------------------------------------------             
       Albias :    (1) Worked on the processing of the data, extraction and merging of the datasets.
                   (2) Worked on the analyze of the raw data (distribution, mean, quantiles, statistics...).
                   (3) Worked on the ranking of the actor pairs and their signicancy.
-                  (4) Implementation of the report and working for the data story|
+                  (4) Implementation of the report and working for the data story
       ------------------------------------------------------------------------------------------------------------------------
 
 
