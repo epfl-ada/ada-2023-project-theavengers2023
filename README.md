@@ -72,7 +72,7 @@ This part of the project is all about checking if our analysis might have proble
 ### 3.1. Improvement of the first analysis
 The initial analysis conducted earlier requires refinement. We will enhance the approach by adjusting the revenues using the consumer price index (CPI), facilitating a more meaningful comparison of earnings for movie makers. Regression analyses involving variables such as the number of actors per film versus revenues (or the logarithm of revenues) and ratings will be performed. By the conclusion of this phase, we aim to provide a comprehensive answer to the first research question.
 
-# Part 4: 
+## Part 4: 
 ### 4.1. Chemistry
 At this stage, we will analyze "Which actor pairs have the best and worst chemistry?". Critical decisions must be made due to the necessity of reducing our actor sample. The challenge arises from the fact that, with the need for interactions between actors, the number of potential interactions among n people is [n(n-1)]/2. As n grows, the number of interactions becomes unmanageable. Consequently, we must carefully select the number of actors based on various considerations. It is acknowledged that we require actors who have collaborated sufficiently to generate significant interactions with their peers. However, determining the exact threshold depends on our specific objectives and preferences.
 Then, we can perform the regression of the interaction between actor to explain the revenues and ratings. 
