@@ -46,6 +46,44 @@ Access all datasets on Google Drive using this link: [datasets](https://drive.go
 
 ## Methods
 
+# Methods
+## Part 1 
+# Data Visualization:
+Our first task involves gaining a comprehensive understanding of the data. This entails visualizing various features within the created dataframe. Even features that may not directly impact our analysis should be examined to identify any potential hidden biases. The objective is to create a clear and insightful dataframe that will serve as a valuable resource throughout the entire project.
+
+# Pre-processing:
+During this stage, we will engage in pre-processing tasks to ensure the data is ready for analysis. This includes addressing any missing or inconsistent data, standardizing formats, and preparing the dataset for subsequent analytical steps.
+
+Specifically, we are actively engaged with various datasets, including additional ones aimed at augmenting the richness of our project. Our efforts involve the meticulous removal of data noise, strategically undertaken to refine the dataset for our subsequent investigations. Our approach is characterized by a balance between precision and flexibility, aligning with our project objectives without imposing overly restrictive criteria.
+
+For instance, data points lacking revenue information or featuring a revenue of 0 are systematically excluded from the dataframe. Given that revenue constitutes a foundational element of our analysis, maintaining data integrity is crucial. On the other hand, when faced with missing year values—a constraint for the adjusted revenue metric we plan to utilize—we opt to retain these entries. To address this gap, we substitute the missing year with a coherent and reasoned value, ensuring the overall robustness of our dataset.
+
+
+## Part 2: Exploring Actor-Movie Relationships
+Moving forward in the project, we will delve into a more detailed examination of the relationship between actors and their respective movies.
+
+# Analysis of Actor-Movie Dynamics:
+Each movie involves a varying number of actors, and at this point, we aim to explore the intricacies of this relationship. We will initiate the investigation into the first research question, focusing on the impact of the number of actors per movie on their quality (measured by ratings) and revenue. The logarithm is applied on the revenues at this stage of the analysis. 
+
+This two-part approach ensures a comprehensive exploration of the dataset, setting the stage for subsequent in-depth analyses. 
+
+This part of the project is all about checking if our analysis might have problems or risks that could affect the project. Making sure the project is doable is really important. So, even if this step might seem unimportant, it's not. It's a way to be sure our analysis is strong and won't face unexpected issues that could mess up the whole project.
+
+# DEADLINE MILESTONE 2
+
+# Part 3 :
+# Improvement of the first analysis
+The initial analysis conducted earlier requires refinement. We will enhance the approach by adjusting the revenues using the consumer price index (CPI), facilitating a more meaningful comparison of earnings for movie makers. Regression analyses involving variables such as the number of actors per film versus revenues (or the logarithm of revenues) and ratings will be performed. By the conclusion of this phase, we aim to provide a comprehensive answer to the first research question.
+
+# Part 4 : 
+# Chemistry
+At this stage, we will analyze "Which actor pairs have the best and worst chemistry?". Critical decisions must be made due to the necessity of reducing our actor sample. The challenge arises from the fact that, with the need for interactions between actors, the number of potential interactions among n people is [n(n-1)]/2. As n grows, the number of interactions becomes unmanageable. Consequently, we must carefully select the number of actors based on various considerations. It is acknowledged that we require actors who have collaborated sufficiently to generate significant interactions with their peers. However, determining the exact threshold depends on our specific objectives and preferences.
+Then, we can perform the regression of the interaction between actor to explain the revenues and ratings. 
+
+# Part 5: 
+# Interconnection 
+
+
 ### T-test
 Explanation later.
 
