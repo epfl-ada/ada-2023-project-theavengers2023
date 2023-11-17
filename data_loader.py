@@ -23,6 +23,10 @@ KAGGLE_IMDB_PATH = 'datasets/kaggle_imdb/'
 KAGGLE_TITLE_IMDB = KAGGLE_IMDB_PATH+"/title.basics.tsv/data.tsv"
 KAGGLE_RATING_IMDB = KAGGLE_IMDB_PATH+"/title.ratings.tsv/data.tsv"
 
+#-----------------Kaggle Oscars dataset-----------------#
+OSCAR_PATH = 'datasets/oscars_awards/'
+OSCAR_WINNER = OSCAR_PATH+"the_oscar_award.csv"
+
 
 
 
@@ -117,6 +121,15 @@ def load_rating_imdb_kaggle():
     return df_rating_imdb
 
 
+def load_oscar_winner():
+    df_oscar_winner = pd.read_csv(OSCAR_WINNER, sep=',', header=0, low_memory=False)
+    df_oscar_winner.rename(columns={'film': 'Name', 'year_film': 'Year', 'name' : 'Actor/Actress'}, inplace=True)
+    df_oscar_winner['Year'] = pd.to_numeric(df_oscar_winner['Year'], errors='coerce').astype('Int64')
+    df_oscar_winner['Year'] = df_oscar_winner['Year'].astype('Int64')
+    df_oscar_winner.dropna(subset=['Name'], inplace=True)
+
+    return df_oscar_winner
+
 
 
 
@@ -159,6 +172,16 @@ def get_wikidata_id_translations():
 #check for non-empty and non-NaN entries in a list
 def is_nonempty_list(lst):
     return isinstance(lst, list) and len(lst) > 0 and not any(pd.isna(item) for item in lst)
+
+
+#function that count the number of known actors
+def count_known_actors(actor_list):
+    #if the value is a list (and not NaN or None), return its length
+    if isinstance(actor_list, list):
+        return len(actor_list)
+    #if the value is NaN or None, return 0
+    else:
+        return 0
 
 
 
