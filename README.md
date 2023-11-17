@@ -21,18 +21,6 @@ Our approach aims to highlight redundant connections among certain actors and as
 
 All the datasets can be found on GoogleDrive at the following link [datasets](https://drive.google.com/drive/folders/1kKqpqdOm1F45n19MyqXFOTy_DvmOtbOA). The datsets folder needs to be put on the same folder as the `P2_milestone.ipynb` if you want to run the notebook. The following tree structures shows how each dataset is broken down : 
 
-- /datasets
-  - MoviesSummaries
-    - character.metadata.tsv
-    - movie.metadata.tsv
-  - kaggle_movie
-    - movies_metadata.csv
-    - ratings.csv
-  - kaggle_imdb
-    - title.basics.tsv
-    - title.ratings.tsv
-  - Inflation
-
 ```bash
 /datasets
 ├──  MoviesSummaries
