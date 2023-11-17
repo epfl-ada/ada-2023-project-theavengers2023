@@ -1,4 +1,4 @@
-# Title
+# Cinematic Connections: Unraveling the Influence of Actor Networks on Movie Success
 
 ## Abstract
 Dive into the captivating world of cinema with our unique exploration of the CMU Movie Summary Corpus dataset. Tired of defending your love for the unparalleled duo of Ben Affleck and Matt Damon during your movie nights? You're in the right place! Our mission, should we decide to accept it (we do), takes you on a journey where we dissect connections between actors. Discover how these links influence financial success and film quality, while exploring aspects such as geography, timeline, and film genre. Thus, no more sterile debates about actor ensembles and dive into the data for an in-depth understanding of the seventh art. Get ready for an unprecedented cinematic adventure where the facts speak for themselves!
@@ -6,10 +6,10 @@ Dive into the captivating world of cinema with our unique exploration of the CMU
 ## Research Questions
 Our approach aims to highlight redundant connections among certain actors and assess their financial and qualitative impact on films. This will enable film producers to make strategic decisions and, on the other hand, provide you with the necessary arguments to win your debates with cinephile friends
 
-- Does the rise of the number of famous actors has a significant impact on the revenue and the quality of a movie ?
-- Which actor pairs have the best and worst chimistry ?
-- Can we characterize the interconnetions between the actors ?
-- Vis-a-vis to the previous questions, do we observe different conclusion in function of the geography, timeline, or film gender ?
+- Does an ensemble of renowned actors significantly influence a movie's revenue and critical acclaim?
+- Which actor duos exhibit the most remarkable synergy, and which fall flat?
+- How can we delineate the interconnectedness within actor networks?
+- In relation to the above queries, do geographical, chronological, or genre-specific factors alter our findings?
 
 ## Aditional Datasets
 - "The Movies Dataset" from Kaggle : This dataset ressembles the one of CMU in terms of contents. We used this dataset to enrich the CMU dataset by filling its missing values. This would allow us to increase the robustness of the CMU dataset but also to expand and broadened our scope for analysis. It provided us with the means to conduct deeper and more precise evaluations of the cinematic information at hand.
@@ -19,7 +19,7 @@ Our approach aims to highlight redundant connections among certain actors and as
 - inflation (to fill)
 
 
-All the datasets can be found on GoogleDrive at the following link [datasets](https://drive.google.com/drive/folders/1kKqpqdOm1F45n19MyqXFOTy_DvmOtbOA). The datsets folder needs to be put on the same folder as the `P2_milestone.ipynb` if you want to run the notebook. The following tree structures shows how each dataset is broken down : 
+Access all datasets on Google Drive using this link: [datasets](https://drive.google.com/drive/folders/1kKqpqdOm1F45n19MyqXFOTy_DvmOtbOA). To execute the `P2_milestone.ipynb`  notebook, position the datasets folder in the same directory. Below is the structure of the datasets provided:
 
 ```bash
 /datasets
