@@ -12,15 +12,11 @@ Our approach aims to highlight redundant connections among certain actors and as
 - Vis-a-vis to the previous questions, do we observe different conclusion in function of the geography, timeline, or film gender ?
 
 ## Aditional Datasets
-The Movies Dataset on Kaggle : \url{https://www.kaggle.com/datasets/rounakbanik/the-movies-dataset/data}
-This data is useful to enhance the revenues of the dataset. It contains information about 45'000 movies. Therefore, merging this dataset to the original dataset increases the number of value for the column "Revenu" by 19%. This is a significately improvement and justify the utilisation of this additional dataset. 
+- "The Movies Dataset" from Kaggle : This dataset ressembles the one of CMU in terms of contents. We used this dataset to enrich the CMU dataset by filling its missing values. This would allow us to increase the robustness of the CMU dataset but also to expand and broadened our scope for analysis. It provided us with the means to conduct deeper and more precise evaluations of the cinematic information at hand.
 
-Translation wikiID-IMDID :
-The first additional dataset we wanted to add has the weakness to not use wikipediaID but IMDID. Therefore, we use a additional dataset to be able to merge the original dataframe with the first additional. 
+- "IMDB Dataset" from Kaggle : This dataset offers a wealth of information, including critical metrics like movie ratings and the volume of votes in line with IMDB standards. Such data points are key indicators of a film's success and popularity, providing valuable insights not present in the initial dataset.
 
-World Bank CPI (*ToDo*)
 
-IMDb dataset (*ToDo*)
 
 ## Methods
 
