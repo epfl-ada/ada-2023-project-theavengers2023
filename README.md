@@ -69,7 +69,11 @@ list tasks and deadlines for each task
 
 | Teammate | Contributions |
 |   :---:  |    :---:      |
+|   Majda |               |
 |   Julien |               |
+|   Louis |               |
+|   Nathan |               |
+|   Albias |               |
 
 assign each task to team memebers
 
