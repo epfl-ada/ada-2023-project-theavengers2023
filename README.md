@@ -16,6 +16,11 @@ Our approach aims to highlight redundant connections among certain actors and as
 
 - "IMDB Dataset" from Kaggle : This dataset offers a wealth of information, including critical metrics like movie ratings and the volume of votes in line with IMDB standards. Such data points are key indicators of a film's success and popularity, providing valuable insights not present in the initial dataset.
 
+- inflation (to fill)
+
+
+All the datasets can be found on GoogleDrive at the following link [datasets](https://drive.google.com/drive/folders/1kKqpqdOm1F45n19MyqXFOTy_DvmOtbOA). The datsets folder needs to be put on the same folder as the `P2_milestone.ipynb` if you want to run the notebook.
+
 
 
 ## Methods
