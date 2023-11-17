@@ -34,8 +34,6 @@ During this stage, we will engage in pre-processing tasks to ensure the data is 
 
 Specifically, we are actively engaged with various datasets, including additional ones aimed at augmenting the richness of our project. Our efforts involve the meticulous removal of data noise, strategically undertaken to refine the dataset for our subsequent investigations. Our approach is characterized by a balance between precision and flexibility, aligning with our project objectives without imposing overly restrictive criteria.
 
-For instance, data points lacking revenue information or featuring a revenue of 0 are systematically excluded from the dataframe. Given that revenue constitutes a foundational element of our analysis, maintaining data integrity is crucial. On the other hand, when faced with missing year values—a constraint for the adjusted revenue metric we plan to utilize—we opt to retain these entries. To address this gap, we substitute the missing year with a coherent and reasoned value, ensuring the overall robustness of our dataset.
-
 
 ### Part 2:
 Moving forward in the project, we will delve into a more detailed examination of the relationship between actors and their respective movies.
