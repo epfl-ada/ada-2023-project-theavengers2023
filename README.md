@@ -88,7 +88,7 @@ In order to answer the posed researched questions, we constructed a data analysi
 ## Organization within the team 
 
 | Teammate | Contributions |
-|   :---:  |    :---:      |
+|     |    |
 |   Majda | (1) Worked on the processing of the data, extraction and merging of the datasets.
 (2) Worked on visualization of the raw data.
 (3) Worked on the ranking of the actor pairs and their signicancy.
