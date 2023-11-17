@@ -14,7 +14,7 @@ Our approach aims to highlight redundant connections among certain actors and as
 ## Aditional Datasets
 - "The Movies Dataset" from Kaggle [1]: This dataset ressembles the one of CMU in terms of contents. We used this dataset to enrich the CMU dataset by filling its missing values. This would allow us to increase the robustness of the CMU dataset but also to expand and broadened our scope for analysis. It provided us with the means to conduct deeper and more precise evaluations of the cinematic information at hand.
 
-- "IMDB Dataset" from Kaggle : This dataset offers a wealth of information, including critical metrics like movie ratings and the volume of votes in line with IMDB standards. Such data points are key indicators of a film's success and popularity, providing valuable insights not present in the initial dataset.
+- "IMDB Dataset" from Kaggle [2] : This dataset offers a wealth of information, including critical metrics like movie ratings and the volume of votes in line with IMDB standards. Such data points are key indicators of a film's success and popularity, providing valuable insights not present in the initial dataset.
 
 - inflation (to fill)
 
@@ -69,6 +69,7 @@ Organization within the team: A list of internal milestones up until project Mil
 Questions for TAs (optional): Add here any questions you have for us related to the proposed project.
 
 ## References 
-1. The Movies Dataset. https://www.kaggle.com/datasets/rounakbanik/the-movies-dataset?resource=download&select=movies_metadata.csv
+1. The Movies Dataset. Kaggle. 2017. https://www.kaggle.com/datasets/rounakbanik/the-movies-dataset?resource=download&select=movies_metadata.csv Accessed November 17, 2023.
+2. IMDb Dataset. Kaggle. 2020. https://www.kaggle.com/datasets/ashirwadsangwan/imdb-dataset Accessed November 17, 2023.
 
 
