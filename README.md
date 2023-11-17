@@ -63,10 +63,14 @@ Explanation later.
 
 ## Proposed timeline
 
-Organization within the team: A list of internal milestones up until project Milestone P3.
+list tasks and deadlines for each task
 
+## Organization within the team 
 
-Questions for TAs (optional): Add here any questions you have for us related to the proposed project.
+assign each task to team memebers
+
+## Questions for TAs (optional): 
+Add here any questions you have for us related to the proposed project.
 
 ## References 
 1. [The Movies Dataset](https://www.kaggle.com/datasets/rounakbanik/the-movies-dataset?resource=download&select=movies_metadata.csv). Kaggle. 2017.  Accessed November 17, 2023.
