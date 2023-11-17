@@ -25,7 +25,7 @@ Access all datasets on Google Drive using this link: [datasets](https://drive.go
 
 ## Methods
 
-## Part 1:
+##Part 1:
 ### 1.1. Data Visualization:
 Our first task involves gaining a comprehensive understanding of the data. This entails visualizing various features within the created dataframe. Even features that may not directly impact our analysis should be examined to identify any potential hidden biases. The objective is to create a clear and insightful dataframe that will serve as a valuable resource throughout the entire project.
 
