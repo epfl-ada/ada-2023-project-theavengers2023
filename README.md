@@ -63,7 +63,9 @@ Explanation later.
 
 ## Proposed timeline
 
-list tasks and deadlines for each task
+In order to answer the posed researched questions, we constructed a data analysis pipeline and the pipeline into 3 major parts as detailed in what follows:
+
+
 
 ## Organization within the team 
 
