@@ -70,6 +70,6 @@ Questions for TAs (optional): Add here any questions you have for us related to 
 
 ## References 
 1. [The Movies Dataset](https://www.kaggle.com/datasets/rounakbanik/the-movies-dataset?resource=download&select=movies_metadata.csv). Kaggle. 2017.  Accessed November 17, 2023.
-2. IMDb Dataset. Kaggle. 2020. https://www.kaggle.com/datasets/ashirwadsangwan/imdb-dataset Accessed November 17, 2023.
+2. [IMDb Dataset](https://www.kaggle.com/datasets/ashirwadsangwan/imdb-dataset). Kaggle. 2020. Accessed November 17, 2023.
 
 
