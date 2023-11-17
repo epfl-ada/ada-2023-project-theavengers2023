@@ -99,7 +99,7 @@ In order to answer the posed researched questions, we constructed a data analysi
      Majda :      (1) Worked on the processing of the data, extraction and merging of the datasets.
                   (2) Worked on visualization of the raw data.
                   (3) Worked on the ranking of the actor pairs and their signicancy.
-                  (4) Analysis of the regression|
+                  (4) Analysis of the regression
      ------------------------------------------------------------------------------------------------------------------------
      Julien :     (1) Worked on the processing of the data, extraction and merging of the datasets.       
                   (2) Implementation of the interaction matrix and first analysis with it 
