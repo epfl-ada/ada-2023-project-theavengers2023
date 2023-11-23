@@ -16,7 +16,7 @@ Our approach aims to highlight redundant connections among certain actors and as
 
 - "IMDB Dataset" from Kaggle [2] : This dataset offers a wealth of information, including critical metrics like movie ratings and the volume of votes in line with IMDB standards. Such data points are key indicators of a film's success and popularity, providing valuable insights not present in the initial dataset.
 
-- "Consumer price index (2010=100) - United States" from The World Bank [3] : This time series is useful to be able to compare appropriately the revenue accros the year. Adjusting revenue for inflation over the years is essential to provide a more accurate representation of the revenue made by the movies. This adjustment ensures that revenue figures are comparable across different periods
+- "Consumer price index (2010=100) - United States" from The World Bank [3] : This time series is useful to be able to compare appropriately the revenue accros the year. Adjusting revenue for inflation over the years is essential to provide a more accurate representation of the revenue made by the movies. This adjustment ensures that revenue figures are comparable across different periods (Enhanced by data provided by the Federal Reserve Bank of Minneapolis [4]) 
 
 
 Access all datasets on Google Drive using this link: [datasets](https://drive.google.com/drive/folders/1kKqpqdOm1F45n19MyqXFOTy_DvmOtbOA). To execute the `Project_milestone2.ipynb`  notebook, position the datasets folder in the same directory. 
@@ -127,5 +127,5 @@ In order to answer the posed researched questions, we constructed a data analysi
 1. [The Movies Dataset](https://www.kaggle.com/datasets/rounakbanik/the-movies-dataset?resource=download&select=movies_metadata.csv). Kaggle. 2017.  Accessed November 17, 2023.
 2. [IMDb Dataset](https://www.kaggle.com/datasets/ashirwadsangwan/imdb-dataset). Kaggle. 2020. Accessed November 17, 2023.
 3. ["Consumer price index (2010=100) - United States](https://data.worldbank.org/indicator/FP.CPI.TOTL?end=2022&locations=US&start=1960&view=chart). The World Bank. Accessed November 17, 2023. 
-
+4. [Consumer Price Index, 1913-](https://www.minneapolisfed.org/about-us/monetary-policy/inflation-calculator/consumer-price-index-1913-). the Federal Reserve Bank of Minneapolis, Accessed November 21, 2023 
 
