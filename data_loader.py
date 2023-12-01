@@ -25,12 +25,13 @@ KAGGLE_IMDB_PATH = 'datasets/kaggle_imdb/'
 KAGGLE_TITLE_IMDB = KAGGLE_IMDB_PATH+"/title.basics.tsv/data.tsv"
 KAGGLE_RATING_IMDB = KAGGLE_IMDB_PATH+"/title.ratings.tsv/data.tsv"
 
+#-----------------Oscars dataset----------------------#
+OSCAR_PATH = 'datasets/oscars_awards/'
+OSCAR_WINNER = OSCAR_PATH+"the_oscar_award.csv"
+
 #-----------------Consumer price index dataset-----------------#
 PRICE_INDEX_PATH = 'datasets/consumer_price_index/'
 CONSUMER_PRICE_INDEX = PRICE_INDEX_PATH+"consumer_price_index_2010.csv"
-CONSUMER_PRICE_INDEX1 = PRICE_INDEX_PATH+"CPI.csv"
-
-
 
 
 
@@ -105,6 +106,12 @@ def load_kaggle_movies():
     df_kaggle_movie['Month'] = df_kaggle_movie['Month'].astype('Int64')
     df_kaggle_movie['Day'] = df_kaggle_movie['Day'].astype('Int64')
 
+    #convert the 'budget' column of movie dataset to numeric
+    df_kaggle_movie['budget'] = pd.to_numeric(df_kaggle_movie['budget'], errors='coerce')
+
+    #replace 0 values with NaN
+    df_kaggle_movie['budget'] = df_kaggle_movie['budget'].replace(0, np.nan)
+
     return df_kaggle_movie
 
 
@@ -126,6 +133,55 @@ def load_rating_imdb_kaggle():
     df_rating_imdb = pd.read_csv(KAGGLE_RATING_IMDB, sep='\t', header=0)
 
     return df_rating_imdb
+
+def load_oscar_winner():
+    df_oscar_winner = pd.read_csv(OSCAR_WINNER, sep=',', header=0, low_memory=False)
+    df_oscar_winner.rename(columns={'film': 'Name', 'year_film': 'Year', 'name': 'Actor Name'}, inplace=True)
+    df_oscar_winner['Year'] = pd.to_numeric(df_oscar_winner['Year'], errors='coerce').astype('Int64')
+    df_oscar_winner['Year'] = df_oscar_winner['Year'].astype('Int64')
+    #df_oscar_winner.dropna(subset=['Name'], inplace=True)
+    df_oscar_winner = df_oscar_winner[df_oscar_winner['category'].isin([
+    'ACTOR',
+    'ACTOR IN A LEADING ROLE',
+    'ACTOR IN A SUPPORTING ROLE',
+    'ACTRESS',
+    'ACTRESS IN A LEADING ROLE',
+    'ACTRESS IN A SUPPORTING ROLE'
+    ])]
+
+    df_oscar_winner = df_oscar_winner[['Actor Name', 'winner']]
+
+    df_oscar_winner['Win'] = np.where(df_oscar_winner['winner'] == True, 1, 0)
+    df_oscar_winner['Nomination'] = np.where(df_oscar_winner['winner'] == False, 1, 0)
+    df_oscar_winner = df_oscar_winner.groupby(['Actor Name']).sum()
+
+    #drop winner column
+    df_oscar_winner.drop(columns=['winner'], inplace=True)
+    
+    df_oscar_winner = df_oscar_winner.reset_index()
+
+    #convert oscar winner and nomination to int
+    df_oscar_winner['Win'] = df_oscar_winner['Win'].astype(int)
+    df_oscar_winner['Nomination'] = df_oscar_winner['Nomination'].astype(int)
+
+
+    return df_oscar_winner
+
+
+def load_inflation():
+    consumer_price_inflation = pd.read_csv(CONSUMER_PRICE_INDEX, sep = ',',skiprows=3)
+    inflation_Dollar = consumer_price_inflation.iloc[251] # Select US 
+    inflation_Dollar = inflation_Dollar.iloc[4:-1] # Select only the value : We have to multiply each revenu by 100 and divide by the appropriate rate
+    inflation_Dollar = inflation_Dollar.reset_index()
+    pd_inflation_Dollar = pd.DataFrame(inflation_Dollar)
+    pd_inflation_Dollar.rename(columns={'index': 'Year'}, inplace=True)
+    pd_inflation_Dollar['Year'] = pd_inflation_Dollar['Year'].astype(int)
+
+    #rename column 251 to CPI
+    pd_inflation_Dollar.rename(columns={251: 'CPI'}, inplace=True)
+
+
+    return pd_inflation_Dollar
 
 
 
@@ -182,20 +238,7 @@ def count_known_actors(actor_list):
     else:
         return 0
     
-def load_inflation():
-    consumer_price_inflation = pd.read_csv(CONSUMER_PRICE_INDEX, sep = ',',skiprows=3)
-    consumer_price_inflation = pd.read_csv(CONSUMER_PRICE_INDEX1, sep = ';')
 
-    inflation_Dollar = consumer_price_inflation # Select US 
-    #inflation_Dollar = inflation_Dollar.iloc[4:-1] # Select only the value : We have to multiply each revenu by 100 and divide by the appropriate rate
-    #inflation_Dollar = inflation_Dollar.reset_index()
-    pd_inflation_Dollar = pd.DataFrame(inflation_Dollar)
-    pd_inflation_Dollar = pd_inflation_Dollar[['Year', 'CPI']]
-    #pd_inflation_Dollar.rename(columns={'index': 'Year', 251 : 'CPI'}, inplace=True)
-    #pd_inflation_Dollar['Year'] = pd_inflation_Dollar['Year'].astype(int)
-
-
-    return pd_inflation_Dollar
 
 
 def compute_categorical_variable(df, string_categorie ,number = 5):
