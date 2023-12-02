@@ -31,7 +31,7 @@ OSCAR_WINNER = OSCAR_PATH+"the_oscar_award.csv"
 
 #-----------------Consumer price index dataset-----------------#
 PRICE_INDEX_PATH = 'datasets/consumer_price_index/'
-CONSUMER_PRICE_INDEX = PRICE_INDEX_PATH+"consumer_price_index_2010.csv"
+CONSUMER_PRICE_INDEX = PRICE_INDEX_PATH+"CPI.csv"
 
 
 
@@ -169,19 +169,11 @@ def load_oscar_winner():
 
 
 def load_inflation():
-    consumer_price_inflation = pd.read_csv(CONSUMER_PRICE_INDEX, sep = ',',skiprows=3)
-    inflation_Dollar = consumer_price_inflation.iloc[251] # Select US 
-    inflation_Dollar = inflation_Dollar.iloc[4:-1] # Select only the value : We have to multiply each revenu by 100 and divide by the appropriate rate
-    inflation_Dollar = inflation_Dollar.reset_index()
-    pd_inflation_Dollar = pd.DataFrame(inflation_Dollar)
-    pd_inflation_Dollar.rename(columns={'index': 'Year'}, inplace=True)
-    pd_inflation_Dollar['Year'] = pd_inflation_Dollar['Year'].astype(int)
-
-    #rename column 251 to CPI
-    pd_inflation_Dollar.rename(columns={251: 'CPI'}, inplace=True)
+    consumer_price_inflation = pd.read_csv(CONSUMER_PRICE_INDEX, sep =';')
 
 
-    return pd_inflation_Dollar
+    
+    return consumer_price_inflation
 
 
 
