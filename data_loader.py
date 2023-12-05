@@ -5,6 +5,8 @@ import json
 import re
 import requests
 import sys
+import seaborn as sns
+import matplotlib.pyplot as plt
 ## Define the paths to the datasets
 
 #-----------------CMU dataset-----------------#
@@ -22,6 +24,16 @@ KAGGLE_RATING = KAGGLE_MOVIE_PATH+"ratings.csv"
 KAGGLE_IMDB_PATH = 'datasets/kaggle_imdb/'
 KAGGLE_TITLE_IMDB = KAGGLE_IMDB_PATH+"/title.basics.tsv/data.tsv"
 KAGGLE_RATING_IMDB = KAGGLE_IMDB_PATH+"/title.ratings.tsv/data.tsv"
+
+#-----------------Oscars dataset----------------------#
+OSCAR_PATH = 'datasets/oscars_awards/'
+OSCAR_WINNER = OSCAR_PATH+"the_oscar_award.csv"
+
+#-----------------Consumer price index dataset-----------------#
+PRICE_INDEX_PATH = 'datasets/consumer_price_index/'
+CONSUMER_PRICE_INDEX = PRICE_INDEX_PATH+"CPI.csv"
+
+
 
 
 
@@ -94,6 +106,12 @@ def load_kaggle_movies():
     df_kaggle_movie['Month'] = df_kaggle_movie['Month'].astype('Int64')
     df_kaggle_movie['Day'] = df_kaggle_movie['Day'].astype('Int64')
 
+    #convert the 'budget' column of movie dataset to numeric
+    df_kaggle_movie['budget'] = pd.to_numeric(df_kaggle_movie['budget'], errors='coerce')
+
+    #replace 0 values with NaN
+    df_kaggle_movie['budget'] = df_kaggle_movie['budget'].replace(0, np.nan)
+
     return df_kaggle_movie
 
 
@@ -115,6 +133,48 @@ def load_rating_imdb_kaggle():
     df_rating_imdb = pd.read_csv(KAGGLE_RATING_IMDB, sep='\t', header=0)
 
     return df_rating_imdb
+
+def load_oscar_winner():
+    df_oscar_winner = pd.read_csv(OSCAR_WINNER, sep=',', header=0, low_memory=False)
+    df_oscar_winner.rename(columns={'film': 'Name', 'year_film': 'Year', 'name': 'Actor Name'}, inplace=True)
+    df_oscar_winner['Year'] = pd.to_numeric(df_oscar_winner['Year'], errors='coerce').astype('Int64')
+    df_oscar_winner['Year'] = df_oscar_winner['Year'].astype('Int64')
+    #df_oscar_winner.dropna(subset=['Name'], inplace=True)
+    df_oscar_winner = df_oscar_winner[df_oscar_winner['category'].isin([
+    'ACTOR',
+    'ACTOR IN A LEADING ROLE',
+    'ACTOR IN A SUPPORTING ROLE',
+    'ACTRESS',
+    'ACTRESS IN A LEADING ROLE',
+    'ACTRESS IN A SUPPORTING ROLE'
+    ])]
+
+    df_oscar_winner = df_oscar_winner[['Actor Name', 'winner']]
+
+    df_oscar_winner['Win'] = np.where(df_oscar_winner['winner'] == True, 1, 0)
+    df_oscar_winner['Nomination'] = np.where(df_oscar_winner['winner'] == False, 1, 0)
+    df_oscar_winner = df_oscar_winner.groupby(['Actor Name']).sum()
+
+    #drop winner column
+    df_oscar_winner.drop(columns=['winner'], inplace=True)
+    
+    df_oscar_winner = df_oscar_winner.reset_index()
+
+    #convert oscar winner and nomination to int
+    df_oscar_winner['Win'] = df_oscar_winner['Win'].astype(int)
+    df_oscar_winner['Nomination'] = df_oscar_winner['Nomination'].astype(int)
+
+
+    return df_oscar_winner
+
+
+def load_inflation():
+    consumer_price_inflation = pd.read_csv(CONSUMER_PRICE_INDEX, sep =';')
+
+
+    
+    return consumer_price_inflation
+
 
 
 
@@ -153,6 +213,46 @@ def get_wikidata_id_translations():
 
 
     return pd.DataFrame(data={'tconst': imdb_id, 'Freebase ID': freebase_id})
+
+
+
+#check for non-empty and non-NaN entries in a list
+def is_nonempty_list(lst):
+    return isinstance(lst, list) and len(lst) > 0 and not any(pd.isna(item) for item in lst)
+
+
+#function that count the number of known actors
+def count_known_actors(actor_list):
+    #if the value is a list (and not NaN or None), return its length
+    if isinstance(actor_list, list):
+        return len(actor_list)
+    #if the value is NaN or None, return 0
+    else:
+        return 0
+    
+
+
+
+def compute_categorical_variable(df, string_categorie ,number = 5):
+ # Only show the number biggest movie producer 
+
+    #compute the percentage of occurrences for each country
+    df_percentages = df.value_counts(normalize=True) * 100
+
+    #compute the top 5 categories
+    top = df_percentages.nlargest(number).index
+
+    # Filter the DataFrame to include only the top 5 countries
+    df_top5 = df[df.isin(top)]
+
+
+def transformCat(x):
+    if (x>=0) and (x<10):
+        return '00'+str(x)
+    elif x<=30:
+        return '0'+str(x)
+    else:
+        return ('30+')
 
 
 
