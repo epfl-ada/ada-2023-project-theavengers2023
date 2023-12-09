@@ -1,20 +1,10 @@
 ---
 layout: page
-title: About me
-subtitle: Why you'd want to go on a date with me
+title: About 
+subtitle: A little bit about ourselves
 ---
 
-My name is Inigo Montoya. I have the following qualities:
 
-- I rock a great mustache
-- I'm extremely loyal to my family
+We are 5 students from the Swiss Federal Institute of Lausanne (EPFL) : Majda Mechti, Nathan Monnet, Julien Burri, Louis Vulteau and Albias Havolli. We realized this project in the scope of the [CS-401: Applied data analysis](https://epfl-ada.github.io/teaching/fall2023/cs401/).
 
-What else do you need?
-
-### My story
-
-To be honest, I'm having some trouble remembering right now, so why don't you just watch [my movie](https://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29) and it will answer **all** your questions.
-
-
-
-
+Check out our project on [GitHub.](https://github.com/link-to-your-repo](https://github.com/epfl-ada/ada-2023-project-theavengers2023)https://github.com/epfl-ada/ada-2023-project-theavengers2023)
