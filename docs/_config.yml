@@ -20,7 +20,7 @@ author: Team TheAvengers2023
 ###############################################
 
 navbar-links:
-  About us: "aboutme"
+  About us: "aboutus"
   Ressources:
     - dataset 1: "https://beautifuljekyll.com"
     - dataset 2: "https://www.markdowntutorial.com/"
