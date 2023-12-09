@@ -1091,19 +1091,23 @@ pre {
   }
 
 
-/* Center-align and style the title */
-.site-heading h1 {
-    text-align: center;
-    font-size: 36px; /* Adjust the font size as needed */
+.big-img {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* Your other styles... */
 }
 
-/* Remove the white box around text */
-.intro-header.big-img .site-heading {
-    background-attachment: fixed;
-    background-color: transparent; /* Set background color to transparent */
+.content-section {
+  overflow: auto;
+  margin-top: 20px; /* Or the amount needed to push the content down */
+  background: rgba(255, 255, 255, 0.8); /* Optional: for semi-transparent background */
+  /* Your other styles... */
 }
 
-/* Adjust background image size */
-.intro-header.big-img {
-    background-size: cover;
+.site-heading h1, .site-heading .subheading {
+  overflow: auto;
+  text-shadow: 2px 2px 4px #000000; /* Example text shadow for readability */
+  /* Your other styles... */
 }
