@@ -1110,6 +1110,27 @@ pre {
 }
 
 .content-section {
-  /* This will be your normal content styling */
+  margin-top: 30px;
+}
+
+.site-heading h1 {
+  color: white;
+  position: relative;
+  padding-bottom: 0.5em; /* Spacing for the line */
+}
+
+.site-heading h1::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  height: 1px; /* Line thickness */
+  width: 60%; /* Line width, adjust as necessary */
+  background: white; /* Line color */
+}
+
+.site-heading .subheading {
+  color: white;
 }
 
