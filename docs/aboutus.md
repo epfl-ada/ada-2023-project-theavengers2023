@@ -2,6 +2,9 @@
 layout: page
 title: About us
 subtitle: A little bit about ourselves
+cover-img: /assets/img/epfl.png
+thumbnail-img: /assets/img/epfl.png
+share-img: /assets/img/epfl.png
 ---
 
 
