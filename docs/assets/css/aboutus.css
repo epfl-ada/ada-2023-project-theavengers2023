@@ -1,0 +1,6 @@
+/* Custom CSS for 'About us' page background */
+.about-background {
+  background-image: url('/path/to/your/about-background.jpg');
+  background-size: cover;
+  background-position: center;
+}
