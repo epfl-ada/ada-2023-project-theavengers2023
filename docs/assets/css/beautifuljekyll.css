@@ -1091,44 +1091,6 @@ pre {
   }
 
 
-.header-image {
-  position: relative;
-  text-align: center;
-}
-
-.header-image img {
-  width: 100%; /* to make the image responsive */
-  height: auto; /* to maintain aspect ratio */
-}
-
-.title-container {
-  position: absolute;
-  top: 50%; /* adjust as necessary */
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white; /* or any color you want */
-}
-
-.content-section {
-  margin-top: 30px;
-}
-
-.site-heading h1 {
-  color: white;
-  position: relative;
-  padding-bottom: 0.5em; /* Spacing for the line */
-}
-
-.site-heading h1::after {
-  content: '';
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 0;
-  height: 1px; /* Line thickness */
-  width: 60%; /* Line width, adjust as necessary */
-  background: white; /* Line color */
-}
 
 .site-heading .subheading {
   color: white;
