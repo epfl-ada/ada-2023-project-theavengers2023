@@ -1091,25 +1091,19 @@ pre {
   }
 
 
-/* Define the appearance of your intro header, where the background image will go */
-.intro-header {
-    background-color: transparent; /* Remove the white background */
-    padding: 0; /* Remove padding */
-    margin-bottom: 0; /* Remove margin */
-    color: white;
-}
-
-/* Define the appearance of the content section */
-.content-section {
-  padding-top: 20px; /* Add padding to top and bottom */
-  background-color: #fff; /* Or any other color you prefer */
-}
-
-h1.post-title {
+/* Center-align and style the title */
+.site-heading h1 {
     text-align: center;
     font-size: 36px; /* Adjust the font size as needed */
 }
 
-.intro-text {
-    display: none; 
+/* Remove the white box around text */
+.intro-header.big-img .site-heading {
+    background-attachment: fixed;
+    background-color: transparent; /* Set background color to transparent */
+}
+
+/* Adjust background image size */
+.intro-header.big-img {
+    background-size: cover;
 }
