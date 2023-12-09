@@ -1091,16 +1091,16 @@ pre {
   }
 
 
-  /* Define the appearance of your intro header, where the background image will go */
+/* Define the appearance of your intro header, where the background image will go */
 .intro-header {
-  background: url('assets/img/background_img.png') no-repeat center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
-  text-align: center;
-  padding: 100px 0; /* Adjust padding as needed */
-  color: white; /* Choose color that contrasts well with your background */
+  padding: 50px 0; /* Adjust the padding to increase or decrease the space */
+  background-position: center center; /* Center the background image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Cover the entire space of the element */
+  position: relative; /* Use relative for positioning inner elements absolutely */
+  color: #fff; /* Change color based on your design */
+  text-align: center; /* Center the text */
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6); /* Optional: text shadow for better readability */
 }
 
 /* Define the appearance of the content section */
@@ -1108,6 +1108,4 @@ pre {
   margin-top: 20px;
   padding: 20px; /* Add padding to top and bottom */
   background-color: #fff; /* Or any other color you prefer */
-}
-
 }
