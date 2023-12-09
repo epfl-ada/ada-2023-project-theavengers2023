@@ -1091,23 +1091,25 @@ pre {
   }
 
 
-.big-img {
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  /* Your other styles... */
+.header-image {
+  position: relative;
+  text-align: center;
+}
+
+.header-image img {
+  width: 100%; /* to make the image responsive */
+  height: auto; /* to maintain aspect ratio */
+}
+
+.title-container {
+  position: absolute;
+  top: 50%; /* adjust as necessary */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white; /* or any color you want */
 }
 
 .content-section {
-  overflow: auto;
-  margin-top: 20px; /* Or the amount needed to push the content down */
-  background: rgba(255, 255, 255, 0.8); /* Optional: for semi-transparent background */
-  /* Your other styles... */
+  /* This will be your normal content styling */
 }
 
-.site-heading h1, .site-heading .subheading {
-  overflow: auto;
-  text-shadow: 2px 2px 4px #000000; /* Example text shadow for readability */
-  /* Your other styles... */
-}
