@@ -1,6 +1,6 @@
 /* Custom CSS for 'About us' page background */
 .about-background {
-  background-image: url('/path/to/your/about-background.jpg');
+  background-image: url('/assets/img/epfl.png');
   background-size: cover;
   background-position: center;
 }
