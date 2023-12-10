@@ -18,5 +18,4 @@ Take a peek at this chart right here. Once we adjust for inflation, the old corr
 <iframe src="assets/plots/revenue-plot.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
 <iframe src="assets/plots/budget-plot.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
 
-When looking 
 -------------
