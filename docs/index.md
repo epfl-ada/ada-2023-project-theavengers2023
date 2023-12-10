@@ -13,7 +13,7 @@ Dive into the captivating world of cinema with our unique exploration of the CMU
 ## Money Talks, But Let's Keep It Real
 When we talk box office hits, we gotta make sure we're not comparing the '20s silent flicks to today's 3D extravaganzas without some tweaks. Money's worth more or less depending on when you're spending it, right? That's why we adjust the cash flow from back in the day to match today's dollars. It's like giving old movies a fair fight in today's box office arena.
 
-<iframe src="assets/plots/revenue-budget-plot.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
+<iframe src="assets/plots/revenue-budget-plot.html" width="375px" height="375px" frameborder="0" position="relative">Genre plot</iframe>
 
 
 -------------
