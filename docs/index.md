@@ -26,15 +26,15 @@ In our cinematic saga, 'renowned' isn't just about who’s clinched the most Osc
 
 #### Crafting the Lens: Our Method for Identifying Renowned Actors
 
-##### Step 1: Setting the Stage with Experience 
+###### Step 1: Setting the Stage with Experience 
 
 We start by considering actors who have been in at least 10 movies. Why? This threshold ensures that we're looking at actors with a substantial body of work, indicating both experience and sustained relevance in the industry. It's not just about having a moment in the spotlight; it's about consistent participation in the cinematic world.
 
-##### Step 2:  Mapping the Connections
+###### Step 2:  Mapping the Connections
 
 Next, we delve into the heart of our analysis - the interactions between actors. By mapping out how often actors work together, we're able to see who's really at the center of the industry's collaborative network. This isn't just about appearing on screen; it's about being a part of the creative partnerships that define cinema. We set a threshold for the number of interactions to focus on actors who are not only experienced but also integral to the network. Those below the threshold might have a presence, but they don't yet form crucial links in the industry's collaborative web.
 
-##### Step 3: Weighing Their Influence and the Threshold of Renown
+###### Step 3: Weighing Their Influence and the Threshold of Renown
 
 We integrate three key centrality metrics:
 - **Degree Centrality**: Number of direct connections, indicating an actor's versatility.
