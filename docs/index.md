@@ -24,4 +24,6 @@ Take a peek at this chart right here. Once we adjust for inflation, the old corr
 
 In our cinematic saga, 'renowned' isn't just about who’s clinched the most Oscars or whose films have filled the most seats. We’re turning the camera to capture something different – the power of connections. Instead of counting trophies and tallying ticket sales, we’re spotlighting the stars who truly connect. Our measure of fame? The number of times actors collaborate on screen. It's the repeated partnerships, the shared scenes, and the collective performances that truly make an actor 'renowned' in our story. This fresh angle reveals the unsung heroes of Hollywood, the ones who might not always make headlines but are, in fact, the linchpins of the industry's most beloved tales. Let's roll the film on this network of narratives and uncover the real champions of the silver screen.
 
+#### Crafting the Lens: Our Method for Identifying Renowned Actors
+
 -----------------------------
