@@ -30,7 +30,7 @@ In our cinematic saga, 'renowned' isn't just about who’s clinched the most Osc
 
 We start by considering actors who have been in at least 10 movies. Why? This threshold ensures that we're looking at actors with a substantial body of work, indicating both experience and sustained relevance in the industry. It's not just about having a moment in the spotlight; it's about consistent participation in the cinematic world.
 
-<iframe src="assets/plots/percentage_actors_and_number_movies.html" width="600" height="400">Genre plot</iframe>
+<iframe src="assets/plots/percentage_actors_and_number_movies.html" width="750" height="530" frameborder="0" position="relative">Genre plot</iframe>
 
 
 ###### Step 2:  Mapping the Connections
