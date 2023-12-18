@@ -29,7 +29,7 @@ To mitigate combinatorial explosion, we opt for a single group that maximizes th
 
 - **Country of Production:** United States.
 - **Language:** English.
-- **Budget:** Magnitude equal to $10^8$, corresponding to revenues between $10^7 and 10^8$.
+- **Budget:** Magnitude equal to 10<sup>8</sup>, corresponding to revenues between 10<sup>7</sup> and 10<sup>8</sup>.
 
 We exclude taking into account the year of publication due to the implementation of inflation, which already limits the impact of this variable.
 
