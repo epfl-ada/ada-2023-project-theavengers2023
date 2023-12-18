@@ -21,8 +21,6 @@ Take a peek at this chart right here. Once we adjust for inflation, the old corr
 -----------------------------
 ## Causality between Revenue and Number of Actors
 #### Research Objective:
-
-
 The objective of this research is to investigate the impact of actor count on (log) revenue. However, numerous other variables could potentially confound causality, such as budget, country, language, publication year, and more. Consequently, we intend to analyze this effect conditionally with respect to the primary factors, including country, language, and budget magnitude.
 
 To mitigate combinatorial explosion, we opt for a single group that maximizes the number of observations. The chosen features include:
@@ -32,7 +30,7 @@ To mitigate combinatorial explosion, we opt for a single group that maximizes th
 - **Budget:** Magnitude equal to 10<sup>8</sup>, corresponding to revenues between 10<sup>7</sup> and 10<sup>8</sup>.
 
 We exclude taking into account the year of publication due to the implementation of inflation, which already limits the impact of this variable.
-
+In this analysis, the term "known" refers to actors who are sufficiently famous to be included in the database. By extension, these actors are those playing a significant role in the film.
 
 <iframe src="assets/plots/boxplot_log_revenue.html" width="700" height="480" frameborder="0" position="relative"></iframe>
 
