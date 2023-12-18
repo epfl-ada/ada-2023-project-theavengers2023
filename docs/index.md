@@ -27,8 +27,14 @@ The aim of this study is to examine the influence of the number of actors on log
 To manage the complexity of the analysis, we have chosen a single group that maximizes the number of observations. The selected features are as follows:
 
 Country of production: United States.
+
+
 Language: English.
-Budget: Magnitude equivalent to $10^8$, corresponding to revenues between $10^7 and 10^8$.
+
+
+Budget: Magnitude equivalent to $10^8$, corresponding to revenues between $10^7$ and $10^8$.
+
+
 We have opted to exclude the consideration of the publication year due to the implementation of inflation, which already mitigates the impact of this variable.
 
 <iframe src="docs/assets/plots/boxplot_log_revenue.html" width="700" height="480" frameborder="0" position="relative"></iframe>
