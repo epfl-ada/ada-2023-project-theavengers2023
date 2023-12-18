@@ -31,7 +31,7 @@ Language: English.
 Budget: Magnitude equivalent to $10^8$, corresponding to revenues between $10^7 and 10^8$.
 We have opted to exclude the consideration of the publication year due to the implementation of inflation, which already mitigates the impact of this variable.
 
-<iframe src="/assets/plots/boxplot_log_revenue.html" width="700" height="480" frameborder="0" position="relative"></iframe>
+<iframe src="docs/assets/plots/boxplot_log_revenue.html" width="700" height="480" frameborder="0" position="relative"></iframe>
 
 
 
