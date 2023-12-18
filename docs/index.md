@@ -34,8 +34,7 @@ In this analysis, the term "known" refers to actors who are sufficiently famous 
 
 <iframe src="assets/plots/boxplot_log_revenue.html" width="700" height="480" frameborder="0" position="relative"></iframe>
 
-
-
+We discern a nuanced yet positive correlation between log revenue and the number of actors, albeit not prominently evident. To comprehensively assess this relationship, we will conduct a quantitative evaluation using statistical tests.
 
 
 
