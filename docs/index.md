@@ -22,7 +22,8 @@ Take a peek at this chart right here. Once we adjust for inflation, the old corr
 
 ### A New Measure of Stardom
 
-In our cinematic saga, 'renowned' isn't just about who’s clinched the most Oscars or whose films have filled the most seats. We’re turning the camera to capture something different – the power of connections. Instead of counting trophies and tallying ticket sales, we’re spotlighting the stars who truly connect. Our measure of fame? The number of times actors collaborate on screen. It's the repeated partnerships, the shared scenes, and the collective performances that truly make an actor 'renowned' in our story. This fresh angle reveals the unsung heroes of Hollywood, the ones who might not always make headlines but are, in fact, the linchpins of the industry's most beloved tales. Let's roll the film on this network of narratives and uncover the real champions of the silver screen.
+In the context of our cinematic project, we aim to assess the significance of interactions among various actors. The objective is to quantify the value or impact of these interactions. To pinpoint noteworthy actor pairs, we adopted the following approach:
+
 
 #### Crafting the Lens: Our Method for Identifying Renowned Actors
 
@@ -33,19 +34,16 @@ We start by considering actors who have been in at least 10 movies. Why? This th
 <iframe src="assets/plots/percentage_actors_and_number_movies.html" width="700" height="480" frameborder="0" position="relative"></iframe>
 
 
-###### Step 2:  Mapping the Connections
+###### Step 2: Filtration of Relevant Movies
 
-Next, we delve into the heart of our analysis - the interactions between actors. By mapping out how often actors work together, we're able to see who's really at the center of the industry's collaborative network. This isn't just about appearing on screen; it's about being a part of the creative partnerships that define cinema. We set a threshold for the number of interactions to focus on actors who are not only experienced but also integral to the network. Those below the threshold might have a presence, but they don't yet form crucial links in the industry's collaborative web.
+Our goal is to enhance your movie night. Therefore, it is interesting to filter the films that are part of our dataframe. The criteria were as follows: The movie must have been translated or created in English. It must have been released after 1980. Thus, we now have a list of actors who have a role in one of the preselected films.
+
+###### Step 3:  Mapping the Connections
+
+Next, we delve into the heart of our analysis - the interactions between actors. By mapping out how often actors work together, we're able to see who's really at the center of the industry's collaborative network. This isn't just about appearing on screen; it's about being a part of the creative partnerships that define cinema. We set a threshold for the number of interactions to focus on actors who are not only experienced but also integral to the network. Those below the threshold might have a presence, but they don't yet form crucial links in the industry's collaborative web. Therefore, we decide to continue with pairs of actor that played in more than 5 movies together.
 
 <iframe src="assets/plots/interactions_and_actors.html" width="750" height="530" frameborder="0" position="relative"></iframe>
 
-###### Step 3: Weighing Their Influence and the Threshold of Renown
 
-We integrate three key centrality metrics:
-- **Degree Centrality**: Number of direct connections, indicating an actor's versatility.
-- **Betweenness Centrality**: Actor's role as a bridge within the network, showcasing their ability to link diverse cinematic groups.
-- **Closeness Centrality**: How close an actor is to all others, highlighting their accessibility in the industry.
-
-By combining these metrics, we get a weighted centrality score that captures not just how connected an actor is, but how influential they are in bridging different parts of the industry and maintaining close ties across the network. This comprehensive measure allows us to identify the true linchpins of the cinematic universe. Finally, we apply a threshold to the weighted centrality scores. This step ensures that we're spotlighting those who are not just connected, but truly central to the fabric of the film industry.
-
+Finally, we have a list of useful actors who have a significant interaction with at least one other member of the list. We filter the list of films once again for our analysis. Indeed, we remove the films where none of the selected actors plays a role. Our database is now ready to reveal all the secrets that unveil which actor pairs add the most value to a film.
 -----------------------------
