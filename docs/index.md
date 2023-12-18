@@ -46,4 +46,5 @@ Next, we delve into the heart of our analysis - the interactions between actors.
 
 
 Finally, we have a list of useful actors who have a significant interaction with at least one other member of the list. We filter the list of films once again for our analysis. Indeed, we remove the films where none of the selected actors plays a role. Our database is now ready to reveal all the secrets that unveil which actor pairs add the most value to a film.
+
 -----------------------------
