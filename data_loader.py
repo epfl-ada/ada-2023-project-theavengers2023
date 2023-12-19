@@ -7,6 +7,10 @@ import requests
 import sys
 import seaborn as sns
 import matplotlib.pyplot as plt
+from PIL import Image, ImageDraw
+from matplotlib.offsetbox import AnnotationBbox, OffsetImage
+import math
+
 ## Define the paths to the datasets
 
 #-----------------CMU dataset-----------------#
@@ -253,6 +257,44 @@ def transformCat(x):
         return '0'+str(x)
     else:
         return ('30+')
+    
+
+def get_ab_from_actor(node, node_size, pos):
+    # read the image file for this node
+    img = Image.open(f'./img/{node}.jpg').convert('RGBA')
+
+    # Resize the image to a square shape
+    side_length = min(img.size)
+    # crop the image to a square
+    img = img.crop(((img.width - side_length) // 2,
+                    (img.height - side_length) // 2,
+                    (img.width + side_length) // 2,
+                    (img.height + side_length) // 2))
+    
+    # Resize the image to the desired dimensions (800x800 or other)
+    #img = img.resize((800, 800), Image.ANTIALIAS)
+    radius = math.sqrt(node_size / math.pi)
+    diameter = radius * 2
+
+    img = img.resize((int(diameter), int(diameter)), Image.ANTIALIAS)
+    
+    # Create a mask for the circular crop
+    mask = Image.new('L', img.size, 0)
+    draw = ImageDraw.Draw(mask)
+    draw.pieslice([(0, 0), img.size], start=0, end=360, fill=255)
+    
+    # Apply the mask to the image to create the circular effect
+    img.putalpha(mask)
+    
+    # Create an OffsetImage object for the image 
+    image_offset = OffsetImage(img, zoom=1)
+    
+    # Create an AnnotationBbox object for the image
+    ab = AnnotationBbox(image_offset, pos[node], frameon=False)
+    
+    return ab
+
+
 
 
 
