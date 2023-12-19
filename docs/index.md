@@ -19,7 +19,7 @@ Take a peek at this chart right here. Once we adjust for inflation, the old corr
 <iframe src="assets/plots/budget-plot.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
 
 -----------------------------
-## Causality between Revenue and Number of Actors
+### Causality between Revenue and Number of Actors
 #### Research Objective:
 The objective of this research is to investigate the impact of actor count on (log) revenue. 
 It seems like we must have the following causality : 
@@ -51,7 +51,7 @@ In this analysis, the term "known" refers to actors who are sufficiently famous 
 We discern a nuanced yet positive correlation between log revenue and the number of actors, albeit not prominently evident. To comprehensively assess this relationship, we will conduct a quantitative evaluation using statistical tests.
 
 
-
+-----------------------------
 ### A New Measure of Stardom
 
 In the context of our cinematic project, we aim to assess the significance of interactions among various actors. The objective is to quantify the value or impact of these interactions. To pinpoint noteworthy actor pairs, we adopted the following approach:
