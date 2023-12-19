@@ -29,7 +29,7 @@ It seems like we must have the following causality :
 However, numerous other variables could potentially confound causality, such as budget, country, language, publication year, and more. 
 We could have something that looks more like this :
 
-<iframe src="assets/plots/Causal_Diagram_second.html" width="350" height="250" frameborder="0" style="display: block; margin: auto;"></iframe>
+<iframe src="assets/plots/Causal_Diagram_second.html" width="350" height="280" frameborder="0" style="display: block; margin: auto;"></iframe>
 
 Consequently, we intend to analyze this effect conditionally with respect to the primary factors, including country, language, and budget 
 magnitude.
