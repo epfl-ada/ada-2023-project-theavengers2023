@@ -80,19 +80,31 @@ Useful for the understandability and visualization of the interaction between ac
 
 In order to answer the posed researched questions, we constructed a data analysis pipeline and the pipeline into 3 major parts as detailed in what follows:             
 
-17.11.2023 : Milestone 2 : End of part 1 & 2
 
+```
+.
+├── 23.11.22 - 
+│  
+├── 25.11.22 - 
+│  
+├── 27.11.22 - 
+│  
+├── 29.11.22 - 
+│  
+├── 02.12.22 - Homework 2 deadline
+│    
+├── 05.12.22 - 
+│  
+├── 17.12.22 - Develop draft for data story
+│  
+├── 20.12.22 - Finalize code implementations and visualizations
+│  
+├── 21.12.22 - Finalize data story
+│  
+└── 22.12.22 - Milestone 3 deadline
 
-24.11.2023 : Part 3
+```
 
-
-08.12.2023 : Part 4
-
-
-15.12.2023 : Part 5
-
-
-22.12.2023 : Milestone 3: Part 6
 
 
 
