@@ -21,7 +21,16 @@ Take a peek at this chart right here. Once we adjust for inflation, the old corr
 -----------------------------
 ## Causality between Revenue and Number of Actors
 #### Research Objective:
-The objective of this research is to investigate the impact of actor count on (log) revenue. However, numerous other variables could potentially confound causality, such as budget, country, language, publication year, and more. Consequently, we intend to analyze this effect conditionally with respect to the primary factors, including country, language, and budget magnitude.
+The objective of this research is to investigate the impact of actor count on (log) revenue. 
+It seems like we must have the following causality : 
+<iframe src="assets/plots/Causal_Diagram_first.html" width="700" height="480" frameborder="0" position="relative"></iframe>
+
+However, numerous other variables could potentially confound causality, such as budget, country, language, publication year, and more. 
+We could have something that looks more like this :
+
+-insert little diagram
+
+Consequently, we intend to analyze this effect conditionally with respect to the primary factors, including country, language, and budget magnitude.
 
 To mitigate combinatorial explosion, we opt for a single group that maximizes the number of observations. The chosen features include:
 
@@ -63,5 +72,7 @@ Next, we delve into the heart of our analysis - the interactions between actors.
 Finally, we have a list of useful actors who have a significant interaction with at least one other member of the list. We filter the list of films once again for our analysis. Indeed, we remove the films where none of the selected actors plays a role. Our database is now ready to reveal all the secrets that unveil which actor pairs add the most value to a film.
 
 <iframe src="assets/plots/interactions_network.html" width="750px" height="530px" frameborder="0" position="relative"></iframe>
+
+The graph above corresponds to a network containing the 69 actors that will be useful for quantifying the power of interactions. Additional information can be obtained by hovering over the photo of an actor. The lines connecting two actors indicate an existing relationship between them. What we can observe is a cluster of significant points. These actors have the particularity of having worked together in the saga (Harry Potter), consisting of 8 films. The actors positioned more centrally in the network are those who interact with several different peers. Take, for example, Steve Buscemi, an actor with an extensive filmography in various cinematic genres, from comedy to action films, enabling him to collaborate with a significant number of his peers.
 
 -----------------------------
