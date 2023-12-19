@@ -142,5 +142,5 @@ In order to answer the posed researched questions, we constructed a data analysi
 2. [IMDb Dataset](https://www.kaggle.com/datasets/ashirwadsangwan/imdb-dataset). Kaggle. 2020. Accessed November 17, 2023.
 3. ["Consumer price index (2010=100) - United States](https://data.worldbank.org/indicator/FP.CPI.TOTL?end=2022&locations=US&start=1960&view=chart). The World Bank. Accessed November 17, 2023. 
 4. [Consumer Price Index, 1913-](https://www.minneapolisfed.org/about-us/monetary-policy/inflation-calculator/consumer-price-index-1913-). the Federal Reserve Bank of Minneapolis, Accessed November 21, 2023
-5. [The Oscar Award, 1927 - 2023](https://www.kaggle.com/datasets/unanimad/the-oscar-award/data) Kaggle, Accessed November 28, 2023. 
+5. [The Oscar Award, 1927 - 2023](https://www.kaggle.com/datasets/unanimad/the-oscar-award/data) Kaggle. 2023. Accessed November 28, 2023. 
 
