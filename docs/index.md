@@ -76,7 +76,7 @@ Next, we delve into the heart of our analysis - the interactions between actors.
 
 Finally, we have a list of useful actors who have a significant interaction with at least one other member of the list. We filter the list of films once again for our analysis. Indeed, we remove the films where none of the selected actors plays a role. Our database is now ready to reveal all the secrets that unveil which actor pairs add the most value to a film.
 
-<iframe src="assets/plots/interactions_network.html" width="750px" height="530px" frameborder="0" position="relative"></iframe>
+<iframe src="assets/plots/interactions_network.html" width="350px" height="530px" frameborder="0" position="relative"></iframe>
 
 The graph above corresponds to a network containing the 69 actors that will be useful for quantifying the power of interactions. Additional information can be obtained by hovering over the photo of an actor. The lines connecting two actors indicate an existing relationship between them. What we can observe is a cluster of significant points. These actors have the particularity of having worked together in the saga (Harry Potter), consisting of 8 films. The actors positioned more centrally in the network are those who interact with several different peers. Take, for example, Steve Buscemi, an actor with an extensive filmography in various cinematic genres, from comedy to action films, enabling him to collaborate with a significant number of his peers.
 
