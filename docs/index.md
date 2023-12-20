@@ -52,8 +52,18 @@ We discern a nuanced yet positive correlation between log revenue and the number
 
 #### Method : Linear Regression
 
+The initial quantitative study involved performing a linear regression, examining the relationship between the number of actors with significant roles in a film and the corresponding adjusted revenue.
 
 <iframe src="assets/plots/Beta_Values_and_confidence_intervals.html" width="800" height="500" frameborder="0" position="relative"></iframe>
+
+Initially, the entire set of independent variables displayed significance in predicting the adjusted log-revenue (P(F-statistic) < 0.05). However, there was a decline in the model's predictive capacity, evidenced by a reduction in the $R^2$ value from $0.088$ in the previous model to $R^2 = 0.054$.
+
+Nevertheless, two significant statistical issues surfaced:
+
+Some dummy variables had a low number of observations.
+While the overall model was significant, none of the independent variables exhibited a significant impact (p-values > 0.05), indicating a high level of correlation among the variables.
+To address these challenges and avoid drawing conclusions from an inconsistent model, our plan is to group the independent variables to reduce correlation.
+
 <iframe src="assets/plots/Distribution_of_the_R2_from_the_random_forest.html" width="800" height="500" frameborder="0" position="relative"></iframe>
 <iframe src="assets/plots/Distribution_of_the_R2_from_the_linear_regression.html" width="800" height="500" frameborder="0" position="relative"></iframe>
 <iframe src="assets/plots/Feature_Importances_using_MDI.html" width="800" height="500" frameborder="0" position="relative"></iframe>
