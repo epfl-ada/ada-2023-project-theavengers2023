@@ -294,9 +294,53 @@ def get_ab_from_actor(node, node_size, pos):
     
     return ab
 
+def is_US(x):
+    if len(x)==0:
+        return False
+    else:
+        if "United States of America" in x:
+            return True
+        else:
+            return False
+def is_Eng(x):
+    if len(x)==0:
+        return False
+    else:
+        if "English Language" in x:
+            return True
+        else:
+            return False
+def budget_magnitude(x):
+    return math.ceil(np.log10(x))
 
+#Function used for the creation of the dummy variables
 
-
+def is_Country(list_country,country):
+    if len(list_country)==0:
+        return False
+    else:
+        if country in list_country:
+            return True
+        else:
+            return False
+        
+def is_Genre(list_genre,genre):
+    if len(list_genre)==0:
+        return False
+    else:
+        if genre in list_genre:
+            return True
+        else:
+            return False    
+        
+def is_Lang(list_lang,lang):
+    if len(list_lang)==0:
+        return False
+    else:
+        if lang in list_lang:
+            return True
+        else:
+            return False
 
 
 
