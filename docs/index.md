@@ -56,7 +56,7 @@ The initial quantitative study involved performing a linear regression, examinin
 
 <iframe src="assets/plots/Beta_Values_and_confidence_intervals.html" width="800" height="500" frameborder="0" position="relative"></iframe>
 
-Initially, the entire set of independent variables displayed significance in predicting the adjusted log-revenue (P(F-statistic) < 0.05). However, there was a decline in the model's predictive capacity, evidenced by a reduction in the $R^2$ value from $0.088$ in the previous model to $R^2 = 0.054$.
+Initially, the entire set of independent variables displayed significance in predicting the adjusted log-revenue (P(F-statistic) < 0.05). However, there was a decline in the model's predictive capacity, evidenced by a reduction in the R<sup>2</sup> value from 0.088 in the previous model to R<sup>2</sup> = 0.054$.
 
 Nevertheless, two significant statistical issues surfaced:
 
