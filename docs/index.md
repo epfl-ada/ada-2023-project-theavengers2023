@@ -53,7 +53,7 @@ We discern a nuanced yet positive correlation between log revenue and the number
 <iframe src="assets/plots/Beta_Values_and_confidence_intervals.html" width="800" height="500" frameborder="0" position="relative"></iframe>
 <iframe src="assets/plots/Distribution_of_the_R2_from_the_random_forest.html" width="800" height="500" frameborder="0" position="relative"></iframe>
 <iframe src="assets/plots/Distribution_of_the_R2_from_the_linear_regression.html" width="800" height="500" frameborder="0" position="relative"></iframe>
-
+<iframe src="assets/plots/Feature_Importances_using_MDI.html" width="800" height="500" frameborder="0" position="relative"></iframe>
 -----------------------------
 ### A New Measure of Stardom
 
