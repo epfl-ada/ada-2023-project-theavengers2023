@@ -76,8 +76,6 @@ Within our dataset, numerous categorical and numerical variables capture our int
 
 For instance, in the "Genre" variable, which includes categories such as {Romantic, Action, Horror,...}, we create new dummy variables like dummy_romantic ={0,1}, dummy_action ={0,1}, dummy_horror ={0,1},...
 
-This methodology is then extended to the variables Genre, Country of production, and Language.
-##### Dummy - Country variables
 
 <iframe src="assets/plots/Distribution_of_the_R2_from_the_random_forest.html" width="800" height="500" frameborder="0" position="relative"></iframe>
 <iframe src="assets/plots/Distribution_of_the_R2_from_the_linear_regression.html" width="800" height="500" frameborder="0" position="relative"></iframe>
