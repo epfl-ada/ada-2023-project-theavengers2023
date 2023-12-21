@@ -93,6 +93,10 @@ Aditionnally, we also plot the most important features using Mean Decrease in Im
 We can see that in fact A COMPLETER!!!
 
 -----------------------------
+### Correaltion between features 
+<iframe src="assets/plots/Correlation_Matrix.html" width="800" height="500" frameborder="0" position="relative"></iframe>
+
+-----------------------------
 ### A New Measure of Stardom
 
 In the context of our cinematic project, we aim to assess the significance of interactions among various actors. The objective is to quantify the value or impact of these interactions. To pinpoint noteworthy actor pairs, we adopted the following approach:
@@ -122,6 +126,8 @@ The endgame of our selection process yields a curated list of actors whose inter
 <iframe src="assets/plots/interactions_network.html"  width="100%" height="700" frameborder="0" position="relative"></iframe>
 
 The graph above corresponds to a network containing the 69 actors that will be useful for quantifying the power of interactions. Additional information can be obtained by hovering over the photo of an actor. The lines connecting two actors indicate an existing relationship between them. What we can observe is a cluster of significant points. These actors have the particularity of having worked together in the saga (Harry Potter), consisting of 8 films. The actors positioned more centrally in the network are those who interact with several different peers. Take, for example, Steve Buscemi, an actor with an extensive filmography in various cinematic genres, from comedy to action films, enabling him to collaborate with a significant number of his peers.
+
+### Building the Interaction matrix 
 
 -----------------------------
 ### Forecasting
