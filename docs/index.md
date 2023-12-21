@@ -74,13 +74,13 @@ The objective of this section is to construct models enabling us to forecast mov
 Within our dataset, numerous categorical and numerical variables capture our interest. Consequently, we generate dummy variables for each categorical variable.
 
 Now, we have the following method, we iterate 1000 times. Each iteration unfolds as follows :
-We divide our dataset in train/test set, a fundamental step for model evaluation. We perform an OLS regression with the train set. Then, we calculate the out-of-sample (with the test set) \(R^2\). This metric gauges how well our model generalizes to unseen data. After each iteration, we meticulously document the out-of-sample R^2, allowing us to construct a distribution. This distribution gives a great picture of the model's performance variability. 
-
-The distribution of R^2 values provides us with valuable insights into the stability and reliability of our forecasting models.Indeed, by the central limit theorem it should follow : A COMPLETER !!!
-
+We divide our dataset in train/test set, a fundamental step for model evaluation. We perform an OLS regression with the train set. Then, we calculate the out-of-sample (with the test set) $R^2$. This metric gauges how well our model generalizes to unseen data. After each iteration, we meticulously document the out-of-sample $R^2$, allowing us to construct a distribution. This distribution gives a great picture of the model's performance variability. Below is our resulting plot :
 
 A CHANGER !!!!
 <iframe src="assets/plots/Distribution_of_the_R2_from_the_linear_regression.html" width="800" height="500" frameborder="0" position="relative"></iframe>
+
+The distribution of $R^2$ values provides us with valuable insights into the stability and reliability of our forecasting models.Indeed, by the central limit theorem it should follow : A COMPLETER !!!
+
 
 A CHANGER !!!
 <iframe src="assets/plots/Distribution_of_the_R2_from_the_random_forest.html" width="800" height="500" frameborder="0" position="relative"></iframe>
