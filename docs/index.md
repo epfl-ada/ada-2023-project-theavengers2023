@@ -93,7 +93,7 @@ Aditionnally, we also plot the most important features using Mean Decrease in Im
 We can see that in fact A COMPLETER!!!
 
 -----------------------------
-### Correaltion between features 
+### Correlation between features 
 <iframe src="assets/plots/Correlation_Matrix.html" width="800" height="500" frameborder="0" position="relative"></iframe>
 
 -----------------------------
