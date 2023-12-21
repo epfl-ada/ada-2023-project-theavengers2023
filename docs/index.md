@@ -73,6 +73,8 @@ We conclude that within the selected movie group sharing the same language, coun
 The objective of this section is to construct models enabling us to forecast movie revenue by considering dependent variables such as the number of actors, the movie genre, the country of production, and other relevant factors. 
 Within our dataset, numerous categorical and numerical variables capture our interest. Consequently, we generate dummy variables for each categorical variable.
 
+#### Method 1 : Monte Carlo iterations with Linear regressions
+
 Now, we have the following method, we iterate 1000 times. Each iteration unfolds as follows :
 We divide our dataset in train/test set, a fundamental step for model evaluation. We perform an OLS regression with the train set. Then, we calculate the out-of-sample (with the test set) R2. This metric gauges how well our model generalizes to unseen data. After each iteration, we meticulously document the out-of-sample R2, allowing us to construct a distribution. This distribution gives a great picture of the model's performance variability. Below is our resulting plot :
 
@@ -81,20 +83,27 @@ We divide our dataset in train/test set, a fundamental step for model evaluation
 
 The distribution of R2 values provides us with valuable insights into the stability and reliability of our forecasting models.Indeed, by the central limit theorem it should follow : A COMPLETER !!!
 
+#### Method 2 : Iterations using Random Forest
+
 After having plotted the distribution of R2 obtained by doing linear regressions, we try to assess the performance of the model by using random forests and also looking at the distribution of the R2. We begin by conducting a training using the function GridSearch CV(K=5). This function is used to optimize the hyperparameters of our RandomForest model. 
 We also iterate 1000 times this method and we split the set in train/test set at each iteration. We perform a Random Forest with the train set. Then, we calculate the out-of-sample (with the test set) R2. We compute after that the distribution of the R2 within all the iterations of the Random Forests :
 
 <iframe src="assets/plots/Distribution_of_the_R2_from_the_random_forest.html" width="800" height="500" frameborder="0" position="relative"></iframe>
 
 We can clearly see also that the distribution follows : A COMPLETER !!! which assess a great stability of our model. 
-Aditionnally, we also plot the most important features using Mean Decrease in Impurity (MDI). The higher the MDI, the greater the feature is at making predictions :
+Aditionnally, we also plot the most important features using Mean Decrease in Impurity (MDI). The higher the MDI, the better the feature is at making predictions :
 <iframe src="assets/plots/Feature_Importances_using_MDI.html" width="800" height="500" frameborder="0" position="relative"></iframe>
 
 We can see that in fact A COMPLETER!!!
 
------------------------------
-### Correlation between features 
+
+#### Correlation between the most important features
+
+Here is a heatmap reprensenting the correlation between each of the most important variables obtained previously from MDI :
 <iframe src="assets/plots/Correlation_Matrix.html" width="800" height="500" frameborder="0" position="relative"></iframe>
+We can see two notable information from this :
+- There is a high positive correlation between English speaking movies and movies released in the USA (correlation = 0.556) which is seems pretty logical.
+- There is a high negative correlation between Indie movies (independent movies) and the adjusted budget (correlation = -0.2) which is also predictable since independent movies tend to have a lower budget. 
 
 -----------------------------
 ### A New Measure of Stardom
