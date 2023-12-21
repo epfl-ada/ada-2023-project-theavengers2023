@@ -36,7 +36,7 @@ We used T-tests to compare the performance metrics of the renowned and non renow
 ### Random forest
 We used a rand
 
-# Network analysis 
+### Network analysis 
 We conducted a Network analysis in order to filter our renowned actors. We based our analysis on the number of interactions between an actor with all the others ones. 
 
 ### Part 1:
