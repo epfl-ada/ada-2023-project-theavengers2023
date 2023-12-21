@@ -76,23 +76,21 @@ Within our dataset, numerous categorical and numerical variables capture our int
 Now, we have the following method, we iterate 1000 times. Each iteration unfolds as follows :
 We divide our dataset in train/test set, a fundamental step for model evaluation. We perform an OLS regression with the train set. Then, we calculate the out-of-sample (with the test set) R2. This metric gauges how well our model generalizes to unseen data. After each iteration, we meticulously document the out-of-sample R2, allowing us to construct a distribution. This distribution gives a great picture of the model's performance variability. Below is our resulting plot :
 
-A CHANGER !!!!
+
 <iframe src="assets/plots/metlenomquetuveux.html" width="800" height="500" frameborder="0" position="relative"></iframe>
 
 The distribution of R2 values provides us with valuable insights into the stability and reliability of our forecasting models.Indeed, by the central limit theorem it should follow : A COMPLETER !!!
 
-After having plotted the distribution of R2 obtained by doing linear regressions, we try to assess the performance of the model by using random forests and also looking at the distribution of the R2.
+After having plotted the distribution of R2 obtained by doing linear regressions, we try to assess the performance of the model by using random forests and also looking at the distribution of the R2. We begin by conducting a training using the function GridSearch CV(K=5). This function is used to optimize the hyperparameters of our RandomForest model. 
+We also iterate 1000 times this method and we split the set in train/test set at each iteration. We perform a Random Forest with the train set. Then, we calculate the out-of-sample (with the test set) R2. We compute after that the distribution of the R2 within all the iterations of the Random Forests :
 
-We begin by conducting a training using the function GridSearch CV(K=5). This function is used to optimize the hyperparameters of our RandomForest model. 
-
-We also iterate 1000 times this method :  
-We split the set in train/test set. We perform a Random Forest with the train set. Then, we calculate the out-of-sample (with the test set) R2. We compute after that the distribution of the R2.
-
-A CHANGER !!!
 <iframe src="assets/plots/Distribution_of_the_R2_from_the_random_forest.html" width="800" height="500" frameborder="0" position="relative"></iframe>
 
-A CHANGER !!!
+We can clearly see also that the distribution follows : A COMPLETER !!! which assess a great stability of our model. 
+Aditionnally, we also plot the most important features using Mean Decrease in Impurity (MDI). The higher the MDI, the greater the feature is at making predictions :
 <iframe src="assets/plots/Feature_Importances_using_MDI.html" width="800" height="500" frameborder="0" position="relative"></iframe>
+
+We can see that in fact A COMPLETER!!!
 
 -----------------------------
 ### A New Measure of Stardom
