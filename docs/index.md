@@ -21,13 +21,14 @@ Take a peek at this chart right here. Once we adjust for inflation, the old corr
 -----------------------------
 ### Causality between Revenue and Number of Actors
 #### Research Objective:
-The objective of this research is to investigate the impact of actor count on (log) revenue. 
-It seems like we must have the following causality : 
+
+In our research, we set out to investigate the relationship between the number of actors in a movie and its (log) revenue. Our initial causal diagram suggests a straightforward link, but we recognize the potential influence of confounding variables like budget, country, language, and more. 
+
+Indeed, it seems like we must have the following straightforward causality : 
 
 <iframe src="assets/plots/Causal_Diagram_first.html" width="350" height="180" frameborder="0" style="display: block; margin: auto;"></iframe>
 
-However, numerous other variables could potentially confound causality, such as budget, country, language, publication year, and more. 
-We could have something that looks more like this :
+However, numerous other variables could potentially confound causality, such as budget. Consequently, we could have a diagram that considers budget as a confounder :
 
 <iframe src="assets/plots/Causal_Diagram_second.html" width="350" height="280" frameborder="0" style="display: block; margin: auto;"></iframe>
 
@@ -44,11 +45,11 @@ To mitigate combinatorial explosion, we opt for the group that maximizes the num
 - **Budget:** Magnitude equal to 10<sup>8</sup>, corresponding to revenues between 10<sup>7</sup> and 10<sup>8</sup>.
 
 We exclude taking into account the year of publication due to the implementation of inflation, which already limits the impact of this variable.
-In this analysis, the term "known" refers to actors who are sufficiently famous to be included in the database. By extension, these actors are those playing a significant role in the film.
+In this analysis, the term "known" refers to actors who are sufficiently famous to be included in the database. By extension, these actors are those playing a significant role in the film. We started with a visual exploration using boxplots :
 
 <iframe src="assets/plots/boxplot_log_revenue.html" width="700" height="480" frameborder="0" position="relative"></iframe>
 
-We discern a nuanced yet positive correlation between log revenue and the number of actors, albeit not prominently evident. To comprehensively assess this relationship, we will conduct a quantitative evaluation using statistical tests.
+We discern a nuanced yet positive correlation between log revenue and the number of actors, albeit not prominently evident. To comprehensively assess this relationship, we will conduct a deeper quantitative evaluation using statistical tests.
 
 #### Method : Linear Regression
 
@@ -56,13 +57,27 @@ The initial quantitative study involved performing a linear regression, examinin
 
 <iframe src="assets/plots/Beta_Values_and_confidence_intervals.html" width="800" height="500" frameborder="0" position="relative"></iframe>
 
-Initially, the entire set of independent variables displayed significance in predicting the adjusted log-revenue (P(F-statistic) < 0.05). 
+Initially, the entire set of independent variables displayed significance in predicting the adjusted log-revenue (P(F-statistic) < 0.05). However, challenges emerged, such as low observations for some dummy variables. While the overall model was significant, none of the independent variables exhibited a significant impact (p-values > 0.05), indicating a high level of correlation among the variables.
 
-Nevertheless, two significant statistical issues surfaced:
+To address these challenges and avoid drawing conclusions from an inconsistent model, our plan is to group the independent variables to reduce correlation.We aggregate the independent variables into groups of 5 actors, we obtain the following beta parameters :
 
-Some dummy variables had a low number of observations.
-While the overall model was significant, none of the independent variables exhibited a significant impact (p-values > 0.05), indicating a high level of correlation among the variables.
-To address these challenges and avoid drawing conclusions from an inconsistent model, our plan is to group the independent variables to reduce correlation.
+ADD PLOT HERE 
+
+The revised model maintained statistical significance, and a majority of the independent variables demonstrated a significant impact on log-revenue. Hence, within a movie group sharing the same language, country of production, and budget magnitude, we still discern an impact of the actor count on log-revenue.
+
+We conclude that within the selected movie group sharing the same language, country, and budget magnitude, we observe a meaningful impact of actor count on log revenue. However, it is essential to note that these findings may not be universally applicable to other groups due to the inability to establish clean matches.
+
+----------------------------
+### Prediction of the revenue in function of a set of variables 
+
+The objective of this section is to construct models enabling us to forecast movie revenue by considering dependent variables such as the number of actors, the movie genre, the country of production, and other relevant factors. 
+
+Within our dataset, numerous categorical and numerical variables capture our interest. Consequently, we generate dummy variables for each categorical variable.
+
+For instance, in the "Genre" variable, which includes categories such as {Romantic, Action, Horror,...}, we create new dummy variables like dummy_romantic ={0,1}, dummy_action ={0,1}, dummy_horror ={0,1},...
+
+This methodology is then extended to the variables Genre, Country of production, and Language.
+##### Dummy - Country variables
 
 <iframe src="assets/plots/Distribution_of_the_R2_from_the_random_forest.html" width="800" height="500" frameborder="0" position="relative"></iframe>
 <iframe src="assets/plots/Distribution_of_the_R2_from_the_linear_regression.html" width="800" height="500" frameborder="0" position="relative"></iframe>
