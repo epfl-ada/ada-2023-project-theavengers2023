@@ -65,21 +65,29 @@ To address these challenges and avoid drawing conclusions from an inconsistent m
 
 The revised model maintained statistical significance, and a majority of the independent variables demonstrated a significant impact on log-revenue. Hence, within a movie group sharing the same language, country of production, and budget magnitude, we still discern an impact of the actor count on log-revenue.
 
-We conclude that within the selected movie group sharing the same language, country, and budget magnitude, we observe a meaningful impact of actor count on log revenue. However, it is essential to note that these findings may not be universally applicable to other groups due to the inability to establish clean matches.
+We conclude that within the selected movie group sharing the same language, country, and budget magnitude, we observe a meaningful impact of actor count on log revenue. However, it is essential to note that these findings may not be universally applicable to other groups due to the inability to establish clean matches. 
 
 ----------------------------
 ### Prediction of the revenue in function of a set of variables 
 
 The objective of this section is to construct models enabling us to forecast movie revenue by considering dependent variables such as the number of actors, the movie genre, the country of production, and other relevant factors. 
-
 Within our dataset, numerous categorical and numerical variables capture our interest. Consequently, we generate dummy variables for each categorical variable.
 
-For instance, in the "Genre" variable, which includes categories such as {Romantic, Action, Horror,...}, we create new dummy variables like dummy_romantic ={0,1}, dummy_action ={0,1}, dummy_horror ={0,1},...
+Now, we have the following method, we iterate 1000 times. Each iteration unfolds as follows :
+We divide our dataset in train/test set, a fundamental step for model evaluation. We perform an OLS regression with the train set. Then, we calculate the out-of-sample (with the test set) \(R^2\). This metric gauges how well our model generalizes to unseen data. After each iteration, we meticulously document the out-of-sample R^2, allowing us to construct a distribution. This distribution gives a great picture of the model's performance variability. 
+
+The distribution of R^2 values provides us with valuable insights into the stability and reliability of our forecasting models.Indeed, by the central limit theorem it should follow : A COMPLETER !!!
 
 
-<iframe src="assets/plots/Distribution_of_the_R2_from_the_random_forest.html" width="800" height="500" frameborder="0" position="relative"></iframe>
+A CHANGER !!!!
 <iframe src="assets/plots/Distribution_of_the_R2_from_the_linear_regression.html" width="800" height="500" frameborder="0" position="relative"></iframe>
+
+A CHANGER !!!
+<iframe src="assets/plots/Distribution_of_the_R2_from_the_random_forest.html" width="800" height="500" frameborder="0" position="relative"></iframe>
+
+A CHANGER !!!
 <iframe src="assets/plots/Feature_Importances_using_MDI.html" width="800" height="500" frameborder="0" position="relative"></iframe>
+
 -----------------------------
 ### A New Measure of Stardom
 
