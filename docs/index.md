@@ -61,7 +61,7 @@ Initially, the entire set of independent variables displayed significance in pre
 
 To address these challenges and avoid drawing conclusions from an inconsistent model, our plan is to group the independent variables to reduce correlation.We aggregate the independent variables into groups of 5 actors, we obtain the following beta parameters :
 
-ADD PLOT HERE 
+<iframe src="assets/plots/Beta_Values_and_confidence_intervals2.html" width="800" height="500" frameborder="0" position="relative"></iframe>
 
 The revised model maintained statistical significance, and a majority of the independent variables demonstrated a significant impact on log-revenue. Hence, within a movie group sharing the same language, country of production, and budget magnitude, we still discern an impact of the actor count on log-revenue.
 
