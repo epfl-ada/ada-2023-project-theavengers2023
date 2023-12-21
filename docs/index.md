@@ -144,26 +144,42 @@ After dealing with this issue, we start conducting our regressions.
 
 ###### Regression of the revenue on the actors and pair of actors without the budget:
 
-We conduct a first regression in which we don't take the budget into account. We obtained the following parameters :
+We conducted a first regression in which we don't take the budget into account. We obtained the following parameters :
 <iframe src="assets/plots/Coefficient_revenues_no_budget.html" width="700" height="480" frameborder="0" position="relative"></iframe>
+
+We can see 3 pairs of actors that have a coefficient statistically significant. Timothy Spall & Alan Rickman, Tom Felton & Mark Williams and Jon Favreau & Vince Vaughn.
+Timothy Spall & Alan Rickman, Tom Felton & Mark Wiliams are all actors of the Harry Potter saga. It's understandable that they have opposite impact. Indeed, their interaction should compensate each other, and if one of them have done another movie that is not as known as Harry Potter then it act as an outlier and undermine the revenue. 
+If we look at individual actor, 14 actors have a significant impact on revenue. All of them have a positive impact. It is worthy emphasizing that some of them have a slightly negative impact on revenue when they are alone and have a significant positive impact when paired with another actor, such as Jon Favreau. We were wondering why Jon Favreau has a positive impact on the revenue while when he is paired with Vince Vaughn, suddenly the impact is significantly negative. We make the hypothesis that perhaps when these two actors play together, they usually play in comedy movies and it may be the case that comedy movies don't generally generate high revenues.However, in order to make such asssumptions we would need further analysis. 
 
 ###### Regression of the ratings on the actors and pair of actors without the budget:
 
-We conduct a regression of the ratings on the actors and pair of actors in which we don't take the budget into account. We obtained the following parameters :
+We conducted a regression of the ratings on the actors and pair of actors in which we don't take the budget into account. We obtained the following parameters :
 <iframe src="assets/plots/Coefficient_ratings_no_budget.html" width="700" height="480" frameborder="0" position="relative"></iframe>
 
 We can see 4 pairs of actors that have a coefficient statistically significant. Ed Begley, Jr & Michael McKean, Fred Willard & Jennifer Coolidge, Eugene Levy & Jennifer Coolidge, Danny Trejo & Cheech Marin.
-If we look at individual actor, 20 actors have a significant impact on revenue. About half of them have a positive impact. It is worthy emphasizing that some of them have a slightly negative impact on revenue when they are alone and have a significant positive impact when paired with another actor such as Cheech Marin or Ed Begley, Jr.
+If we look at individual actor, 20 actors have a significant impact on ratings. About half of them have a positive impact. One thing we can notice is that Fred Willard has a significant negative impact on the ratings and the pair consisting of Jennifer Coolidge and Fred Willard also have a significant negative rating, however the pair consisting of Jennifer Coolidge and Eugene Levy has a significant positive impact on the revenue. 
 
 ###### Regression of the revenue on the actors and pair of actors with the budget:
 
-We conduct a regression in which we take the budget into account. We obtained the following parameters :
+We conducted a regression in which we take the budget into account. We obtained the following parameters :
 <iframe src="assets/plots/Coefficient_revenues_with_budget.html" width="700" height="480" frameborder="0" position="relative"></iframe>
+
+The Adjusted budget coefficient is significant and positive which is quite predictable. This coefficient may remove the explanation linked to budget from the other previous coefficients linked to actors and pair of actors. We also encounter the same pairs as before such as Timothy Spall & Alan Rickman and Timothy Spall & Maggie Smith.
+If we look at individual actor, 2 actors have a significant impact on revenue. 
 
 ###### Regression of the ratings on the actors and pair of actors with the budget:
 
-We conduct a regression in which we take the budget into account. We obtained the following parameters :
+Finally, we conducted a regression of the ratings on the actors and pairs of actors in which we take the budget into account:
+
 <iframe src="assets/plots/Coefficient_ratings_with_budget.html" width="700" height="480" frameborder="0" position="relative"></iframe>
+
+The first thing we can mention is that the adjusted budget is not significant. We can interpret that by the fact that viewers perhaps do not necessarily care about the budget of movie to appreciate it. For the pairs of actors, they remain very similar to the previous regressions. 
+
+
+
+
+
+
 
 -----------------------------
 ### Forecasting
