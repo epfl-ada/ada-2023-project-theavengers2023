@@ -77,13 +77,16 @@ Now, we have the following method, we iterate 1000 times. Each iteration unfolds
 We divide our dataset in train/test set, a fundamental step for model evaluation. We perform an OLS regression with the train set. Then, we calculate the out-of-sample (with the test set) R2. This metric gauges how well our model generalizes to unseen data. After each iteration, we meticulously document the out-of-sample R2, allowing us to construct a distribution. This distribution gives a great picture of the model's performance variability. Below is our resulting plot :
 
 A CHANGER !!!!
-<iframe src="assets/plots/Distribution_of_the_R2_from_the_linear_regression.html" width="800" height="500" frameborder="0" position="relative"></iframe>
+<iframe src="assets/plots/metlenomquetuveux.html" width="800" height="500" frameborder="0" position="relative"></iframe>
 
 The distribution of R2 values provides us with valuable insights into the stability and reliability of our forecasting models.Indeed, by the central limit theorem it should follow : A COMPLETER !!!
 
-Now, we have the following method, we iterate 1000 times. One interaction consists of : 
-We split the set in train/test set. We perform an Random Forest with the train set. Then, we calculate the out-of-sample (with the test set) R2.
-We compute after that the distribution of the R2
+After having plotted the distribution of R2 obtained by doing linear regressions, we try to assess the performance of the model by using random forests and also looking at the distribution of the R2.
+
+We begin by conducting a training using the function GridSearch CV(K=5). This function is used to optimize the hyperparameters of our RandomForest model. 
+
+We also iterate 1000 times this method :  
+We split the set in train/test set. We perform a Random Forest with the train set. Then, we calculate the out-of-sample (with the test set) R2. We compute after that the distribution of the R2.
 
 A CHANGER !!!
 <iframe src="assets/plots/Distribution_of_the_R2_from_the_random_forest.html" width="800" height="500" frameborder="0" position="relative"></iframe>
