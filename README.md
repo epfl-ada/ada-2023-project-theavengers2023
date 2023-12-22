@@ -68,8 +68,9 @@ This part of the project is all about checking if our analysis might have proble
 ### Part 3:
 #### 3.1. Improvement of the first analysis
 Following a preliminary analysis encompassing the entire dataset, we delved into more nuanced examinations, meticulously controlling for potential biases. Factors such as country of origin, year of release, spoken languages, and movie budget were scrutinized to ensure a more refined analysis. Employing the consumer price index (CPI) to adjust revenues for inflation over time, we conducted linear regression models. These models sought to elucidate the influence of the number of actors per movie on both adjusted revenues and movie ratings. This approach allowed us to uncover more granular insights while addressing potential confounding variables.
-#### 3.2. Feature importance and predicting models
 
+#### 3.2. Feature importance and predicting models
+We aimed to find the best model to predict revenues based on the available features. We used linear regression and Random Forest method to build model. We calculated the empirical distribution of the out-of-sample $R^2$ with the two models
 
 
 ### Part 4: 
