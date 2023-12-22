@@ -29,7 +29,7 @@ Access all datasets on Google Drive using this link: [datasets](https://drive.go
 
 
 ## Methods
-### t-tests
+### T-tests
 We employed t-tests to scrutinize the performance metrics of both renowned and non-renowned actors. These metrics encompassed the average rating and the average adjusted revenues attributed to a specific actor. Additionally, we leveraged t-tests to conduct an analysis based on movie genres. This involved exploring whether there exists a statistically significant difference in performance metrics between movies featuring renowned actors and those featuring non-renowned actors.
 
 ### Linear Regreesion (OLS)
@@ -144,7 +144,7 @@ In order to answer the posed researched questions, we constructed a data analysi
      ------------------------------------------------------------------------------------------------------------------------             
       Albias :    (1) Worked on the processing of the data, extraction and merging of the datasets.
                   (2) Worked on the analyze of the raw data (distribution, mean, quantiles, statistics...).
-                  (3) Worked on the ranking of the actor pairs and their signicancy.
+                  (3) Worked on the ranking of the actor pairs and their significancy.
                   (4) Implementation of the report and working for the data story
       ------------------------------------------------------------------------------------------------------------------------
 
