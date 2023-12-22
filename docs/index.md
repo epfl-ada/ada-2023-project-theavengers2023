@@ -108,7 +108,9 @@ We can see that the most important features are the following : The Adjusted Bud
 ###### Correlation between the most important features
 
 Here is a heatmap reprensenting the correlation between each of the most important variables obtained previously from MDI :
+
 <iframe src="assets/plots/Correlation_Matrix.html" width="800" height="500" frameborder="0" position="relative"></iframe>
+
 We can see two notable information from this :
 - There is a high positive correlation between English speaking movies and movies released in the USA (correlation = 0.556) which is seems pretty logical.
 - There is a high negative correlation between Indie movies (independent movies) and the adjusted budget (correlation = -0.2) which is also predictable since independent movies tend to have a lower budget. 
@@ -120,6 +122,7 @@ Primarily, the decision trees within the random forest consistently identify the
 The rationale is straightforward. A greater movie budget tends to yield superior outcomes in terms of special effects, set design, and the caliber of hired actors that consequently leads to a higher revenue. As depicted in the graph below, this positive correlation is readily apparent, showcasing a relatively modest data spread compared to a linear model.
 
 <iframe src="assets/plots/Adjusted_Revenue_vs_Adjusted_Budget_with_a_Linear_Regression.html" width="700" height="480" frameborder="0" position="relative"></iframe>
+
 
 ###### Discussion about other influtential variables
 
@@ -133,6 +136,8 @@ Delving deeper, the impact of independence resonates more profoundly in the real
 The intricate relationship between independence, budget, and revenue unveils a narrative where financial constraints do not entirely dictate the destiny of independent films. As we unravel these layers, a nuanced understanding of the interplay between variables emerges.
 
 <iframe src="assets/plots/Distribution_of_Adjusted_Budget_for_Independent_and_Non_Independent_Movies.html" width="700" height="480" frameborder="0" position="relative"></iframe>
+
+COMMENTER LE PLOT !!!
 
 ###### Industrilization of the cinema and monopole of the USA : Dummy_English_Language and Country_USA
 
