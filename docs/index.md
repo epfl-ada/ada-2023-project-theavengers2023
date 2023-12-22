@@ -185,26 +185,13 @@ The endgame of our selection process yields a curated list of actors whose inter
 
 <iframe src="assets/plots/interactions_network.html"  width="100%" height="700" frameborder="0" position="relative"></iframe>
 
-The graph above corresponds to a network containing the 69 actors that will be useful for quantifying the power of interactions. Additional information can be obtained by hovering over the photo of an actor. The lines connecting two actors indicate an existing relationship between them. What we can observe is a cluster of significant points. These actors have the particularity of having worked together in the saga (Harry Potter), consisting of 8 films. The actors positioned more centrally in the network are those who interact with several different peers. Take, for example, Steve Buscemi, an actor with an extensive filmography in various cinematic genres, from comedy to action films, enabling him to collaborate with a significant number of his peers.
-
-----------------------------
-### Graph : ICI ? 
-
-
-<iframe src="assets/plots/weighted_graph_actors.html"  width="100%" height="700" frameborder="0" position="relative"></iframe>
-
 The depicted graph represents a network comprising 69 actors, providing a means to quantify the strength of interactions. Further details can be accessed by hovering over an actor's photo. When two actors are connected, it indicates that they have collaborated in a movie. Moreover, the edges (segments connecting actor pairs) are weighted based on the total number of movies in which they have played together.
-
 
 The graph's construction offers a comprehensive understanding of how the frequency of collaborations influences actors' positions on the cinematic stage. In constructing the graph, we employed the Fruchterman-Reingold force-directed algorithm, but to make it more accessible, let's refer to this type of graph as a "spring graph." In essence, envision each node as connected by a spring whose attractive force is proportional to the weight of the corresponding edge. Consequently, actors who have collaborated frequently will exhibit strong connections, tightly linked by these "springs", while actors who have never worked together will lack any attractive forces within the graph.
 
 Interestingly, a distinct cluster quickly emerges. Situated at the bottom right of the graph, this cluster is essentially the Harry Potter movies cluster. A significant number of actors exclusively participated in the Harry Potter film series (though they may have had roles elsewhere, our previous constraint might have filtered out lesser-known movies). As a result, all these actors are closely grouped, yet the entire cluster has shifted away from the overall mass of the graph because, in general, they did not interact with other actors. Furthermore, Harry Potter actors who also appeared in other well-known movies are positioned toward the center of the main graph due to their additional collaboration with the actors of the main cluster.
 
 Briefly commenting on the main cluster, it is noteworthy that the distribution appears quite even. Actors of significant importance, owing to their substantial number of collaborations within our dataset, tend to occupy central positions, while those with fewer collaborations seem to gravitate toward the outer edges. Notably, actors like Steve Buscemi stand out for their astonishingly high number of collaborations compared to their peers and dominate the center.
-
-
-
-
 
 -----------------------------
 ### Comparative Analysis of Revenues and Ratings
