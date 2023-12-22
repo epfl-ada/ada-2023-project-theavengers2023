@@ -92,6 +92,8 @@ We also iterate 1000 times this method and we split the set in train/test set at
 
 Initially, the random forest exhibits a commendable average predictive power (R2(rf)=0.42) with minimal variability, as indicated by a narrow confidence interval at 95% [0.38, 0.45].Furthermore, the Random Forest demonstrates a substantial enhancement in prediction compared to linear regression (R2(lr)=0.218).
 
+###### Mean Decrease in Impurity
+
 Our objective, now, is to pinpoint the most discriminative variables within the Random Forest analysis.
 
 
@@ -110,6 +112,37 @@ Here is a heatmap reprensenting the correlation between each of the most importa
 We can see two notable information from this :
 - There is a high positive correlation between English speaking movies and movies released in the USA (correlation = 0.556) which is seems pretty logical.
 - There is a high negative correlation between Indie movies (independent movies) and the adjusted budget (correlation = -0.2) which is also predictable since independent movies tend to have a lower budget. 
+
+###### Discussion about Adjusted Budget as influtential variable
+
+Primarily, the decision trees within the random forest consistently identify the budget of a movie adjusted for inflation as the most influential dependent variable with a Gini impurity of 0.238.
+
+The rationale is straightforward. A greater movie budget tends to yield superior outcomes in terms of special effects, set design, and the caliber of hired actors that consequently leads to a higher revenue. As depicted in the graph below, this positive correlation is readily apparent, showcasing a relatively modest data spread compared to a linear model.
+
+<iframe src="assets/plots/Adjusted_Revenue_vs_Adjusted_Budget_with_a_Linear_Regression.html" width="700" height="480" frameborder="0" position="relative"></iframe>
+
+###### Discussion about other influtential variables
+
+As discussed in a previous section of this project, there is a positive correlation between the number of actors and the adjusted revenue: the higher the number of actors, the higher the adjusted revenue.
+
+Continuing, let's examine the 'Indie' variable, indicating whether a film is independently produced. Our previous hypothesis from the observation of the heatmap is verified. Indeed, the variable demonstrates a negative correlation with both adjusted revenue and budget. This correlation is in line with expectations, given that independent films often face constraints in securing substantial financial backing, as evident in the histogram plot below where the adjusted budget for independent movies tends to be considerably lower.
+As a result, the earlier observed reduction in budget typically coincides with a decrease in adjusted revenue.
+
+It is noteworthy that independence has a more pronounced impact on the adjusted budget (rho=-0.204) compared to the adjusted revenue (rho=-0.119). This observation is encouraging for small cinema producers, as it suggests that revenue and budget are not perfectly proportional. Therefore, a reduction in the budget does not necessarily result in an equivalent decrease in revenue.
+
+<iframe src="assets/plots/Distribution_of_Adjusted_Budget_for_Independent_and_Non_Independent_Movies.html" width="700" height="480" frameborder="0" position="relative"></iframe>
+
+###### Industrilization of the cinema and monopole of the USA : Dummy_English_Language and Country_USA
+
+The significance and positive correlation of the variables "Dummy_Language_English" and "Country_USA" with adjusted revenue underscore the dominance of Hollywood in the global cinema landscape from an economic standpoint. 
+
+This suggests that, economically, Hollywood productions and English-language content play a pivotal role in maximizing revenue. Therefore, emphasizing the use of the English language appears to be crucial for revenue growth in the cinematic industry.
+
+Moreover, movies produced in Hollywood leverage a robust distribution network, global communication channels, marketing strategies, and various other factors that contribute to revenue enhancement.
+
+In this analysis, we note a slightly negative correlation between the production year and adjusted revenue, which is surprising. We initially expected that accounting for inflation would mitigate the impact of the production year on adjusted revenue.
+
+Contrary to our expectations, there seems to be another variable influencing both adjusted revenue and the production year. Further exploration of this topic could unveil a potential confounding variable, adding depth to our understanding of the relationship between adjusted revenue and the year of production. However, considering that the absolute value is close to 0, it is possible that this observation is merely due to statistical noise.
 
 -----------------------------
 ### A New Measure of Stardom
@@ -188,3 +221,4 @@ The first thing we can mention is that the adjusted budget is not significant. W
 In the enchanting realm of cinema, the year 2024 promises a captivating array of films gracing screens around the globe. Amongst this cinematic tapestry, certain gems stand out, eagerly anticipated by audiences worldwide. If you aspire to be a cinematic trailblazer, ready to regale your friends with insights into the blockbusters set to dominate the box office, then this section is tailored just for you.
 
 Here, we delve into the anticipation surrounding several films poised to take center stage in the cinematic landscape. Our endeavor extends beyond mere anticipation as we embark on the fascinating journey of predicting the revenues these cinematic marvels are destined to amass. Join us in this cinematic odyssey, where the magic of storytelling meets the allure of box office predictions.
+
