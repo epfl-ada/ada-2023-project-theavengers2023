@@ -319,6 +319,10 @@ The first thing we can mention is that the adjusted budget is not significant. W
 
 You can finally take a break now, no more regressions coming !
 
+#### Network Analysis
+
+![Graph](assets/plots/weighted_graph_actors.png)
+
 -----------------------------
 ### Forecasting
 In the enchanting realm of cinema, the year 2024 promises a captivating array of films gracing screens around the globe. Amongst this cinematic tapestry, certain gems stand out, eagerly anticipated by audiences worldwide. If you aspire to be a cinematic trailblazer, ready to regale your friends with insights into the blockbusters set to dominate the box office, then this section is tailored just for you.
@@ -377,3 +381,4 @@ Given the anticipated hype surrounding this third installment, its association w
 
 ### Conclusion
 
+![Thank you for reading our DataStory!](final_picture.png)
