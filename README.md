@@ -40,10 +40,17 @@ We opted for a Random Forest as an alternative approach to traditional OLS regre
 
 ### Network analysis 
 
-We embarked on a comprehensive Network analysis to distill renowned actors from the ensemble. Our analysis centered on quantifying the interactions each actor had with others, providing a visual representation of the interconnections and discerning patterns within the remaining actors. This proved pivotal in our analysis, enabling us to identify and address multicollinearity concerns arising from the Harry Potter Cast.
+We embarked on a comprehensive Network analysis to distill renowned actors from the ensemble. Our analysis centered on quantifying the interactions each actor had with others, providing a visual representation of the interconnections and discerning patterns within the remaining actors. This proved pivotal in our analysis, enabling us to identify and address multicollinearity concerns arising from the Harry Potter Cast when we tried the linear regression approach.
 
-Employing three key metrics—Degree Centrality, Betweenness Centrality, and Closeness Centrality—we harnessed the power of network analysis to visually link actors sharing similar revenue profiles. This approach not only enriched our understanding of actor connections but also shed light on revenue patterns within this network.
+The idea is to build a graph where nodes represent actors, and edges are weighted based on one of the following criteria:
 
+-The number of movies two actors (two nodes) worked on together.
+-The average revenue of the movies two actors collaborated on.
+-The average rating of the movies two actors collaborated on.
+
+Next, we construct a "spring graph" using the networkx library. The spring graph is drawn so that the higher the edge weights, the closer the connected nodes tend to be (as if there were a spring connecting the nodes). With these graphs, we can observe clusters or patterns to identify efficient groups of actors.
+
+To go further than qualitative analysis, we quantify such clusters or patterns using three key metrics : Degree Centrality, Betweenness Centrality, and Closeness Centrality.
 
 ### Part 1:
 #### 1.1. Data Visualization:
