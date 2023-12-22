@@ -44,9 +44,12 @@ We embarked on a comprehensive Network analysis to distill renowned actors from 
 
 The idea is to build a graph where nodes represent actors, and edges are weighted based on one of the following criteria:
 
--The number of movies two actors (two nodes) worked on together.
--The average revenue of the movies two actors collaborated on.
--The average rating of the movies two actors collaborated on.
+- The number of movies two actors (two nodes) worked on together.
+  
+- The average revenue of the movies two actors collaborated on.
+  
+- The average rating of the movies two actors collaborated on.
+  
 
 Next, we construct a "spring graph" using the networkx library. The spring graph is drawn so that the higher the edge weights, the closer the connected nodes tend to be (as if there were a spring connecting the nodes). With these graphs, we can observe clusters or patterns to identify efficient groups of actors.
 
