@@ -123,23 +123,23 @@ Primarily, the decision trees within the random forest consistently identify the
 
 The rationale is straightforward. A greater movie budget tends to yield superior outcomes in terms of special effects, set design, and the caliber of hired actors that consequently leads to a higher revenue. As depicted in the graph below, this positive correlation is readily apparent, showcasing a relatively modest data spread compared to a linear model.
 
-<iframe src="assets/plots/Adjusted_Revenue_vs_Adjusted_Budget_with_a_Linear_Regression.html" width="700" height="480" frameborder="0" position="relative"></iframe>
+<iframe src="assets/plots/Adjusted_Revenue_vs_Adjusted_Budget_with_a_Linear_Regression.html" width="700" height="550" frameborder="0" position="relative"></iframe>
 
 
 ###### Discussion about other influtential variables
 
 In a previous chapter of our data exploration saga, we unearthed a positive correlation between the number of actors and adjusted revenue. The symbiotic dance unfolded—more actors, more revenue.
 
-Continuing, our spotlight turns to the 'Indie' variable, indicating whether a film is independently produced. Our previous hypothesis from the observation of the heatmap finds validation. Indeed, the variable demonstrates a negative correlation with both adjusted revenue and budget. This correlation is in line with expectations, given that independent films often face constraints in securing substantial financial backing, as evident in the histogram plot below where the adjusted budget for independent movies tends to be considerably lower.
+Our spotlight now turns to the 'Indie' variable, indicating whether a film is independently produced. Our previous hypothesis from the observation of the heatmap finds validation. Indeed, the variable demonstrates a negative correlation with both adjusted revenue and budget. This correlation is in line with expectations, given that independent films often face constraints in securing substantial financial backing, as evident in the histogram plot below where the adjusted budget for independent movies tends to be considerably lower.
 As a result, the earlier observed reduction in budget typically coincides with a decrease in adjusted revenue.
 
 Delving deeper, the impact of independence resonates more profoundly in the realm of adjusted budget (rho=-0.204) compared to adjusted revenue (rho=-0.119). This observation brings a glimmer of hope to small cinema producers, suggesting that the reduction in budget doesn't necessarily translate to a proportional decrease in revenue.
 
-The intricate relationship between independence, budget, and revenue unveils a narrative where financial constraints do not entirely dictate the destiny of independent films. As we unravel these layers, a nuanced understanding of the interplay between variables emerges.
+The intricate relationship between independence, budget, and revenue unveils a narrative where financial constraints do not entirely dictate the destiny of independent films.
 
-<iframe src="assets/plots/Distribution_of_Adjusted_Budget_for_Independent_and_Non_Independent_Movies.html" width="700" height="480" frameborder="0" position="relative"></iframe>
+<iframe src="assets/plots/Distribution_of_Adjusted_Budget_for_Independent_and_Non_Independent_Movies.html" width="800" height="550" frameborder="0" position="relative"></iframe>
 
-COMMENTER LE PLOT !!!
+The plot clearly demonstrates what was previously mentionned since most of the observations of independent movies have an adjusted budget that is quite lower than the non-independent ones. 
 
 ###### Industrilization of the cinema and monopole of the USA : Dummy_English_Language and Country_USA
 
