@@ -83,7 +83,7 @@ We divide our dataset in train/test set, a fundamental step for model evaluation
 
 <iframe src="assets/plots/metlenomquetuveux.html" width="800" height="500" frameborder="0" position="relative"></iframe>
 
-The distribution of R2 values provides us with valuable insights into the stability and reliability of our forecasting models.Indeed, by the central limit theorem it should follow : A COMPLETER !!!
+The distribution of R2 values provides us with valuable insights into the stability and reliability of our forecasting models. We can see from the plot above that the average R2 is 0.22.
 
 ###### Method 2 : Iterations using Random Forest
 
