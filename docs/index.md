@@ -349,6 +349,8 @@ We have developed a Random Forest model and utilized it to predict the revenue o
 
 <iframe src="assets/plots/Forecasted_Revenue_Distributions_for_Selected_Movies.html" width="700" height="480" frameborder="0" position="relative"></iframe>
 
+This is a boxplot for the three previously mentionned movies. Deadpool 3 has a median revenue of 195M $ (with q1 = 35M $ and q3 = 375M $). Despicable Me 3 has a median revenue of 54M $ (with q1 = 22M $ and q3 = 137M $). And finally, Madam Web has a median revenue of 51M $ (with q1 = 17M $ and q3 = 143M $).
+
 
 #### Conclusion 
 
