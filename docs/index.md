@@ -184,7 +184,7 @@ Next, we delve into the heart of our analysis - the interactions between actors.
 
 The endgame of our selection process yields a curated list of actors whose interactions bear the hallmark of significance. With the final filter applied, we eliminate any film devoid of our shortlisted actors' presence, sharpening the focus of our database. Now primed for the grand reveal, we stand on the brink of uncovering the enigmatic duo of actors that hold the keys to cinematic success.
 
-<iframe src="assets/plots/interactions_network.html"  width="100%" height="700" frameborder="0" position="relative"></iframe>
+<iframe src="assets/plots/interactions_network.html"  width="100%" height="1000" frameborder="0" position="relative"></iframe>
 
 The depicted graph represents a network comprising 69 actors, providing a means to quantify the strength of interactions. Further details can be accessed by hovering over an actor's photo. When two actors are connected, it indicates that they have collaborated in a movie. Moreover, the edges (segments connecting actor pairs) are weighted based on the total number of movies in which they have played together.
 
@@ -370,4 +370,6 @@ Deadpool 3 is an upcoming American superhero film based on the Marvel Comics cha
 The scale of your forecast for Deadpool 3 appears reasonable at 130 million, considering the success of the previous installment, which grossed 785 million with a budget of 135 million.
 
 Given the anticipated hype surrounding this third installment, its association with the Marvel Cinematic Universe, and a budget increase of 20 million, we anticipate that the revenue will likely fall within the range of 600-800 million.
+
+### Conclusion
 
