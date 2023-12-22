@@ -143,8 +143,8 @@ COMMENTER LE PLOT !!!
 
 ###### Industrilization of the cinema and monopole of the USA : Dummy_English_Language and Country_USA
 
-In the intricate web of cinematic variables, the prominence of "Dummy_Language_English" and "Country_USA" takes center stage, revealing a narrative steeped in the economic dominance of Hollywood on the global cinema landscape. The undeniable significance and positive correlation with adjusted revenue illuminate the economic powerhouse that Hollywood represents. This economic prowess signifies that, from a revenue standpoint, Hollywood productions and English-language content wield formidable influence, painting a compelling picture of their economic centrality in the cinematic arena. 
-
+The significance and positive correlation of the variables "Dummy_Language_English" and "Country_USA" with adjusted revenue underscore the dominance of Hollywood in the global cinema landscape from an economic standpoint. 
+This suggests that, economically, Hollywood productions and English-language content play a pivotal role in maximizing revenue. Therefore, emphasizing the use of the English language appears to be crucial for revenue growth in the cinematic industry.
 Moreover, movies produced in Hollywood leverage a robust distribution network, global communication channels, marketing strategies, and various other factors that contribute to revenue enhancement.
 
 In this analysis, we note a slightly negative correlation between the production year and adjusted revenue, which is surprising. We initially expected that accounting for inflation would mitigate the impact of the production year on adjusted revenue.
