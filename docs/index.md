@@ -321,7 +321,7 @@ You can finally take a break now, no more regressions coming !
 
 #### Network Analysis
 
-![Graph](assets/plots/weighted_graph_actors.png)
+<img src="assets/plots/weighted_graph_actors.png" alt="Weighted graph" width="100"/>
 
 -----------------------------
 ### Forecasting
@@ -381,4 +381,4 @@ Given the anticipated hype surrounding this third installment, its association w
 
 ### Conclusion
 
-<img src="final_picture.png" alt="Thank you for reading our DataStory!" width="100"/>
+<img src="assets/plots/final_picture.png" alt="Thank you for reading our DataStory!" width="100"/>
