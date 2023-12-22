@@ -16,9 +16,14 @@ When we talk box office hits, we gotta make sure we're not comparing the '20s si
 Take a peek at this chart right here. Once we adjust for inflation, the old correlation between a movie's release year and its wallet—both what it cost and what it made—kinda fades away. But here's a kicker: the relationship between what a film spends and earns? Still cozy. The more a movie's budget balloons, the more it seems to rake in. Looks like spending big could mean earning big, but let's not forget—correlation isn't causation. So, let's not jump to conclusions just yet!
 
 <iframe src="assets/plots/revenue-plot.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
+
+In the plot above we see clearly see that the adjusted revenues are less impacted by inflation than the non adjusted ones. To proceed for this adjustement, we divided the revenues (and then after the budget) by the CPI (Consumer Price Index) taking the year 2010 as a reference.
+It means that we increase revenues before 2010 and reduce those after.
+
 <iframe src="assets/plots/budget-plot.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
 
-AJOUTER COMMENTAIRE + CPI + 2010 !!!
+In this second plot, we also observe that the plot is a little more flat when we make our adjustment. 
+
 
 -----------------------------
 ### Causality between Revenue and Number of Actors
