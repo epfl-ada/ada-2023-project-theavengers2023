@@ -12,19 +12,20 @@ Dive into the captivating world of cinema with our unique exploration of the CMU
 
 ### Money Talks, But Let's Keep It Real
 
-When we talk box office hits, we gotta make sure we're not comparing the '20s silent flicks to today's 3D extravaganzas without some tweaks. Money's worth more or less depending on when you're spending it, right? That's why we adjust the cash flow from back in the day to match today's dollars. It's like giving old movies a fair fight in today's box office arena.
+When we talk box office hits, we gotta make sure we're not comparing the '20s silent movies to today's 3D extravaganzas without some adjustments. Money's worth more or less depending on when you're spending it. That's why we adjust the cash flow from back in the day to match today's dollars. It's like giving old movies a fair fight in today's box office arena.
 
-Take a peek at this chart right here. Once we adjust for inflation, the old correlation between a movie's release year and its wallet—both what it cost and what it made—kinda fades away. But here's a kicker: the relationship between what a film spends and earns? Still cozy. The more a movie's budget balloons, the more it seems to rake in. Looks like spending big could mean earning big, but let's not forget—correlation isn't causation. So, let's not jump to conclusions just yet!
+Look at this chart right here. Once we adjust for inflation, the old correlation between a movie's release year and its wallet—both what it cost and what it made—kinda fades away. But here's a kicker: the relationship between what a film spends and earns? Still cozy. The more a movie's budget balloons, the more it seems to rake in. Looks like spending big could mean earning big, but let's not forget—correlation isn't causation. So, let's not jump to conclusions just yet ! 
+
+Get ready to dive into the depths of data analysis and make sure you stay focused until the end of our story.
 
 <iframe src="assets/plots/revenue-plot.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
 
-In the plot above we see clearly see that the adjusted revenues are less impacted by inflation than the non adjusted ones. To proceed for this adjustement, we divided the revenues (and then after the budget) by the CPI (Consumer Price Index) taking the year 2010 as a reference.
+In the plot above we clearly see that the adjusted revenues are less impacted by inflation than the non adjusted ones. To proceed for this adjustement, we divided the revenues (and the budget as well) by the CPI (Consumer Price Index) taking the year 2010 as a reference.
 It means that we increase revenues before 2010 and reduce those after.
 
 <iframe src="assets/plots/budget-plot.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
 
 In this second plot, we also observe that the plot is a little more flat when we make our adjustment. 
-
 
 -----------------------------
 ### Causality between Revenue and Number of Actors
@@ -36,14 +37,13 @@ Indeed, it seems like we must have the following straightforward causality :
 
 <iframe src="assets/plots/Causal_Diagram_first.html" width="350" height="180" frameborder="0" style="display: block; margin: auto;"></iframe>
 
-However, numerous other variables could potentially confound causality, such as budget. Consequently, we could have a diagram that considers budget as a confounder :
+However, numerous other variables could potentially confound causality, such as budget. Consequently, we could have a diagram that considers budget as a confounder:
 
 <iframe src="assets/plots/Causal_Diagram_second.html" width="350" height="280" frameborder="0" style="display: block; margin: auto;"></iframe>
 
-Consequently, we intend to analyze this effect conditionally with respect to the primary factors, including country, language, and budget 
+Consequently, we intend to analyze this effect conditionally with respect to the primary factors,including country,language and budget 
 magnitude.
-In order to exclude the effect of a possible counfounder, we try to look at a subgroup of movies that share the same country,language and  
-budget magnitude. We do not exactly proceed with a matching because the number of movies for some countries is very low but we still try to 
+In order to exclude the effect of a possible confounder, we try to look at a subgroup of movies that share the same country,language and budget magnitude. We do not exactly proceed with a matching because the number of movies for some countries is very low but we still try to 
 find an effect of the number of known actors on the revenues within this subgroup.
 
 To mitigate combinatorial explosion, we opt for the group that maximizes the number of observations. The chosen features include:
@@ -52,8 +52,7 @@ To mitigate combinatorial explosion, we opt for the group that maximizes the num
 - **Language:** English.
 - **Budget:** Magnitude equal to 10<sup>8</sup>, corresponding to revenues between 10<sup>7</sup> and 10<sup>8</sup>.
 
-We exclude taking into account the year of publication due to the implementation of inflation, which already limits the impact of this variable.
-In this analysis, the term "known" refers to actors who are sufficiently famous to be included in the database. By extension, these actors are those playing a significant role in the film. We started with a visual exploration using boxplots :
+We exclude taking into account the year of publication due to the implementation of inflation, which already limits the impact of this variable. By extension, these actors are those playing a significant role in the film. We started with a visual exploration using boxplots :
 
 <iframe src="assets/plots/boxplot_log_revenue.html" width="700" height="480" frameborder="0" position="relative"></iframe>
 
@@ -67,7 +66,7 @@ The initial quantitative study involved performing a linear regression, examinin
 
 Initially, the entire set of independent variables displayed significance in predicting the adjusted log-revenue (P(F-statistic) < 0.05). However, challenges emerged, such as low observations for some dummy variables. While the overall model was significant, none of the independent variables exhibited a significant impact (p-values > 0.05), indicating a high level of correlation among the variables.
 
-To address these challenges and avoid drawing conclusions from an inconsistent model, our plan is to group the independent variables to reduce correlation.We aggregate the independent variables into groups of 5 actors, we obtain the following beta parameters :
+To address these challenges and avoid drawing conclusions from an inconsistent model, our plan is to group the independent variables to reduce correlation. We aggregate the independent variables into groups of 5 actors, we obtain the following beta parameters :
 
 <iframe src="assets/plots/Beta_Values_and_confidence_intervals2.html" width="800" height="500" frameborder="0" position="relative"></iframe>
 
