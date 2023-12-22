@@ -299,8 +299,57 @@ Finally, we conducted a regression of the ratings on the actors and pairs of act
 The first thing we can mention is that the adjusted budget is not significant. We can interpret that by the fact that viewers perhaps do not necessarily care about the budget of movie to appreciate it. For the pairs of actors, they remain very similar to the previous regressions. 
 
 -----------------------------
-### Forecasting
+##### Forecasting
 In the enchanting realm of cinema, the year 2024 promises a captivating array of films gracing screens around the globe. Amongst this cinematic tapestry, certain gems stand out, eagerly anticipated by audiences worldwide. If you aspire to be a cinematic trailblazer, ready to regale your friends with insights into the blockbusters set to dominate the box office, then this section is tailored just for you.
 
 Here, we delve into the anticipation surrounding several films poised to take center stage in the cinematic landscape. Our endeavor extends beyond mere anticipation as we embark on the fascinating journey of predicting the revenues these cinematic marvels are destined to amass. Join us in this cinematic odyssey, where the magic of storytelling meets the allure of box office predictions.
+
+#### Movie Releases in 2024
+
+##### Madame Web
+- *Release Date:* February 2024
+- *Budget:* $80 million
+- *Number of Preponderant Actors:* 8
+- *Genres:* Crime, Drama, Thriller
+
+##### Despicable Me 4
+- *Release Date:* July 2024
+- *Budget:* $51 million
+- *Number of Preponderant Actors:* 2
+- *Genres:* Kids & Family, Comedy, Adventure, Animation
+
+##### Deadpool 3
+- *Release Date:* July 2024
+- *Budget:* Estimated $150 million
+- *Number of Preponderant Actors:* 5
+- *Genres:* Action, Adventure, Comedy, Fantasy
+
+We have developed a Random Forest model and utilized it to predict the revenue of these three upcoming movies.
+
+
+*INSERT FIGURE * 
+Comment on what you see on the figure 
+
+
+#### Conclusion 
+
+###### Madame WEB 
+Madame Web is an upcoming American superhero film based on Marvel Comics featuring the character of the same name, produced by Columbia Pictures and Di Bonaventura Pictures in association with Marvel Entertainment. Distributed by Sony Pictures Releasing, it is intended to be the fourth film in Sony's Spider-Man Universe (SSU).
+
+The estimated median revenue hovers around \$60,000,000, slightly below the corresponding budget. Notably, the film Morbius, belonging to Sony\'s Spider-Man Universe and featuring a relatively unfamiliar superhero, presents an interesting case. Despite its budget being approximately 75 million of dollars, the movie generated a revenue of 160 million of dollars. This suggests that while our predictions are reasonably close, they may benefit from factoring in the revenue boost associated with the widespread excitement surrounding Marvel movies.
+
+In conclusion, considering these factors, *we opt to forecast a gross revenue of approximately \$100,000,000 for this movie.*
+###### Despicable Me 4
+Despicable Me 4 is the upcoming fourth installment in the Despicable Me film series. The film's release date is currently set for July 3, 2024.
+
+Despicable Me 3 generated an impressive 1.035 billion in revenue, surpassing its modest budget of 80 million. The initial prediction significantly underestimated the potential revenue, projecting only 43 million. To rectify this, adjustments are necessary, considering that Despicable Me movies are animated and do not involve 'real' actors. Additionally, the established hype surrounding the preceding Despicable Me films should be taken into account. However, it's essential to note that the budget for the fourth movie is reduced to 51 million, compared to 80 million for its predecessor.
+
+In conclusion, considering these factors, *we opt to forecast a gross revenue of at least \$500,000,000 for this movie.*
+
+###### Deadpool 3
+Deadpool 3 is an upcoming American superhero film based on the Marvel Comics character Deadpool, produced by Marvel Studios, Maximum Effort, and 21 Laps Entertainment, and distributed by Walt Disney Studios Motion Pictures. It is intended to be the 34th film in the Marvel Cinematic Universe (MCU) and a sequel to Deadpool (2016) and Deadpool 2 (2018).
+
+The scale of your forecast for Deadpool 3 appears reasonable at 130 million, considering the success of the previous installment, which grossed 785 million with a budget of 135 million.
+
+Given the anticipated hype surrounding this third installment, its association with the Marvel Cinematic Universe, and a budget increase of 20 million, we anticipate that the revenue will likely fall within the range of 600-800 million.
 
