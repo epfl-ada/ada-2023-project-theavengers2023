@@ -123,12 +123,14 @@ The rationale is straightforward. A greater movie budget tends to yield superior
 
 ###### Discussion about other influtential variables
 
-As discussed in a previous section of this project, there is a positive correlation between the number of actors and the adjusted revenue: the higher the number of actors, the higher the adjusted revenue.
+In a previous chapter of our data exploration saga, we unearthed a positive correlation between the number of actors and adjusted revenue. The symbiotic dance unfolded—more actors, more revenue.
 
-Continuing, let's examine the 'Indie' variable, indicating whether a film is independently produced. Our previous hypothesis from the observation of the heatmap is verified. Indeed, the variable demonstrates a negative correlation with both adjusted revenue and budget. This correlation is in line with expectations, given that independent films often face constraints in securing substantial financial backing, as evident in the histogram plot below where the adjusted budget for independent movies tends to be considerably lower.
+Continuing, our spotlight turns to the 'Indie' variable, indicating whether a film is independently produced. Our previous hypothesis from the observation of the heatmap finds validation. Indeed, the variable demonstrates a negative correlation with both adjusted revenue and budget. This correlation is in line with expectations, given that independent films often face constraints in securing substantial financial backing, as evident in the histogram plot below where the adjusted budget for independent movies tends to be considerably lower.
 As a result, the earlier observed reduction in budget typically coincides with a decrease in adjusted revenue.
 
-It is noteworthy that independence has a more pronounced impact on the adjusted budget (rho=-0.204) compared to the adjusted revenue (rho=-0.119). This observation is encouraging for small cinema producers, as it suggests that revenue and budget are not perfectly proportional. Therefore, a reduction in the budget does not necessarily result in an equivalent decrease in revenue.
+Delving deeper, the impact of independence resonates more profoundly in the realm of adjusted budget (rho=-0.204) compared to adjusted revenue (rho=-0.119). This observation brings a glimmer of hope to small cinema producers, suggesting that the reduction in budget doesn't necessarily translate to a proportional decrease in revenue.
+
+The intricate relationship between independence, budget, and revenue unveils a narrative where financial constraints do not entirely dictate the destiny of independent films. As we unravel these layers, a nuanced understanding of the interplay between variables emerges.
 
 <iframe src="assets/plots/Distribution_of_Adjusted_Budget_for_Independent_and_Non_Independent_Movies.html" width="700" height="480" frameborder="0" position="relative"></iframe>
 
