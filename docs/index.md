@@ -87,7 +87,7 @@ Now, we have the following method, we iterate 1000 times. Each iteration unfolds
 We divide our dataset in train/test set, a fundamental step for model evaluation. We perform an OLS regression with the train set. Then, we calculate the out-of-sample (with the test set) R2. This metric gauges how well our model generalizes to unseen data. After each iteration, we meticulously document the out-of-sample R2, allowing us to construct a distribution. This distribution gives a great picture of the model's performance variability. Below is our resulting plot :
 
 
-<iframe src="assets/plots/metlenomquetuveux.html" width="800" height="500" frameborder="0" position="relative"></iframe>
+<iframe src="assets/plots/metlenomquetuveux.html" width="800" height="600" frameborder="0" position="relative"></iframe>
 
 The distribution of R2 values provides us with valuable insights into the stability and reliability of our forecasting models. We can see from the plot above that the average R2 is 0.22.
 
@@ -96,7 +96,7 @@ The distribution of R2 values provides us with valuable insights into the stabil
 After having plotted the distribution of R2 obtained by doing linear regressions, we try to assess the performance of the model by using random forests and also looking at the distribution of the R2. We begin by conducting a training using the function GridSearch CV(K=5). This function is used to optimize the hyperparameters of our RandomForest model. 
 We also iterate 1000 times this method and we split the set in train/test set at each iteration. We perform a Random Forest with the train set. Then, we calculate the out-of-sample (with the test set) R2. We compute after that the distribution of the R2 within all the iterations of the Random Forests :
 
-<iframe src="assets/plots/Distribution_of_the_R2_from_the_random_forest.html" width="800" height="500" frameborder="0" position="relative"></iframe>
+<iframe src="assets/plots/Distribution_of_the_R2_from_the_random_forest.html" width="800" height="600" frameborder="0" position="relative"></iframe>
 
 Initially, the random forest exhibits a commendable average predictive power (R2(rf)=0.42) with minimal variability, as indicated by a narrow confidence interval at 95% [0.38, 0.45].Furthermore, the Random Forest demonstrates a substantial enhancement in prediction compared to linear regression (R2(lr)=0.218).
 
@@ -108,7 +108,7 @@ Our objective, now, is to pinpoint the most discriminative variables within the 
 In a decision tree, and subsequently in a random forest, the initial selection of variables involves choosing the most informative ones to partition the dataset. The impurity, often measured by Gini impurity, defines the likelihood of a variable being selected. Therefore, a high probability indicates that the corresponding variable possesses significant explanatory power.Hence, we will visualize the dependent variables characterized by the highest Gini impurity.
 We plot the most important features using Mean Decrease in Impurity (MDI). The higher the MDI, the better the feature is at making predictions :
 
-<iframe src="assets/plots/Feature_Importances_using_MDI_final.html" width="800" height="500" frameborder="0" position="relative"></iframe>
+<iframe src="assets/plots/Feature_Importances_using_MDI_final.html" width="800" height="600" frameborder="0" position="relative"></iframe>
 
 We can see that the most important features are the following : The Adjusted Budget, the Number of actors and the years. It seems quite logical that the Budget is an important predictor of the revenue. The Number of actors is also an important feature and we can explain it by the fact that more complex storylines that involves a numerous set of characters, and thus of actors, captivates people more. Hence, it generates more revenue. Finally, we can also hypothetically argue that the release date is also an important factor that explains revenues because people tend to spend more money on cinema than before. ARTICLE BFM ???
 
@@ -143,7 +143,7 @@ Delving deeper, the impact of independence resonates more profoundly in the real
 
 The intricate relationship between independence, budget, and revenue unveils a narrative where financial constraints do not entirely dictate the destiny of independent films.
 
-<iframe src="assets/plots/Distribution_of_Adjusted_Budget_for_Independent_and_Non_Independent_Movies.html" width="800" height="550" frameborder="0" position="relative"></iframe>
+<iframe src="assets/plots/Distribution_of_Adjusted_Budget_for_Independent_and_Non_Independent_Movies.html" width="1000" height="550" frameborder="0" position="relative"></iframe>
 
 The plot clearly demonstrates what was previously mentionned since most of the observations of independent movies have an adjusted budget that is quite lower than the non-independent ones. 
 
