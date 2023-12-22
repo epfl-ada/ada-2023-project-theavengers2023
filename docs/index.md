@@ -201,11 +201,13 @@ In the initial analysis, we do not distinguish between datasets, comparing reven
 The p-value for average revenue is 1.42e-07, indicating a statistically significant difference. However, the p-value for average rating is 0.6345, suggesting no statistically significant difference.
 
 <iframe src="assets/plots/number_movies_genre.html"  width="100%" height="700" frameborder="0" position="relative"></iframe>
-COMMENTER !!!
+
+We see from the plot that most renowed actors tend to play in Comedy, Drama, Action, Adventure and Horror movies. And more generally we can see that Drama, Comedy and Actions movies are more numerous. 
 
 #### Genre-specific Analysis
 In the following section, we performed t-test with the null Hypothesis : 
 H0 : The mean between the two groups is the same. We test with a 5% level.
+
 ##### Drama
 
 | -                   | Renowned Actors     | Non-renowned Actors | 
@@ -271,8 +273,12 @@ We conducted a first regression in which we don't take the budget into account. 
 <iframe src="assets/plots/Coefficient_revenues_no_budget.html" width="700" height="480" frameborder="0" position="relative"></iframe>
 
 We can see 3 pairs of actors that have a coefficient statistically significant. Timothy Spall & Alan Rickman, Tom Felton & Mark Williams and Jon Favreau & Vince Vaughn.
-Timothy Spall & Alan Rickman, Tom Felton & Mark Wiliams are all actors of the Harry Potter saga. It's understandable that they have opposite impact. Indeed, their interaction should compensate each other, and if one of them have done another movie that is not as known as Harry Potter then it act as an outlier and undermine the revenue. 
-If we look at individual actor, 14 actors have a significant impact on revenue. All of them have a positive impact. It is worthy emphasizing that some of them have a slightly negative impact on revenue when they are alone and have a significant positive impact when paired with another actor, such as Jon Favreau. We were wondering why Jon Favreau has a positive impact on the revenue while when he is paired with Vince Vaughn, suddenly the impact is significantly negative. We make the hypothesis that perhaps when these two actors play together, they usually play in comedy movies and it may be the case that comedy movies don't generally generate high revenues. This hypothesis can be supported by our previous analyzes of revenues and ratings, indeed the mean of adjusted revenues for the Comedy genre is significantly lower than the mean of adjusted revenues for the Action, Adventure and Horror genres.
+
+Timothy Spall & Alan Rickman, Tom Felton & Mark Wiliams are all actors of the Harry Potter saga. It's understandable that they have opposite impact. Indeed, their interaction should compensate each other, and if one of them have done another movie that is not as known as Harry Potter then it act as an outlier and undermines the revenue. 
+
+If we look at individual actor, 14 actors have a significant impact on revenue. All of them have a positive impact. It is worthy emphasizing that some of them have a slightly negative impact on revenue when they are alone and have a significant positive impact when paired with another actor, such as Jon Favreau. 
+
+We were wondering why Jon Favreau has a positive impact on the revenue while when he is paired with Vince Vaughn, suddenly the impact is significantly negative. We make the hypothesis that perhaps when these two actors play together, they usually play in comedy movies and it may be the case that comedy movies don't generally generate high revenues. This hypothesis can in fact be supported by our previous analyzes of revenues and ratings, indeed the mean of adjusted revenues for the Comedy genre is significantly lower than the mean of adjusted revenues for the Action, Adventure and Horror genres.
 
 ###### Regression of the ratings on the actors and pair of actors without the budget:
 
