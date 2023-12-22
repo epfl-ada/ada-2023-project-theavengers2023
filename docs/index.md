@@ -292,6 +292,7 @@ We were wondering why Jon Favreau has a positive impact on the revenue while whe
 ###### Regression of the ratings on the actors and pair of actors without the budget:
 
 We conducted a regression of the ratings on the actors and pair of actors in which we don't take the budget into account. We obtained the following parameters :
+
 <iframe src="assets/plots/Coefficient_ratings_no_budget.html" width="700" height="480" frameborder="0" position="relative"></iframe>
 
 We can see 4 pairs of actors that have a coefficient statistically significant. Ed Begley, Jr & Michael McKean, Fred Willard & Jennifer Coolidge, Eugene Levy & Jennifer Coolidge, Danny Trejo & Cheech Marin.
