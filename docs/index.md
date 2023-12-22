@@ -90,7 +90,7 @@ We also iterate 1000 times this method and we split the set in train/test set at
 
 <iframe src="assets/plots/Distribution_of_the_R2_from_the_random_forest.html" width="800" height="500" frameborder="0" position="relative"></iframe>
 
-Initially, the random forest exhibits a commendable average predictive power ($R^2_{rf}=0.42$) with minimal variability, as indicated by a narrow confidence interval at 95% [$0.38, 0.45$].Furthermore, the Random Forest demonstrates a substantial enhancement in prediction compared to linear regression ($R^2_{lr}=0.218$).
+Initially, the random forest exhibits a commendable average predictive power (R2(rf)=0.42) with minimal variability, as indicated by a narrow confidence interval at 95% [0.38, 0.45].Furthermore, the Random Forest demonstrates a substantial enhancement in prediction compared to linear regression (R2(lr)=0.218).
 
 Our objective, now, is to pinpoint the most discriminative variables within the Random Forest analysis.
 
@@ -100,7 +100,7 @@ We plot the most important features using Mean Decrease in Impurity (MDI). The h
 
 <iframe src="assets/plots/Feature_Importances_using_MDI_final.html" width="800" height="500" frameborder="0" position="relative"></iframe>
 
-We can see that the most important features are the following : 
+We can see that the most important features are the following : The Adjusted Budget, the Number of actors and the years. It seems quite logical that the Budget is an important predictor of the revenue. The Number of actors is also an important feature and we can explain it by the fact that more complex storylines that involves a numerous set of characters, and thus of actors, captivates people more. Hence, it generates more revenue. Finally, we can also hypothetically argue that the release date is also an important factor that explains revenues because people tend to spend more money on cinema than before. ARTICLE BFM ???
 
 
 ###### Correlation between the most important features
@@ -156,7 +156,8 @@ We conducted a first regression in which we don't take the budget into account. 
 
 We can see 3 pairs of actors that have a coefficient statistically significant. Timothy Spall & Alan Rickman, Tom Felton & Mark Williams and Jon Favreau & Vince Vaughn.
 Timothy Spall & Alan Rickman, Tom Felton & Mark Wiliams are all actors of the Harry Potter saga. It's understandable that they have opposite impact. Indeed, their interaction should compensate each other, and if one of them have done another movie that is not as known as Harry Potter then it act as an outlier and undermine the revenue. 
-If we look at individual actor, 14 actors have a significant impact on revenue. All of them have a positive impact. It is worthy emphasizing that some of them have a slightly negative impact on revenue when they are alone and have a significant positive impact when paired with another actor, such as Jon Favreau. We were wondering why Jon Favreau has a positive impact on the revenue while when he is paired with Vince Vaughn, suddenly the impact is significantly negative. We make the hypothesis that perhaps when these two actors play together, they usually play in comedy movies and it may be the case that comedy movies don't generally generate high revenues.However, in order to make such asssumptions we would need further analysis. 
+If we look at individual actor, 14 actors have a significant impact on revenue. All of them have a positive impact. It is worthy emphasizing that some of them have a slightly negative impact on revenue when they are alone and have a significant positive impact when paired with another actor, such as Jon Favreau. We were wondering why Jon Favreau has a positive impact on the revenue while when he is paired with Vince Vaughn, suddenly the impact is significantly negative. We make the hypothesis that perhaps when these two actors play together, they usually play in comedy movies and it may be the case that comedy movies don't generally generate high revenues.However,in order to make such asssumptions we would need further analysis. 
+ON PEUT BACKUP AVEC LES TRUCS DE ALBIAS !!!
 
 ###### Regression of the ratings on the actors and pair of actors without the budget:
 
