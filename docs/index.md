@@ -143,6 +143,8 @@ COMMENTER LE PLOT !!!
 
 The significance and positive correlation of the variables "Dummy_Language_English" and "Country_USA" with adjusted revenue underscore the dominance of Hollywood in the global cinema landscape from an economic standpoint. 
 
+In the intricate web of cinematic variables, the prominence of "Dummy_Language_English" and "Country_USA" takes center stage, revealing a narrative steeped in the economic dominance of Hollywood on the global cinema landscape. The undeniable significance and positive correlation with adjusted revenue illuminate the economic powerhouse that Hollywood represents. This economic prowess signifies that, from a revenue standpoint, Hollywood productions and English-language content wield formidable influence, painting a compelling picture of their economic centrality in the cinematic arena. 
+
 This suggests that, economically, Hollywood productions and English-language content play a pivotal role in maximizing revenue. Therefore, emphasizing the use of the English language appears to be crucial for revenue growth in the cinematic industry.
 
 Moreover, movies produced in Hollywood leverage a robust distribution network, global communication channels, marketing strategies, and various other factors that contribute to revenue enhancement.
@@ -181,6 +183,81 @@ The endgame of our selection process yields a curated list of actors whose inter
 <iframe src="assets/plots/interactions_network.html"  width="100%" height="700" frameborder="0" position="relative"></iframe>
 
 The graph above corresponds to a network containing the 69 actors that will be useful for quantifying the power of interactions. Additional information can be obtained by hovering over the photo of an actor. The lines connecting two actors indicate an existing relationship between them. What we can observe is a cluster of significant points. These actors have the particularity of having worked together in the saga (Harry Potter), consisting of 8 films. The actors positioned more centrally in the network are those who interact with several different peers. Take, for example, Steve Buscemi, an actor with an extensive filmography in various cinematic genres, from comedy to action films, enabling him to collaborate with a significant number of his peers.
+
+
+
+-----------------------------
+### Comparative Analysis of Revenues and Ratings
+
+In this section, we aim to compare revenues and ratings between the filtered dataset and the remaining movies. The filtered dataset comprises movies in which at least one actor from a restricted list has played, and we refer to these actors as "Renowned Actors." This analysis aims to validate our selection process and the designation of actors in the restricted list.
+
+#### Overall Analysis
+
+In the initial analysis, we do not distinguish between datasets, comparing revenues and ratings:
+
+| -                   | Renowned Actors     | Non-renowned Actors |
+|---------------------|---------------------|---------------------|
+| Mean Adj. Revenues  | $127,436,562        | $58,695,708         |
+| Mean Rating         | 6.55                | 6.48                |
+
+The p-value for average revenue is 1.42e-07, indicating a statistically significant difference. However, the p-value for average rating is 0.6345, suggesting no statistically significant difference.
+
+MAJDA:
+Insert l’image et commente la brièvement ATTENDRE ALBIAS
+
+#### Genre-specific Analysis
+In the following section, we performed t-test with the null Hypothesis : 
+H0 : The mean between the two groups is the same. We test with a 5% level.
+##### Drama
+
+| -                   | Renowned Actors     | Non-renowned Actors | Genre  |
+|---------------------|---------------------|---------------------|--------|
+| Mean Adj. Revenues  | $63,789,276         | $40,465,501         | Drama  |
+| Mean Rating         | 6.81                | 6.70                | Drama  |
+
+The p-value for average revenue in the Drama genre is 0.00118, indicating statistical significance. The p-value for average rating is 0.0157, also showing statistical significance.
+
+##### Comedy
+
+| -                   | Renowned Actors     | Non-renowned Actors | Genre  |
+|---------------------|---------------------|---------------------|--------|
+| Mean Adj. Revenues  | $67,770,572         | $46,968,185         | Comedy |
+| Mean Rating         | 6.25                | 6.19                | Comedy |
+
+The p-value for average revenue in the Comedy genre is 5.63e-7, indicating statistical significance. The p-value for average rating is 0.20, meaning the difference in average rating is not statistically significant for the Comedy genre.
+
+##### Action
+
+| -                   | Renowned Actors     | Non-renowned Actors | Genre  |
+|---------------------|---------------------|---------------------|--------|
+| Mean Adj. Revenues  | $209,075,703        | $98,260,512         | Action |
+| Mean Rating         | 6.25                | 6.21                | Action |
+
+The p-value for revenue is almost 0, indicating that the difference is statistically significant. The p-value for the average rating is 0.50 meaning that there is no significant difference.
+
+##### Adventure
+
+| -                   | Renowned Actors     | Non-renowned Actors | Genre    |
+|---------------------|---------------------|---------------------|----------|
+| Mean Adj. Revenues  | $235,390,961        | $117,535,852        | Adventure |
+| Mean Rating         | 6.51                | 6.34                | Adventure |
+
+The p-value for average revenue is 0.00016, indicating statistical significance. The p-value for average rating is 0.04 also showing statistical significance.
+
+##### Horror
+
+| -                   | Renowned Actors     | Non-renowned Actors | Genre  |
+|---------------------|---------------------|---------------------|--------|
+| Mean Adj. Revenues  | $90,194,068         | $38,575,751         | Horror |
+| Mean Rating         | 6.13                | 5.67                | Horror |
+The p-value for average revenue is almost 0, indicating statistical significance. The p-value for average rating is 0.016 also showing statistical significance.
+
+
+#### Conclusion
+
+In summary, for each genre, the difference in revenue is statistically significant, with movies featuring renowned actors earning more on average. Notably, the difference in ratings is significant for Drama, Adventure, and Horror genres. Interestingly, Comedy movies, despite earning less on average, show no significant difference in ratings compared to movies with non-renowned actors.
+
+Additionally, the comparative analysis reveals that, on average, Action movies generate significantly more revenue than Comedy movies. All these findings contribute to the robustness of our actor discrimination and the use of the term "renowned" for the restricted list.
 
 -----------------------------
 ### Interaction of actors
