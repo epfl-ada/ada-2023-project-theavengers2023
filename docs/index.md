@@ -90,11 +90,17 @@ We also iterate 1000 times this method and we split the set in train/test set at
 
 <iframe src="assets/plots/Distribution_of_the_R2_from_the_random_forest.html" width="800" height="500" frameborder="0" position="relative"></iframe>
 
-We can clearly see also that the distribution follows : A COMPLETER !!! which assess a great stability of our model. 
-Aditionnally, we also plot the most important features using Mean Decrease in Impurity (MDI). The higher the MDI, the better the feature is at making predictions :
-<iframe src="assets/plots/Feature_Importances_using_MDI.html" width="800" height="500" frameborder="0" position="relative"></iframe>
+Initially, the random forest exhibits a commendable average predictive power ($R^2_{rf}=0.42$) with minimal variability, as indicated by a narrow confidence interval at 95% [$0.38, 0.45$].Furthermore, the Random Forest demonstrates a substantial enhancement in prediction compared to linear regression ($R^2_{lr}=0.218$).
 
-We can see that in fact A COMPLETER!!!
+Our objective, now, is to pinpoint the most discriminative variables within the Random Forest analysis.
+
+
+In a decision tree, and subsequently in a random forest, the initial selection of variables involves choosing the most informative ones to partition the dataset. The impurity, often measured by Gini impurity, defines the likelihood of a variable being selected. Therefore, a high probability indicates that the corresponding variable possesses significant explanatory power.Hence, we will visualize the dependent variables characterized by the highest Gini impurity.
+We plot the most important features using Mean Decrease in Impurity (MDI). The higher the MDI, the better the feature is at making predictions :
+
+<iframe src="assets/plots/Feature_Importances_using_MDI_final.html" width="800" height="500" frameborder="0" position="relative"></iframe>
+
+We can see that the most important features are the following : 
 
 
 ###### Correlation between the most important features
