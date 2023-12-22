@@ -74,12 +74,13 @@ Our objective was to identify the optimal model for revenue prediction, leveragi
 
 ### Part 4: 
 #### 4.1. Chemistry 
-At this stage, we will analyze "Which actor pairs have the best and worst chemistry?". Critical decisions must be made due to the necessity of reducing our actor sample. The challenge arises from the fact that, with the need for interactions between actors, the number of potential interactions among n people is [n(n-1)]/2. As n grows, the number of interactions becomes unmanageable. Consequently, we must carefully select the number of actors based on various considerations. It is acknowledged that we require actors who have collaborated sufficiently to generate significant interactions with their peers. However, determining the exact threshold depends on our specific objectives and preferences. Then, we can perform the regression of the interaction between actor to explain the revenues and ratings. 
+We meticulously curated a subset of renowned actors, employing various criteria to facilitate a comprehensive analysis of the individual and collaborative impact of actors. Our actor selection process adhered to stringent criteria to mitigate the risk of multicollinearity in our regression analysis. Subsequently, we conducted linear regression analyses, both with and without budget control, to delve into the nuanced dynamics of actor contributions to movie outcomes.
 
 ### Part 5: 
 ### 5.1 Interconnection 
 At this stage, we will use a network analyze to quantify the number of interactions between actors. That will provide an answer about the existence of communities and also an help to visualize these communities.
-### 5.2 Forecast 
+### 5.2 Forecast
+
 ### Part 6:
 Create the data story for our report.
 
