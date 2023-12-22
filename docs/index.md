@@ -11,6 +11,7 @@ use-site-title: true
 Dive into the captivating world of cinema with our unique exploration of the CMU Movie Summary Corpus dataset. Tired of defending your love for the unparalleled duo of Ben Affleck and Matt Damon during your movie nights? You're in the right place! Our mission, should we decide to accept it (we do), takes you on a journey where we dissect connections between actors. Discover how these links influence financial success and film quality, while exploring aspects such as geography, timeline, and film genre. Thus, no more sterile debates about actor ensembles and dive into the data for an in-depth understanding of the seventh art. Get ready for an unprecedented cinematic adventure where the facts speak for themselves!
 
 ### Money Talks, But Let's Keep It Real
+
 When we talk box office hits, we gotta make sure we're not comparing the '20s silent flicks to today's 3D extravaganzas without some tweaks. Money's worth more or less depending on when you're spending it, right? That's why we adjust the cash flow from back in the day to match today's dollars. It's like giving old movies a fair fight in today's box office arena.
 
 Take a peek at this chart right here. Once we adjust for inflation, the old correlation between a movie's release year and its wallet—both what it cost and what it made—kinda fades away. But here's a kicker: the relationship between what a film spends and earns? Still cozy. The more a movie's budget balloons, the more it seems to rake in. Looks like spending big could mean earning big, but let's not forget—correlation isn't causation. So, let's not jump to conclusions just yet!
@@ -80,7 +81,7 @@ We conclude that within the selected movie group sharing the same language, coun
 The objective of this section is to construct models enabling us to forecast movie revenue by considering dependent variables such as the number of actors, the movie genre, the country of production, and other relevant factors. 
 Within our dataset, numerous categorical and numerical variables capture our interest. Consequently, we generate dummy variables for each categorical variable.
 
-###### Method 1 : Monte Carlo iterations with Linear regressions
+#### Method 1 : Monte Carlo iterations with Linear regressions
 
 Now, we have the following method, we iterate 1000 times. Each iteration unfolds as follows :
 We divide our dataset in train/test set, a fundamental step for model evaluation. We perform an OLS regression with the train set. Then, we calculate the out-of-sample (with the test set) R2. This metric gauges how well our model generalizes to unseen data. After each iteration, we meticulously document the out-of-sample R2, allowing us to construct a distribution. This distribution gives a great picture of the model's performance variability. Below is our resulting plot :
@@ -90,7 +91,7 @@ We divide our dataset in train/test set, a fundamental step for model evaluation
 
 The distribution of R2 values provides us with valuable insights into the stability and reliability of our forecasting models. We can see from the plot above that the average R2 is 0.22.
 
-###### Method 2 : Iterations using Random Forest
+#### Method 2 : Iterations using Random Forest
 
 After having plotted the distribution of R2 obtained by doing linear regressions, we try to assess the performance of the model by using random forests and also looking at the distribution of the R2. We begin by conducting a training using the function GridSearch CV(K=5). This function is used to optimize the hyperparameters of our RandomForest model. 
 We also iterate 1000 times this method and we split the set in train/test set at each iteration. We perform a Random Forest with the train set. Then, we calculate the out-of-sample (with the test set) R2. We compute after that the distribution of the R2 within all the iterations of the Random Forests :
@@ -99,7 +100,7 @@ We also iterate 1000 times this method and we split the set in train/test set at
 
 Initially, the random forest exhibits a commendable average predictive power (R2(rf)=0.42) with minimal variability, as indicated by a narrow confidence interval at 95% [0.38, 0.45].Furthermore, the Random Forest demonstrates a substantial enhancement in prediction compared to linear regression (R2(lr)=0.218).
 
-###### Mean Decrease in Impurity
+#### Mean Decrease in Impurity
 
 Our objective, now, is to pinpoint the most discriminative variables within the Random Forest analysis.
 
@@ -112,7 +113,7 @@ We plot the most important features using Mean Decrease in Impurity (MDI). The h
 We can see that the most important features are the following : The Adjusted Budget, the Number of actors and the years. It seems quite logical that the Budget is an important predictor of the revenue. The Number of actors is also an important feature and we can explain it by the fact that more complex storylines that involves a numerous set of characters, and thus of actors, captivates people more. Hence, it generates more revenue. Finally, we can also hypothetically argue that the release date is also an important factor that explains revenues because people tend to spend more money on cinema than before. ARTICLE BFM ???
 
 
-###### Correlation between the most important features
+#### Correlation between the most important features
 
 Here is a heatmap reprensenting the correlation between each of the most important variables obtained previously from MDI :
 
@@ -122,7 +123,7 @@ We can see two notable information from this :
 - There is a high positive correlation between English speaking movies and movies released in the USA (correlation = 0.556) which is seems pretty logical.
 - There is a high negative correlation between Indie movies (independent movies) and the adjusted budget (correlation = -0.2) which is also predictable since independent movies tend to have a lower budget. 
 
-###### Discussion about Adjusted Budget as influtential variable
+#### Discussion about Adjusted Budget as influtential variable
 
 Primarily, the decision trees within the random forest consistently identify the budget of a movie adjusted for inflation as the most influential dependent variable with a Gini impurity of 0.238.
 
@@ -131,7 +132,7 @@ The rationale is straightforward. A greater movie budget tends to yield superior
 <iframe src="assets/plots/Adjusted_Revenue_vs_Adjusted_Budget_with_a_Linear_Regression.html" width="700" height="550" frameborder="0" position="relative"></iframe>
 
 
-###### Discussion about other influtential variables
+#### Discussion about other influtential variables
 
 In a previous chapter of our data exploration saga, we unearthed a positive correlation between the number of actors and adjusted revenue. The symbiotic dance unfolded—more actors, more revenue.
 
@@ -146,7 +147,7 @@ The intricate relationship between independence, budget, and revenue unveils a n
 
 The plot clearly demonstrates what was previously mentionned since most of the observations of independent movies have an adjusted budget that is quite lower than the non-independent ones. 
 
-###### Industrilization of the cinema and monopole of the USA : Dummy_English_Language and Country_USA
+#### Industrilization of the cinema and monopole of the USA 
 
 The significance and positive correlation of the variables "Dummy_Language_English" and "Country_USA" with adjusted revenue underscore the dominance of Hollywood in the global cinema landscape from an economic standpoint. 
 This suggests that, economically, Hollywood productions and English-language content play a pivotal role in maximizing revenue. Therefore, emphasizing the use of the English language appears to be crucial for revenue growth in the cinematic industry.
@@ -164,22 +165,22 @@ In the context of our cinematic project, we aim to assess the significance of in
 
 #### Crafting the Lens: Our Method for Identifying Renowned Actors
 
-###### Step 1: Setting the Stage with Experience 
+##### Step 1: Setting the Stage with Experience 
 
 We start by considering actors who have been in at least 10 movies. Why? This threshold ensures that we're looking at actors with a substantial body of work, indicating both experience and sustained relevance in the industry. It's not just about having a moment in the spotlight; it's about consistent participation in the cinematic world.
 
 <iframe src="assets/plots/percentage_actors_and_number_movies.html" width="700" height="480" frameborder="0" position="relative"></iframe>
 
 
-###### Step 2: Filtration of Relevant Movies
+##### Step 2: Filtration of Relevant Movies
 
 Our goal is to enhance your movie night. Therefore, it is interesting to filter the films that are part of our dataframe. The criteria were as follows: The movie must have been translated or created in English. It must have been released after 1980. Thus, we now have a list of actors who have a role in one of the preselected films.
 
-###### Step 3:  Mapping the Connections
+##### Step 3:  Mapping the Connections
 
 Next, we delve into the heart of our analysis - the interactions between actors. By mapping out how often actors work together, we're able to see who's really at the center of the industry's collaborative network. This isn't just about appearing on screen; it's about being a part of the creative partnerships that define cinema. We set a threshold for the number of interactions to focus on actors who are not only experienced but also integral to the network. Those below the threshold might have a presence, but they don't yet form crucial links in the industry's collaborative web. Therefore, we decide to continue with pairs of actor that played in more than 5 movies together.
 
-###### The Final Curation:
+##### The Final Curation:
 
 The endgame of our selection process yields a curated list of actors whose interactions bear the hallmark of significance. With the final filter applied, we eliminate any film devoid of our shortlisted actors' presence, sharpening the focus of our database. Now primed for the grand reveal, we stand on the brink of uncovering the enigmatic duo of actors that hold the keys to cinematic success.
 
@@ -276,7 +277,7 @@ In our quest to decipher the intricate dance of actors within the cinematic real
 With the list of actors who have a lot of interactions among themselves and the list of films in which they have played, we conduct a linear regression to identify actor pairs that have the most impact on revenues. However, we faced some problems with multicollinearity in the case that two actors play in the same exact movie. For instance, it is the case for some Harry Potter actors. We needed to take care of that so we removed actor "Duplicates". 
 After dealing with this issue, we start conducting our regressions.
 
-###### Regression of the revenue on the actors and pair of actors without the budget:
+#### Regression of the revenue on the actors and pair of actors without the budget:
 
 We conducted a first regression in which we don't take the budget into account. We obtained the following parameters :
 <iframe src="assets/plots/Coefficient_revenues_no_budget.html" width="700" height="480" frameborder="0" position="relative"></iframe>
@@ -289,7 +290,7 @@ If we look at individual actor, 14 actors have a significant impact on revenue. 
 
 We were wondering why Jon Favreau has a positive impact on the revenue while when he is paired with Vince Vaughn, suddenly the impact is significantly negative. We make the hypothesis that perhaps when these two actors play together, they usually play in comedy movies and it may be the case that comedy movies don't generally generate high revenues. This hypothesis can in fact be supported by our previous analyzes of revenues and ratings, indeed the mean of adjusted revenues for the Comedy genre is significantly lower than the mean of adjusted revenues for the Action, Adventure and Horror genres.
 
-###### Regression of the ratings on the actors and pair of actors without the budget:
+#### Regression of the ratings on the actors and pair of actors without the budget:
 
 We conducted a regression of the ratings on the actors and pair of actors in which we don't take the budget into account. We obtained the following parameters :
 
@@ -298,7 +299,7 @@ We conducted a regression of the ratings on the actors and pair of actors in whi
 We can see 4 pairs of actors that have a coefficient statistically significant. Ed Begley, Jr & Michael McKean, Fred Willard & Jennifer Coolidge, Eugene Levy & Jennifer Coolidge, Danny Trejo & Cheech Marin.
 If we look at individual actor, 20 actors have a significant impact on ratings. About half of them have a positive impact. One thing we can notice is that Fred Willard has a significant negative impact on the ratings and the pair consisting of Jennifer Coolidge and Fred Willard also have a significant negative rating, however the pair consisting of Jennifer Coolidge and Eugene Levy has a significant positive impact on the revenue. 
 
-###### Regression of the revenue on the actors and pair of actors with the budget:
+#### Regression of the revenue on the actors and pair of actors with the budget:
 
 We conducted a regression in which we take the budget into account. We obtained the following parameters :
 <iframe src="assets/plots/Coefficient_revenues_with_budget.html" width="700" height="480" frameborder="0" position="relative"></iframe>
@@ -306,7 +307,7 @@ We conducted a regression in which we take the budget into account. We obtained 
 The Adjusted budget coefficient is significant and positive which is quite predictable. This coefficient may remove the explanation linked to budget from the other previous coefficients linked to actors and pair of actors. We also encounter the same pairs as before such as Timothy Spall & Alan Rickman and Timothy Spall & Maggie Smith.
 If we look at individual actor, 2 actors have a significant impact on revenue. 
 
-###### Regression of the ratings on the actors and pair of actors with the budget:
+#### Regression of the ratings on the actors and pair of actors with the budget:
 
 Finally, we conducted a regression of the ratings on the actors and pairs of actors in which we take the budget into account:
 
@@ -315,7 +316,7 @@ Finally, we conducted a regression of the ratings on the actors and pairs of act
 The first thing we can mention is that the adjusted budget is not significant. We can interpret that by the fact that viewers perhaps do not necessarily care about the budget of movie to appreciate it. For the pairs of actors, they remain very similar to the previous regressions. 
 
 -----------------------------
-##### Forecasting
+### Forecasting
 In the enchanting realm of cinema, the year 2024 promises a captivating array of films gracing screens around the globe. Amongst this cinematic tapestry, certain gems stand out, eagerly anticipated by audiences worldwide. If you aspire to be a cinematic trailblazer, ready to regale your friends with insights into the blockbusters set to dominate the box office, then this section is tailored just for you.
 
 Here, we delve into the anticipation surrounding several films poised to take center stage in the cinematic landscape. Our endeavor extends beyond mere anticipation as we embark on the fascinating journey of predicting the revenues these cinematic marvels are destined to amass. Join us in this cinematic odyssey, where the magic of storytelling meets the allure of box office predictions.
@@ -349,20 +350,21 @@ Comment on what you see on the figure
 
 #### Conclusion 
 
-###### Madame WEB 
+##### Madame WEB 
 Madame Web is an upcoming American superhero film based on Marvel Comics featuring the character of the same name, produced by Columbia Pictures and Di Bonaventura Pictures in association with Marvel Entertainment. Distributed by Sony Pictures Releasing, it is intended to be the fourth film in Sony's Spider-Man Universe (SSU).
 
 The estimated median revenue hovers around \$60,000,000, slightly below the corresponding budget. Notably, the film Morbius, belonging to Sony\'s Spider-Man Universe and featuring a relatively unfamiliar superhero, presents an interesting case. Despite its budget being approximately 75 million of dollars, the movie generated a revenue of 160 million of dollars. This suggests that while our predictions are reasonably close, they may benefit from factoring in the revenue boost associated with the widespread excitement surrounding Marvel movies.
 
 In conclusion, considering these factors, *we opt to forecast a gross revenue of approximately \$100,000,000 for this movie.*
-###### Despicable Me 4
+
+##### Despicable Me 4
 Despicable Me 4 is the upcoming fourth installment in the Despicable Me film series. The film's release date is currently set for July 3, 2024.
 
 Despicable Me 3 generated an impressive 1.035 billion in revenue, surpassing its modest budget of 80 million. The initial prediction significantly underestimated the potential revenue, projecting only 43 million. To rectify this, adjustments are necessary, considering that Despicable Me movies are animated and do not involve 'real' actors. Additionally, the established hype surrounding the preceding Despicable Me films should be taken into account. However, it's essential to note that the budget for the fourth movie is reduced to 51 million, compared to 80 million for its predecessor.
 
 In conclusion, considering these factors, *we opt to forecast a gross revenue of at least \$500,000,000 for this movie.*
 
-###### Deadpool 3
+##### Deadpool 3
 Deadpool 3 is an upcoming American superhero film based on the Marvel Comics character Deadpool, produced by Marvel Studios, Maximum Effort, and 21 Laps Entertainment, and distributed by Walt Disney Studios Motion Pictures. It is intended to be the 34th film in the Marvel Cinematic Universe (MCU) and a sequel to Deadpool (2016) and Deadpool 2 (2018).
 
 The scale of your forecast for Deadpool 3 appears reasonable at 130 million, considering the success of the previous installment, which grossed 785 million with a budget of 135 million.
