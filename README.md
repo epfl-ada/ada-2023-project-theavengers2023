@@ -111,7 +111,7 @@ In order to answer the posed researched questions, we constructed a data analysi
 │    
 ├── 05.12.22 - Classification of the pairs of actors
 │  
-├── 10.12.22 - Performance metrics of the renonwed and non renowned actors 
+├── 10.12.22 - Compare performance metrics of the renonwed and non renowned actors 
 │  
 ├── 17.12.22 - Develop draft for data story
 │  
