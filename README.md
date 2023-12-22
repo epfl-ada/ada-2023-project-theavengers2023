@@ -80,6 +80,7 @@ We meticulously curated a subset of renowned actors, employing various criteria 
 ### 5.1 Interconnection 
 At this stage, we will use a network analyze to quantify the number of interactions between actors. That will provide an answer about the existence of communities and also an help to visualize these communities.
 ### 5.2 Forecast
+Leveraging the model developed in Part 3, we ventured into the realm of forecasting by applying it to three highly anticipated movies slated for release in 2024: Madame Web, Despicable 4, and Deadpool 3. This strategic approach allowed us to scrutinize the model's robustness when faced with movies characterized by inherently unquantifiable features.
 
 ### Part 6:
 Create the data story for our report.
@@ -134,7 +135,7 @@ In order to answer the posed researched questions, we constructed a data analysi
       Louis :     (1) Worked on linear regression of the log-revenue and the rating in function of the numbner of known actors.
                   (2) Worked on the statistical impact of the models and parameters.
                   (3) Worked on the fitting of the functional form of the revenue and rating.
-                  (4) Implementation and analysis of the linear regression
+                  (4) Implementation and analysis of the models
     ------------------------------------------------------------------------------------------------------------------------              
       Nathan :    (1) Worked on linear regression of the log-revenue and the rating in function of the numbner of known actors.
                   (2) Worked on the network analyze and the visualization of the interaction of actors.
