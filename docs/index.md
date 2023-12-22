@@ -190,6 +190,9 @@ The graph above corresponds to a network containing the 69 actors that will be u
 ----------------------------
 ### Graph : ICI ? 
 
+
+<iframe src="assets/plots/weighted_graph_actors.html"  width="100%" height="700" frameborder="0" position="relative"></iframe>
+
 The depicted graph represents a network comprising 69 actors, providing a means to quantify the strength of interactions. Further details can be accessed by hovering over an actor's photo. When two actors are connected, it indicates that they have collaborated in a movie. Moreover, the edges (segments connecting actor pairs) are weighted based on the total number of movies in which they have played together.
 
 
