@@ -8,7 +8,7 @@ share-img: /assets/img/background_img.png
 use-site-title: true
 ---
 
-Dive into the captivating world of cinema with our unique exploration of the CMU Movie Summary Corpus dataset. Tired of defending your love for the unparalleled duo of Ben Affleck and Matt Damon during your movie nights? You're in the right place! Our mission, should we decide to accept it (we do), takes you on a journey where we dissect connections between actors. Discover how these links influence financial success and film quality, while exploring aspects such as geography, timeline, and film genre. Thus, no more sterile debates about actor ensembles and dive into the data for an in-depth understanding of the seventh art. Get ready for an unprecedented cinematic adventure where the facts speak for themselves!
+Dive into the captivating world of cinema with our unique exploration of the CMU Movie Summary Corpus dataset. Tired of defending your love for the unparalleled duo of Ben Affleck and Matt Damon during your movie nights? You're in the right place! Our mission, should we decide to accept it (we do), takes you on a journey where we dissect connections between actors. Discover how these links influence financial success and film quality, while exploring aspects such as geography, timeline and film genre. Thus, no more sterile debates about actor ensembles and dive into the data for an in-depth understanding of the seventh art. Get ready for an unprecedented cinematic adventure where the facts speak for themselves!
 
 ### Money Talks, But Let's Keep It Real
 
@@ -31,7 +31,7 @@ In this second plot, we also observe that the plot is a little more flat when we
 ### Causality between Revenue and Number of Actors
 #### Research Objective:
 
-In our research, we set out to investigate the relationship between the number of actors in a movie and its (log) revenue. Our initial causal diagram suggests a straightforward link, but we recognize the potential influence of confounding variables like budget, country, language, and more. 
+In our research, we set out to investigate the relationship between the number of actors in a movie and its (log) revenue. Our initial causal diagram suggests a straightforward link, but we recognize the potential influence of confounding variables like budget, country, language and more. 
 
 Indeed, it seems like we must have the following straightforward causality : 
 
@@ -70,25 +70,24 @@ To address these challenges and avoid drawing conclusions from an inconsistent m
 
 <iframe src="assets/plots/Beta_Values_and_confidence_intervals2.html" width="800" height="500" frameborder="0" position="relative"></iframe>
 
-The revised model maintained statistical significance, and a majority of the independent variables demonstrated a significant impact on log-revenue. Hence, within a movie group sharing the same language, country of production, and budget magnitude, we still discern an impact of the actor count on log-revenue.
+The revised model maintained statistical significance and a majority of the independent variables demonstrated a notable impact on log-revenue. Hence, we still discern an impact of the actor count on log-revenue within a movie group sharing the same language, country of production and budget magnitude.
 
-We conclude that within the selected movie group sharing the same language, country, and budget magnitude, we observe a meaningful impact of actor count on log revenue. However, it is essential to note that these findings may not be universally applicable to other groups due to the inability to establish clean matches. 
+We conclude that within the selected movie group sharing the same language, country and budget magnitude, we observe a meaningful impact of actor count on log revenue. However, it is essential to note that these findings may not be universally applicable to other groups due to the inability to establish clean matches. 
 
 ----------------------------
 ### Prediction of the revenue in function of a set of variables 
 
-The objective of this section is to construct models enabling us to forecast movie revenue by considering dependent variables such as the number of actors, the movie genre, the country of production, and other relevant factors. 
+The objective of this section is to construct models enabling us to forecast movie revenue by considering dependent variables such as the number of actors, the movie genre, the country of production and other relevant factors. 
 Within our dataset, numerous categorical and numerical variables capture our interest. Consequently, we generate dummy variables for each categorical variable.
 
-#### Method 1 : Monte Carlo iterations with Linear regressions
+#### Method 1 : Monte Carlo iterations with Linear regression
 
-Now, we have the following method, we iterate 1000 times. Each iteration unfolds as follows :
-We divide our dataset in train/test set, a fundamental step for model evaluation. We perform an OLS regression with the train set. Then, we calculate the out-of-sample (with the test set) R2. This metric gauges how well our model generalizes to unseen data. After each iteration, we meticulously document the out-of-sample R2, allowing us to construct a distribution. This distribution gives a great picture of the model's performance variability. Below is our resulting plot :
+Now, we have the following method that consists of applying a 1000 iterations. In each of them, we divide our dataset in train/test set.That is a fundamental step for model evaluation. We perform an OLS regression with the train set. Then, we calculate the out-of-sample (with the test set) R<sup>2</sup>. This metric gauges how well our model generalizes to unseen data. After each iteration, we meticulously document the out-of-sample R<sup>2</sup>, allowing us to construct a distribution. This distribution gives a great picture of the model's performance variability. Below is our resulting plot :
 
 
 <iframe src="assets/plots/metlenomquetuveux.html" width="800" height="600" frameborder="0" position="relative"></iframe>
 
-The distribution of R2 values provides us with valuable insights into the stability and reliability of our forecasting models. We can see from the plot above that the average R2 is 0.22.
+The distribution of R<sup>2</sup> values provides us with valuable insights into the stability and reliability of our forecasting models. We can see from the plot above that the average R<sup>2</sup> is 0.22.
 
 #### Method 2 : Iterations using Random Forest
 
@@ -97,19 +96,21 @@ We also iterate 1000 times this method and we split the set in train/test set at
 
 <iframe src="assets/plots/Distribution_of_the_R2_from_the_random_forest.html" width="800" height="600" frameborder="0" position="relative"></iframe>
 
-Initially, the random forest exhibits a commendable average predictive power (R2(rf)=0.42) with minimal variability, as indicated by a narrow confidence interval at 95% [0.38, 0.45].Furthermore, the Random Forest demonstrates a substantial enhancement in prediction compared to linear regression (R2(lr)=0.218).
+Initially, the random forest exhibits a commendable average predictive power (R<sup>2</sup><inf>rf</inf>=0.42) with minimal variability, as indicated by a narrow confidence interval at 95% [0.38, 0.45]. Furthermore, the Random Forest demonstrates a substantial enhancement in prediction compared to linear regression (R<sup>2</sup><inf>lr</inf>=0.218).
 
 #### Mean Decrease in Impurity
 
 Our objective, now, is to pinpoint the most discriminative variables within the Random Forest analysis.
 
 
-In a decision tree, and subsequently in a random forest, the initial selection of variables involves choosing the most informative ones to partition the dataset. The impurity, often measured by Gini impurity, defines the likelihood of a variable being selected. Therefore, a high probability indicates that the corresponding variable possesses significant explanatory power.Hence, we will visualize the dependent variables characterized by the highest Gini impurity.
+In a decision tree and subsequently in a random forest, the initial selection of variables involves choosing the most informative ones to partition the dataset. The impurity, often measured by Gini impurity, defines the likelihood of a variable being selected. Therefore, a high probability indicates that the corresponding variable possesses significant explanatory power. Hence, we will visualize the dependent variables characterized by the highest Gini impurity.
 We plot the most important features using Mean Decrease in Impurity (MDI). The higher the MDI, the better the feature is at making predictions :
 
 <iframe src="assets/plots/Feature_Importances_using_MDI_final.html" width="800" height="600" frameborder="0" position="relative"></iframe>
 
-We can see that the most important features are the following : The Adjusted Budget, the Number of actors and the years. It seems quite logical that the Budget is an important predictor of the revenue. The Number of actors is also an important feature and we can explain it by the fact that more complex storylines that involves a numerous set of characters, and thus of actors, captivates people more. Hence, it generates more revenue. Finally, we can also hypothetically argue that the release date is also an important factor that explains revenues because people tend to spend more money on cinema than before. ARTICLE BFM ???
+We can see that the most important features are the following : The Adjusted Budget, the Number of actors and the years. It seems quite logical that the Budget is an important predictor of the revenue. The number of actors is also an important feature and we can explain it by the fact that more complex storylines that involves a numerous set of characters and thus of actors, captivates people more. Hence, it generates more revenue. Finally, we can also hypothetically argue that the release date is also an important factor that explains revenues because people tend to spend more money on cinema than before. 
+
+BFM 
 
 
 #### Correlation between the most important features
@@ -126,31 +127,31 @@ We can see two notable information from this :
 
 Primarily, the decision trees within the random forest consistently identify the budget of a movie adjusted for inflation as the most influential dependent variable with a Gini impurity of 0.238.
 
-The rationale is straightforward. A greater movie budget tends to yield superior outcomes in terms of special effects, set design, and the caliber of hired actors that consequently leads to a higher revenue. As depicted in the graph below, this positive correlation is readily apparent, showcasing a relatively modest data spread compared to a linear model.
+The rationale is straightforward. A greater movie budget tends to yield superior outcomes in terms of special effects, set design and the caliber of hired actors that consequently leads to a higher revenue. As depicted in the graph below, this positive correlation is readily apparent, showcasing a relatively modest data spread compared to a linear model.
 
 <iframe src="assets/plots/Adjusted_Revenue_vs_Adjusted_Budget_with_a_Linear_Regression.html" width="700" height="550" frameborder="0" position="relative"></iframe>
 
 
-#### Discussion about other influtential variables
+#### Discussion about other influential variables
 
 In a previous chapter of our data exploration saga, we unearthed a positive correlation between the number of actors and adjusted revenue. The symbiotic dance unfolded—more actors, more revenue.
 
-Our spotlight now turns to the 'Indie' variable, indicating whether a film is independently produced. Our previous hypothesis from the observation of the heatmap finds validation. Indeed, the variable demonstrates a negative correlation with both adjusted revenue and budget. This correlation is in line with expectations, given that independent films often face constraints in securing substantial financial backing, as evident in the histogram plot below where the adjusted budget for independent movies tends to be considerably lower.
+Our spotlight now turns to the 'Indie' variable, indicating whether a film is independently produced. Our previous hypothesis from the observation of the heatmap finds validation. Indeed, the variable demonstrates a negative correlation with both adjusted revenue and budget. This correlation is in line with expectations, given that independent films often face constraints in securing substantial financial backing. We can see it quite clearly in the histogram plot below where the adjusted budget for independent movies tends to be considerably lower.
 As a result, the earlier observed reduction in budget typically coincides with a decrease in adjusted revenue.
 
 Delving deeper, the impact of independence resonates more profoundly in the realm of adjusted budget (rho=-0.204) compared to adjusted revenue (rho=-0.119). This observation brings a glimmer of hope to small cinema producers, suggesting that the reduction in budget doesn't necessarily translate to a proportional decrease in revenue.
 
-The intricate relationship between independence, budget, and revenue unveils a narrative where financial constraints do not entirely dictate the destiny of independent films.
+The intricate relationship between independence, budget and revenue unveils a narrative where financial constraints do not entirely dictate the destiny of independent films.
 
 <iframe src="assets/plots/Distribution_of_Adjusted_Budget_for_Independent_and_Non_Independent_Movies.html" width="1000" height="550" frameborder="0" position="relative"></iframe>
 
 The plot clearly demonstrates what was previously mentionned since most of the observations of independent movies have an adjusted budget that is quite lower than the non-independent ones. 
 
-#### Industrilization of the cinema and monopole of the USA 
+#### Industrialization of the cinema and monopole of the USA 
 
 The significance and positive correlation of the variables "Dummy_Language_English" and "Country_USA" with adjusted revenue underscore the dominance of Hollywood in the global cinema landscape from an economic standpoint. 
 This suggests that, economically, Hollywood productions and English-language content play a pivotal role in maximizing revenue. Therefore, emphasizing the use of the English language appears to be crucial for revenue growth in the cinematic industry.
-Moreover, movies produced in Hollywood leverage a robust distribution network, global communication channels, marketing strategies, and various other factors that contribute to revenue enhancement.
+Moreover, movies produced in Hollywood leverage a robust distribution network, global communication channels, marketing strategies and various other factors that contribute to revenue enhancement.
 
 In this analysis, we note a slightly negative correlation between the production year and adjusted revenue, which is surprising. We initially expected that accounting for inflation would mitigate the impact of the production year on adjusted revenue.
 
@@ -166,7 +167,7 @@ In the context of our cinematic project, we aim to assess the significance of in
 
 ##### Step 1: Setting the Stage with Experience 
 
-We start by considering actors who have been in at least 10 movies. Why? This threshold ensures that we're looking at actors with a substantial body of work, indicating both experience and sustained relevance in the industry. It's not just about having a moment in the spotlight; it's about consistent participation in the cinematic world.
+Let's take a step back from our analysis and take a break from all the technical details to investigate the interactions between actors. We start by considering actors who have been in at least 10 movies. Why? This threshold ensures that we're looking at actors with a substantial body of work, indicating both experience and sustained relevance in the industry. It's not just about having a moment in the spotlight, it's about consistent participation in the cinematic world.
 
 <iframe src="assets/plots/percentage_actors_and_number_movies.html" width="700" height="480" frameborder="0" position="relative"></iframe>
 
@@ -177,7 +178,7 @@ Our goal is to enhance your movie night. Therefore, it is interesting to filter 
 
 ##### Step 3:  Mapping the Connections
 
-Next, we delve into the heart of our analysis - the interactions between actors. By mapping out how often actors work together, we're able to see who's really at the center of the industry's collaborative network. This isn't just about appearing on screen; it's about being a part of the creative partnerships that define cinema. We set a threshold for the number of interactions to focus on actors who are not only experienced but also integral to the network. Those below the threshold might have a presence, but they don't yet form crucial links in the industry's collaborative web. Therefore, we decide to continue with pairs of actor that played in more than 5 movies together.
+Next, we delve into the heart of our analysis - the interactions between actors. By mapping out how often actors work together, we're able to see who's really at the center of the industry's collaborative network. This isn't just about appearing on screen, it's about being a part of the creative partnerships that defines cinema. We set a threshold for the number of interactions to focus on actors who are not only experienced but also integral to the network. Those below the threshold might have a presence, but they don't yet form crucial links in the industry's collaborative web. Therefore, we decide to continue with pairs of actor that played in more than 5 movies together.
 
 ##### The Final Curation:
 
@@ -187,7 +188,7 @@ The endgame of our selection process yields a curated list of actors whose inter
 
 The depicted graph represents a network comprising 69 actors, providing a means to quantify the strength of interactions. Further details can be accessed by hovering over an actor's photo. When two actors are connected, it indicates that they have collaborated in a movie. Moreover, the edges (segments connecting actor pairs) are weighted based on the total number of movies in which they have played together.
 
-The graph's construction offers a comprehensive understanding of how the frequency of collaborations influences actors' positions on the cinematic stage. In constructing the graph, we employed the Fruchterman-Reingold force-directed algorithm, but to make it more accessible, let's refer to this type of graph as a "spring graph." In essence, envision each node as connected by a spring whose attractive force is proportional to the weight of the corresponding edge. Consequently, actors who have collaborated frequently will exhibit strong connections, tightly linked by these "springs", while actors who have never worked together will lack any attractive forces within the graph.
+The graph's construction offers a comprehensive understanding of how the frequency of collaborations influences actors' positions on the cinematic stage. In constructing the graph, we employed the Fruchterman-Reingold force-directed algorithm, but to make it more accessible, let's refer to this type of graph as a "spring graph". In essence, envision each node as connected by a spring whose attractive force is proportional to the weight of the corresponding edge. Consequently, actors who have collaborated frequently will exhibit strong connections, tightly linked by these "springs", while actors who have never worked together will lack any attractive forces within the graph.
 
 Interestingly, a distinct cluster quickly emerges. Situated at the bottom right of the graph, this cluster is essentially the Harry Potter movies cluster. A significant number of actors exclusively participated in the Harry Potter film series (though they may have had roles elsewhere, our previous constraint might have filtered out lesser-known movies). As a result, all these actors are closely grouped, yet the entire cluster has shifted away from the overall mass of the graph because, in general, they did not interact with other actors. Furthermore, Harry Potter actors who also appeared in other well-known movies are positioned toward the center of the main graph due to their additional collaboration with the actors of the main cluster.
 
@@ -196,7 +197,7 @@ Briefly commenting on the main cluster, it is noteworthy that the distribution a
 -----------------------------
 ### Comparative Analysis of Revenues and Ratings
 
-In this section, we aim to compare revenues and ratings between the filtered dataset and the remaining movies. The filtered dataset comprises movies in which at least one actor from a restricted list has played, and we refer to these actors as "Renowned Actors." This analysis aims to validate our selection process and the designation of actors in the restricted list.
+In this section, we aim to compare revenues and ratings between the filtered dataset and the remaining movies. The filtered dataset comprises movies in which at least one actor from a restricted list has played and we refer to these actors as "Renowned Actors." This analysis aims to validate our selection process and the designation of actors in the restricted list.
 
 #### Overall Analysis
 
@@ -211,11 +212,10 @@ The p-value for average revenue is 1.42e-07, indicating a statistically signific
 
 <iframe src="assets/plots/number_movies_genre.html"  width="100%" height="700" frameborder="0" position="relative"></iframe>
 
-We see from the plot that most renowed actors tend to play in Comedy, Drama, Action, Adventure and Horror movies. And more generally we can see that Drama, Comedy and Actions movies are more numerous. 
+We observe that our filtration is drastic since the difference between the bar plots of renowed actors and non-renowed actors is pretty notable. We can also see from the plot that most renowed actors tend to play in Comedy, Drama, Action, Adventure and Horror movies. And more generally we note that Drama, Comedy and Actions movies are more numerous.
 
 #### Genre-specific Analysis
-In the following section, we performed t-test with the null Hypothesis : 
-H0 : The mean between the two groups is the same. We test with a 5% level.
+In the following section, we performed t-test : 
 
 ##### Drama
 
@@ -224,6 +224,8 @@ H0 : The mean between the two groups is the same. We test with a 5% level.
 | Mean Adj. Revenues  | $63,789,276         | $40,465,501         | 
 | Mean Rating         | 6.81                | 6.70                | 
 
+The null hypothesis is the following :
+H0 : The mean between the two groups is the same. We test with a 5% level.
 The p-value for average revenue in the Drama genre is 0.00118, indicating statistical significance. The p-value for average rating is 0.0157, also showing statistical significance.
 
 ##### Comedy
@@ -265,7 +267,7 @@ The p-value for average revenue is almost 0, indicating statistical significance
 
 #### Conclusion
 
-In summary, for each genre, the difference in revenue is statistically significant, with movies featuring renowned actors earning more on average. Notably, the difference in ratings is significant for Drama, Adventure, and Horror genres. Interestingly, Comedy movies, despite earning less on average, show no significant difference in ratings compared to movies with non-renowned actors.
+In summary, for each genre, the difference in revenue is statistically significant, with movies featuring renowned actors earning more on average. Notably, the difference in ratings is significant for Drama, Adventure and Horror genres. Interestingly, Comedy movies, despite earning less on average, show no significant difference in ratings compared to movies with non-renowned actors.
 
 Additionally, the comparative analysis reveals that, on average, Action movies generate significantly more revenue than Comedy movies. All these findings contribute to the robustness of our actor discrimination and the use of the term "renowned" for the restricted list.
 
@@ -274,7 +276,8 @@ Additionally, the comparative analysis reveals that, on average, Action movies g
 
 In our quest to decipher the intricate dance of actors within the cinematic realm, we embarked on a journey armed with data on actor interactions and the films they adorned. Our primary goal was to discern the impact of actor pairings on movie revenues and ratings. 
 With the list of actors who have a lot of interactions among themselves and the list of films in which they have played, we conduct a linear regression to identify actor pairs that have the most impact on revenues. However, we faced some problems with multicollinearity in the case that two actors play in the same exact movie. For instance, it is the case for some Harry Potter actors. We needed to take care of that so we removed actor "Duplicates". 
-After dealing with this issue, we start conducting our regressions.
+
+After dealing with this issue, we start conducting our regressions. So now, let's refocus on the heart of our subject: the most emblematic acting duos!
 
 #### Regression of the revenue on the actors and pair of actors without the budget:
 
@@ -283,7 +286,7 @@ We conducted a first regression in which we don't take the budget into account. 
 
 We can see 3 pairs of actors that have a coefficient statistically significant. Timothy Spall & Alan Rickman, Tom Felton & Mark Williams and Jon Favreau & Vince Vaughn.
 
-Timothy Spall & Alan Rickman, Tom Felton & Mark Wiliams are all actors of the Harry Potter saga. It's understandable that they have opposite impact. Indeed, their interaction should compensate each other, and if one of them have done another movie that is not as known as Harry Potter then it act as an outlier and undermines the revenue. 
+Timothy Spall & Alan Rickman, Tom Felton & Mark Wiliams are all actors of the Harry Potter saga. It's understandable that they have opposite impact. Indeed, their interaction should compensate each other and if one of them have done another movie that is not as known as Harry Potter then it act as an outlier and undermines the revenue. 
 
 If we look at individual actor, 14 actors have a significant impact on revenue. All of them have a positive impact. It is worthy emphasizing that some of them have a slightly negative impact on revenue when they are alone and have a significant positive impact when paired with another actor, such as Jon Favreau. 
 
@@ -304,7 +307,7 @@ We conducted a regression in which we take the budget into account. We obtained 
 <iframe src="assets/plots/Coefficient_revenues_with_budget.html" width="700" height="480" frameborder="0" position="relative"></iframe>
 
 The Adjusted budget coefficient is significant and positive which is quite predictable. This coefficient may remove the explanation linked to budget from the other previous coefficients linked to actors and pair of actors. We also encounter the same pairs as before such as Timothy Spall & Alan Rickman and Timothy Spall & Maggie Smith.
-If we look at individual actor, 2 actors have a significant impact on revenue. 
+If we look at individual actor, two actors have a significant impact on revenue. 
 
 #### Regression of the ratings on the actors and pair of actors with the budget:
 
@@ -313,6 +316,8 @@ Finally, we conducted a regression of the ratings on the actors and pairs of act
 <iframe src="assets/plots/Coefficient_ratings_with_budget.html" width="700" height="480" frameborder="0" position="relative"></iframe>
 
 The first thing we can mention is that the adjusted budget is not significant. We can interpret that by the fact that viewers perhaps do not necessarily care about the budget of movie to appreciate it. For the pairs of actors, they remain very similar to the previous regressions. 
+
+You can finally take a break now, no more regressions coming !
 
 -----------------------------
 ### Forecasting
@@ -342,9 +347,7 @@ Here, we delve into the anticipation surrounding several films poised to take ce
 
 We have developed a Random Forest model and utilized it to predict the revenue of these three upcoming movies.
 
-
-*INSERT FIGURE * 
-Comment on what you see on the figure 
+<iframe src="assets/plots/Forecasted_Revenue_Distributions_for_Selected_Movies.html" width="700" height="480" frameborder="0" position="relative"></iframe>
 
 
 #### Conclusion 
@@ -364,11 +367,11 @@ Despicable Me 3 generated an impressive 1.035 billion in revenue, surpassing its
 In conclusion, considering these factors, *we opt to forecast a gross revenue of at least \$500,000,000 for this movie.*
 
 ##### Deadpool 3
-Deadpool 3 is an upcoming American superhero film based on the Marvel Comics character Deadpool, produced by Marvel Studios, Maximum Effort, and 21 Laps Entertainment, and distributed by Walt Disney Studios Motion Pictures. It is intended to be the 34th film in the Marvel Cinematic Universe (MCU) and a sequel to Deadpool (2016) and Deadpool 2 (2018).
+Deadpool 3 is an upcoming American superhero film based on the Marvel Comics character Deadpool, produced by Marvel Studios, Maximum Effort and 21 Laps Entertainment and distributed by Walt Disney Studios Motion Pictures. It is intended to be the 34th film in the Marvel Cinematic Universe (MCU) and a sequel to Deadpool (2016) and Deadpool 2 (2018).
 
 The scale of your forecast for Deadpool 3 appears reasonable at 130 million, considering the success of the previous installment, which grossed 785 million with a budget of 135 million.
 
-Given the anticipated hype surrounding this third installment, its association with the Marvel Cinematic Universe, and a budget increase of 20 million, we anticipate that the revenue will likely fall within the range of 600-800 million.
+Given the anticipated hype surrounding this third installment, its association with the Marvel Cinematic Universe and a budget increase of 20 million, we anticipate that the revenue will likely fall within the range of 600-800 million.
 
 ### Conclusion
 
