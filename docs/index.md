@@ -381,4 +381,4 @@ Given the anticipated hype surrounding this third installment, its association w
 
 ### Conclusion
 
-![Thank you for reading our DataStory!](final_picture.png)
+![Thank you for reading our DataStory!](/final_picture.png){ width=50% }
