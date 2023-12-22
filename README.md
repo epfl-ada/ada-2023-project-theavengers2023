@@ -70,17 +70,16 @@ This part of the project is all about checking if our analysis might have proble
 Following a preliminary analysis encompassing the entire dataset, we delved into more nuanced examinations, meticulously controlling for potential biases. Factors such as country of origin, year of release, spoken languages, and movie budget were scrutinized to ensure a more refined analysis. Employing the consumer price index (CPI) to adjust revenues for inflation over time, we conducted linear regression models. These models sought to elucidate the influence of the number of actors per movie on both adjusted revenues and movie ratings. This approach allowed us to uncover more granular insights while addressing potential confounding variables.
 
 #### 3.2. Feature importance and predicting models
-We aimed to find the best model to predict revenues based on the available features. We used linear regression and Random Forest method to build model. We calculated the empirical distribution of the out-of-sample $R^2$ with the two models
-
+Our objective was to identify the optimal model for revenue prediction, leveraging the available features. Employing both linear regression and the Random Forest method, we constructed models to discern the most effective predictor. Calculating the empirical distribution of out-of-sample $R^2$ for both models, we observed the superior performance of the Random Forest method over OLS regression. Utilizing Gini impurity as a metric, we identified the most influential features in explaining revenues and conducted a more in-depth analysis focused on these key variables.
 
 ### Part 4: 
-#### 4.1. Chemistry
+#### 4.1. Chemistry 
 At this stage, we will analyze "Which actor pairs have the best and worst chemistry?". Critical decisions must be made due to the necessity of reducing our actor sample. The challenge arises from the fact that, with the need for interactions between actors, the number of potential interactions among n people is [n(n-1)]/2. As n grows, the number of interactions becomes unmanageable. Consequently, we must carefully select the number of actors based on various considerations. It is acknowledged that we require actors who have collaborated sufficiently to generate significant interactions with their peers. However, determining the exact threshold depends on our specific objectives and preferences. Then, we can perform the regression of the interaction between actor to explain the revenues and ratings. 
 
 ### Part 5: 
 ### 5.1 Interconnection 
 At this stage, we will use a network analyze to quantify the number of interactions between actors. That will provide an answer about the existence of communities and also an help to visualize these communities.
-
+### 5.2 Forecast 
 ### Part 6:
 Create the data story for our report.
 
