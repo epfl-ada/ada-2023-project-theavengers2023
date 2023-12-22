@@ -124,8 +124,8 @@ In order to answer the posed researched questions, we constructed a data analysi
 
      Majda :      (1) Worked on the processing of the data, extraction and merging of the datasets.
                   (2) Worked on visualization of the raw data.
-                  (3) Worked on the ranking of the actor pairs and their signicancy.
-                  (4) Analysis of the regression
+                  (3) Worked on the ranking of the actor pairs and their significancy.
+                  (4) Implementation of the report and working for the data story
      ------------------------------------------------------------------------------------------------------------------------
      Julien :     (1) Worked on the processing of the data, extraction and merging of the datasets.       
                   (2) Implementation of the interaction matrix and first analysis with it 
@@ -137,7 +137,7 @@ In order to answer the posed researched questions, we constructed a data analysi
                   (3) Worked on the fitting of the functional form of the revenue and rating.
                   (4) Implementation and analysis of the models
     ------------------------------------------------------------------------------------------------------------------------              
-      Nathan :    (1) Worked on linear regression of the log-revenue and the rating in function of the numbner of known actors.
+      Nathan :    (1) Worked on linear regression of the log-revenue and the rating in function of the number of known actors.
                   (2) Worked on the network analyze and the visualization of the interaction of actors.
                   (3) Worked on the fitting of the functional form of the revenue and rating.
                   (4) Implementation of the report and working for the data story 
