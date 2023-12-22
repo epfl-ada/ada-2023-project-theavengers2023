@@ -118,7 +118,7 @@ Here is a heatmap reprensenting the correlation between each of the most importa
 <iframe src="assets/plots/Correlation_Matrix.html" width="800" height="500" frameborder="0" position="relative"></iframe>
 
 We can see two notable information from this :
-- There is a high positive correlation between English speaking movies and movies released in the USA (correlation = 0.556) which is seems pretty logical.
+- There is a high positive correlation between English speaking movies and movies released in the USA (correlation = 0.556) which seems pretty logical.
 - There is a high negative correlation between Indie movies (independent movies) and the adjusted budget (correlation = -0.2) which is also predictable since independent movies tend to have a lower budget. 
 
 #### Discussion about Adjusted Budget as influtential variable
