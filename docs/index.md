@@ -392,5 +392,10 @@ The scale of your forecast for Deadpool 3 appears reasonable at 130 million, con
 Given the anticipated hype surrounding this third installment, its association with the Marvel Cinematic Universe and a budget increase of 20 million, we anticipate that the revenue will likely fall within the range of 600-800 million.
 
 ### Conclusion
+Our journey is coming to an end, and you now possess all the necessary ingredients to become cinema connoisseurs. Initially, we tackled the issue of inflation adjustment to make our revenues comparable. We delved into causality, exploring potential confounders, but their impact proved to be less significant than anticipated. Moving forward, we ventured into predicting revenue based on various variables, uncovering several with substantial predictive power.
 
-<img src="assets/plots/final_picture.png" alt="Thank you for reading our DataStory!" width="2000"/>
+Next, we delved into the heart of our challenge: identifying the most iconic duos in cinema. To achieve this, we had to sift through our data to pinpoint actors with the greatest renown, employing multiple filters to select the most electrifying connections. We then conducted a comparative analysis of revenues and ratings, gaining further insights into our data. Subsequently, we examined interactions between the selected actors to deduce their most significant impact on revenue.
+
+Finally, to wrap up our exploration, we ventured into forecasting, estimating revenue using variables with high predictive power. You now stand at the threshold of a cinematic understanding enriched by data, ready to embark on your own narrative within the vast world of film insights.
+
+<img src="assets/plots/final_picture.png" alt="Thank you for reading our DataStory!" width="1000"/>
