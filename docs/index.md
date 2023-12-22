@@ -66,7 +66,7 @@ The initial quantitative study involved performing a linear regression, examinin
 
 Initially, the entire set of independent variables displayed significance in predicting the adjusted log-revenue (P(F-statistic) < 0.05). However, challenges emerged, such as low observations for some dummy variables. While the overall model was significant, none of the independent variables exhibited a significant impact (p-values > 0.05), indicating a high level of correlation among the variables.
 
-To address these challenges and avoid drawing conclusions from an inconsistent model, our plan is to group the independent variables to reduce correlation. We aggregate the independent variables into groups of 5 actors, we obtain the following beta parameters :
+To address these challenges and avoid drawing conclusions from an inconsistent model, our plan is to group the independent variables to reduce correlation. We aggregate the independent variables into groups of 5 actors (categories are now 0:0-4 actors; 1:5-9,etc.), we obtain the following beta parameters :
 
 <iframe src="assets/plots/Beta_Values_and_confidence_intervals2.html" width="800" height="500" frameborder="0" position="relative"></iframe>
 
@@ -91,12 +91,12 @@ The distribution of R<sup>2</sup> values provides us with valuable insights into
 
 #### Method 2 : Iterations using Random Forest
 
-After having plotted the distribution of R2 obtained by doing linear regressions, we try to assess the performance of the model by using random forests and also looking at the distribution of the R2. We begin by conducting a training using the function GridSearch CV(K=5). This function is used to optimize the hyperparameters of our RandomForest model. 
-We also iterate 1000 times this method and we split the set in train/test set at each iteration. We perform a Random Forest with the train set. Then, we calculate the out-of-sample (with the test set) R2. We compute after that the distribution of the R2 within all the iterations of the Random Forests :
+After having plotted the distribution of R<sup>2</sup> obtained by doing linear regressions, we try to assess the performance of the model by using random forests and also looking at the distribution of the R<sup>2</sup>. We begin by conducting a training using the function GridSearch CV(K=5). This function is used to optimize the hyperparameters of our RandomForest model. 
+We also iterate 1000 times this method and we split the set in train/test set at each iteration. We perform a Random Forest with the train set. Then, we calculate the out-of-sample (with the test set) R<sup>2</sup>. We compute after that the distribution of the R<sup>2</sup> within all the iterations of the Random Forests :
 
 <iframe src="assets/plots/Distribution_of_the_R2_from_the_random_forest.html" width="800" height="600" frameborder="0" position="relative"></iframe>
 
-Initially, the random forest exhibits a commendable average predictive power (R<sup>2</sup><inf>rf</inf>=0.42) with minimal variability, as indicated by a narrow confidence interval at 95% [0.38, 0.45]. Furthermore, the Random Forest demonstrates a substantial enhancement in prediction compared to linear regression (R<sup>2</sup><inf>lr</inf>=0.218).
+Initially, the random forest exhibits a commendable average predictive power (R<sup>2</sup>(rf)=0.42) with minimal variability, as indicated by a narrow confidence interval at 95% [0.38, 0.45]. Furthermore, the Random Forest demonstrates a substantial enhancement in prediction compared to linear regression (R<sup>2</sup>(lr)=0.218).
 
 #### Mean Decrease in Impurity
 
@@ -109,8 +109,6 @@ We plot the most important features using Mean Decrease in Impurity (MDI). The h
 <iframe src="assets/plots/Feature_Importances_using_MDI_final.html" width="800" height="600" frameborder="0" position="relative"></iframe>
 
 We can see that the most important features are the following : The Adjusted Budget, the Number of actors and the years. It seems quite logical that the Budget is an important predictor of the revenue. The number of actors is also an important feature and we can explain it by the fact that more complex storylines that involves a numerous set of characters and thus of actors, captivates people more. Hence, it generates more revenue. Finally, we can also hypothetically argue that the release date is also an important factor that explains revenues because people tend to spend more money on cinema than before. 
-
-BFM 
 
 
 #### Correlation between the most important features
