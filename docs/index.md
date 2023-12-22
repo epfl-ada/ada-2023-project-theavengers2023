@@ -398,4 +398,6 @@ Next, we delved into the heart of our challenge: identifying the most iconic duo
 
 Finally, to wrap up our exploration, we ventured into forecasting, estimating revenue using variables with high predictive power. You now stand at the threshold of a cinematic understanding enriched by data, ready to embark on your own narrative within the vast world of film insights.
 
+Thank you for reading our DataStory!
+
 <img src="assets/plots/final_picture.png" alt="Thank you for reading our DataStory!" width="1000"/>
