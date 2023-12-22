@@ -139,6 +139,7 @@ The graph above corresponds to a network containing the 69 actors that will be u
 -----------------------------
 ### Interaction of actors
 
+In our quest to decipher the intricate dance of actors within the cinematic realm, we embarked on a journey armed with data on actor interactions and the films they adorned. Our primary goal was to discern the impact of actor pairings on movie revenues and ratings. 
 With the list of actors who have a lot of interactions among themselves and the list of films in which they have played, we conduct a linear regression to identify actor pairs that have the most impact on revenues. However, we faced some problems with multicollinearity in the case that two actors play in the same exact movie. For instance, it is the case for some Harry Potter actors. We needed to take care of that so we removed actor "Duplicates". 
 After dealing with this issue, we start conducting our regressions.
 
@@ -174,12 +175,6 @@ Finally, we conducted a regression of the ratings on the actors and pairs of act
 <iframe src="assets/plots/Coefficient_ratings_with_budget.html" width="700" height="480" frameborder="0" position="relative"></iframe>
 
 The first thing we can mention is that the adjusted budget is not significant. We can interpret that by the fact that viewers perhaps do not necessarily care about the budget of movie to appreciate it. For the pairs of actors, they remain very similar to the previous regressions. 
-
-
-
-
-
-
 
 -----------------------------
 ### Forecasting
