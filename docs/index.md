@@ -248,6 +248,7 @@ The p-value for average revenue is 0.00016, indicating statistical significance.
 |---------------------|---------------------|---------------------|
 | Mean Adj. Revenues  | $90,194,068         | $38,575,751         | 
 | Mean Rating         | 6.13                | 5.67                | 
+
 The p-value for average revenue is almost 0, indicating statistical significance. The p-value for average rating is 0.016 also showing statistical significance.
 
 
@@ -271,8 +272,7 @@ We conducted a first regression in which we don't take the budget into account. 
 
 We can see 3 pairs of actors that have a coefficient statistically significant. Timothy Spall & Alan Rickman, Tom Felton & Mark Williams and Jon Favreau & Vince Vaughn.
 Timothy Spall & Alan Rickman, Tom Felton & Mark Wiliams are all actors of the Harry Potter saga. It's understandable that they have opposite impact. Indeed, their interaction should compensate each other, and if one of them have done another movie that is not as known as Harry Potter then it act as an outlier and undermine the revenue. 
-If we look at individual actor, 14 actors have a significant impact on revenue. All of them have a positive impact. It is worthy emphasizing that some of them have a slightly negative impact on revenue when they are alone and have a significant positive impact when paired with another actor, such as Jon Favreau. We were wondering why Jon Favreau has a positive impact on the revenue while when he is paired with Vince Vaughn, suddenly the impact is significantly negative. We make the hypothesis that perhaps when these two actors play together, they usually play in comedy movies and it may be the case that comedy movies don't generally generate high revenues.However,in order to make such asssumptions we would need further analysis. 
-ON PEUT BACKUP AVEC LES TRUCS DE ALBIAS !!!
+If we look at individual actor, 14 actors have a significant impact on revenue. All of them have a positive impact. It is worthy emphasizing that some of them have a slightly negative impact on revenue when they are alone and have a significant positive impact when paired with another actor, such as Jon Favreau. We were wondering why Jon Favreau has a positive impact on the revenue while when he is paired with Vince Vaughn, suddenly the impact is significantly negative. We make the hypothesis that perhaps when these two actors play together, they usually play in comedy movies and it may be the case that comedy movies don't generally generate high revenues. This hypothesis can be supported by our previous analyzes of revenues and ratings, indeed the mean of adjusted revenues for the Comedy genre is significantly lower than the mean of adjusted revenues for the Action, Adventure and Horror genres.
 
 ###### Regression of the ratings on the actors and pair of actors without the budget:
 
